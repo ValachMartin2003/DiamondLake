@@ -90,7 +90,11 @@
 
 			<!-- Foglalás gomb/link -->
 			<div class="d-grid gap-2 col-2 mx-auto">
-				<button class="btn btn-secondary border-3 border-dark" disabled type="button">Szobafoglalás</button>
+				<button class="btn btn-secondary border-3 border-dark" 
+								ng-disabled="!$root.user.id" 
+								type="button">
+					Szobafoglalás
+				</button>
 			</div>
 
 
@@ -99,7 +103,8 @@
 							class="btn btn-outline-dark ms-auto" 
 							data-bs-toggle="modal" 
 							data-bs-target="#setupModal">
-				Bejelentkezés
+				<span ng-if="!$root.user.id">Bejelentkezés</span>
+				<span ng-if="$root.user.id">Beállítások</span>
 			</button>
 		</div>
 	</div>

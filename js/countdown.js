@@ -41,7 +41,8 @@
         document.getElementById("headline").innerText = "Az esemény megtörtént!";
         clearInterval(x); 
       } else {
-        document.getElementById("days").innerText = Math.floor(distance1 / day);
+        let days = document.getElementById("days");
+        days.innerText = Math.floor(distance1 / day);
         document.getElementById("hours").innerText = Math.floor((distance1 % (day)) / (hour));
         document.getElementById("minutes").innerText = Math.floor((distance1 % (hour)) / (minute));
         document.getElementById("seconds").innerText = Math.floor((distance1 % (minute)) / second);

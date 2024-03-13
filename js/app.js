@@ -65,6 +65,7 @@
 				url: '/esemeny',
 				parent: 'root',
 				templateUrl: './html/esemeny.html',
+				controller: 'esemenyController'
 			})
 			.state('information', {
 				url: '/information',
@@ -477,7 +478,33 @@
 		}
 	])
 
+	// Esemény controller
+	.controller('esemenyController', [
+		'$scope',
+	 	'$timeout',
+		'http',
+		function($scope, $timeout, http) {
+			http.request('./php/programok.php')
+			.then(response => {
+				for (let i=0; i< response.future.length; i++) {
+					response.future[i].days = "55";
+					response.future[i].hours = "55";
+					response.future[i].minutes = "55";
+					response.future[i].seconds = "55";
+				}
+				$scope.data = response;
+				$scope.$applyAsync();
+			});
 
+			$scope.description = (evemt) => {
+				let element = evemt.currentTarget,
+						key 		= element.getAttribute('key'),
+						index 	= parseInt(element.getAttribute('index'));
+				$scope.description = $scope.data[key][index].description;
+				$scope.$applyAsync();
+			};
+	 	}
+	])
 
     
 	// Szobaink controller		
