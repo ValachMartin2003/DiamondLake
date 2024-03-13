@@ -1,0 +1,201 @@
+<!-- Profile form -->	 
+<form name="profileForm">
+
+	<!-- User type -->
+	<div class="mb-3 col-12 col-sm-11 col-lg-9 col-xl-8">
+		<label for="country_code" class="form-label">
+			<span>Típus:</span>
+		</label>
+		<div class="mb-3">
+
+			<!-- Type -->
+			<input class="form-control d-inline-block bg-light text-center"
+						 id="type"
+						 name="type" 
+						 type="text"
+						 style="max-width:50px;"
+						 spellcheck="false" 
+						 autocomplete="off"
+						 maxlength="1"
+						 ng-model="model.profile.type"
+						 ng-init="model.profile.type=$root.user.type"
+						 disabled>
+
+			<!-- Type name -->
+			<input class="form-control bg-light d-inline-block"
+						 id="type_name"
+						 name="type_name" 
+						 type="text"
+						 style="max-width:200px;"
+						 spellcheck="false" 
+						 autocomplete="off"
+						 ng-model="model.profile.type_name"
+						 ng-init="model.profile.type_name=$root.user.type_name"
+						 disabled>
+		</div>
+	</div>
+
+	<!-- Name -->
+	<div class="mb-3 col-12 col-sm-11 col-lg-9 col-xl-8">
+		<label for="proName" class="form-label">
+			<i class="fa-solid fa-star fa-2xs text-danger"></i>
+			<span>Név:</span>
+		</label>
+		<input class="form-control"
+					 id="proName"
+					 name="proName"
+					 placeholder="név"
+					 type="text"
+					 spellcheck="false" 
+					 autocomplete="off"
+					 maxlength="100"
+					 ng-model="model.profile.name"
+					 ng-init="model.profile.name=$root.user.name"
+					 required>
+	</div>
+
+	<!-- Born -->
+	<div class="mb-3 col-12 col-sm-11 col-lg-9 col-xl-8">
+		<label for="proBorn" class="form-label">
+			<i class="fa-solid fa-star fa-2xs text-danger"></i>
+			<span>Született:</span>
+		</label>
+		<input class="form-control"
+					 id="proBorn"
+					 name="proBorn"
+					 type="date"
+					 style="max-width:170px;"
+					 spellcheck="false" 
+					 autocomplete="off"
+					 max="{{helper.maxBorn}}"
+					 min="{{helper.minBorn}}"
+					 ng-model="model.profile.born"
+					 ng-init="model.profile.born=$root.user.born"
+					 required>
+	</div>
+
+	<!-- Gendern -->
+	<fieldset class="mb-3 col-12 col-sm-11 col-lg-9 col-xl-8">
+		<legend class="form-label fs-6">
+			<i class="fa-solid fa-star fa-2xs text-danger"></i>
+			<span>Neme:</span>
+		</legend>
+
+		<!-- Inpu/Label for female -->
+		<div class="form-check form-check-inline">
+			<input id="female"
+						 name="gender" 
+						 type="radio"
+						 value="F"
+						 class="form-check-input"
+						 ng-model="model.profile.gender" 
+						 required>
+			<label for="female" class="form-check-label">
+				nő
+			</label>
+		</div>
+
+		<!-- Inpu/Label for male -->
+		<div class="form-check form-check-inline">
+			<input id="male"
+						 name="gender"
+						 type="radio" 
+						 value="M"
+						 class="form-check-input"
+						 ng-model="model.profile.gender"
+						 ng-init="model.profile.gender=$root.user.gender" 
+						 required
+						 ng-check-mark>
+			<label for="male" class="form-check-label">
+				férfi
+			</label>
+		</div>
+	</fieldset>
+
+	<!-- Address -->
+	<div class="mb-3 col-12 col-sm-11 col-lg-9 col-xl-8">
+		<label for="address" class="form-label">
+			<span>Lakcím:</span>
+		</label>
+		<textarea class="form-control"
+							id="address"
+							name="address" 
+							placeholder="lakcím"
+							spellcheck="false" 
+							autocomplete="off"
+							rows="1"
+							ng-model="model.profile.address"
+							ng-init="model.profile.address=$root.user.address">
+		</textarea>
+	</div>
+
+	<!-- Phone -->
+	<div class="mb-3 col-12 col-sm-11 col-lg-9 col-xl-8">
+		<label for="country_code" class="form-label">
+			<span>Telefonszám:</span>
+		</label>
+		<div class="mb-3">
+
+			<!-- Country code -->
+			<span>+</span>
+			<input class="form-control d-inline-block mx-1"
+						 id="country_code"
+						 name="country_code" 
+						 type="text"
+						 placeholder="OH"
+						 style="max-width:60px;"
+						 spellcheck="false" 
+						 autocomplete="off"
+						 maxlength="3"
+						 ng-model="model.profile.country_code"
+						 ng-init="model.profile.country_code=$root.user.country_code"
+						 ng-pattern="/^$|^(?!(0))[0-9]{1,3}$/">
+
+			<!-- Phone -->
+			<input class="form-control d-inline-block"
+						 id="phone"
+						 name="phone" 
+						 type="text"
+						 placeholder="telefonszám"
+						 style="max-width:150px;"
+						 spellcheck="false" 
+						 autocomplete="off"
+						 maxlength="10"
+						 ng-model="model.profile.phone"
+						 ng-init="model.profile.phone=$root.user.phone"
+						 ng-pattern="/^$|^(?!(0))[0-9]{7,10}$/">
+		</div>
+	</div>
+
+	<!-- Buttons -->
+	<div class="text-center text-sm-end">
+
+		<!-- Accept button -->
+		<button data-key="profile" 
+						type="button" 
+						class="btn mx-1 mb-1 btn-primary"
+						style="min-width:120px;"
+						data-bs-dismiss="modal"
+						ng-disabled="profileForm.$invalid" 
+						ng-click="methods.accept($event)">
+			Módosít
+		</button>
+
+		<!-- Logout button -->
+		<button data-key="logout" 
+						type="button" 
+						class="btn mx-1 mb-1 btn-outline-danger"
+						style="min-width:120px;"
+						ng-click="methods.logout()">
+			Kijelenkezés
+		</button>
+
+		<!-- Cancel -->
+		<button type="button" 
+						class="btn mx-1 mb-1 btn-outline-secondary" 
+						style="min-width:120px;"
+						data-bs-dismiss="modal">
+			Mégsem
+		</button>
+	</div>  
+</form>

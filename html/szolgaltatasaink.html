@@ -1,0 +1,24 @@
+<div class="position1 container-fluid">
+    <div class="position2 row">
+        <div class="card" style="width: 400px; margin: 0 auto;">
+            <div class="card-body">
+                <h2 class="text-center mt-3">Szolgáltatásaink</h2>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-4 g-2" ng-controller="szolgaltatasainkController">
+            <div class="col" ng-repeat="service in data track by $index">
+                <div class="card mt-2">
+                    <img ng-src="./img/{{service.img}}.png" class="card-img-top" alt="{{service.title}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{service.title}}</h5>
+                    </div>
+
+                    <div class="card-footer">
+                        
+                        <a href="#" class="btn btn-dark" ng-click="loadServiceContent(service)">Tovább</a>
+                    </div>
+            </div>
+        </div>
+    </div> 
+</div>

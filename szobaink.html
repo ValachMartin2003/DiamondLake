@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/diamondlake.css">
+  <title>Főoldal</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <!-- Logo és szolgáltatások baloldalon -->
+      <a class="navbar-brand" href="fooldal.html">
+        <img src="img/Icon/logo_neve.png" alt="Logo" height="30" class="d-inline-block align-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="fooldal.html">Szállodánk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="szobaink.html">Szobáink</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Éttermünk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Szolgáltatások</a>
+          </li>
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Rendezvények
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Szabadulószoba</a></li>
+              <li><a class="dropdown-item" href="#">Esküvőszervezés</a></li>
+              <li><a class="dropdown-item" href="#">Családi események</a></li>
+            </ul>
+          </li> 
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Útbaigazítás
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Vendégtájékoztató</a></li>
+              <li><a class="dropdown-item" href="rolunk.html">Rólunk</a></li>
+              <li><a class="dropdown-item" href="elerhetosegek.html">Elérhetőség</a></li>
+              <li><a class="dropdown-item" href="#">Magunkról</a></li>
+              <li><a class="dropdown-item" href="#">Árak</a></li>
+            </ul>
+          </li> 
+        </ul>
+       
+         <!-- Keresőmező -->
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Keresés" aria-label="Keresés">
+        <button class="btn btn-outline-dark" type="submit">Keresés</button>
+      </form>
+        <!-- Belépés gomb/link -->
+        <button type="button" class="btn btn-outline-dark ms-auto" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Belépés
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login eleje -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+            <div style="width: 100%;">
+              <h5 class="modal-title mx-auto">Bejelentkezés</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <div class="modal-body">
+            <!-- Login form -->
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="inputEmail" class="form-label">Email cím</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email cím">
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword" class="form-label">Jelszó</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Jelszó">
+                </div>
+                <div class="text-center"> <!-- Tartalom középre igazítása -->
+                    <button type="submit" class="btn btn-dark">Belépés</button>
+                    <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#registerModal">Regisztráció</a>
+                </div>  
+            </form>
+        </div>
+        <hr class="divider">
+        <!-- Background color choices -->
+        <div class="mt-4 text-center">
+          <h5>Válassza ki a felső menűsor színét:</h5>
+          <hr class="divider">  
+          <div class="color-palette border-box" id="navbar-color-palette">
+            <div class="color-box" style="background-color: #c59362" onclick="changeNavbarColor('#c59362')"></div>
+            <div class="color-box" style="background-color: #a99c49ae" onclick="changeNavbarColor('#a99c49ae')"></div>
+            <div class="color-box" style="background-color: #9b9b9b" onclick="changeNavbarColor('#9b9b9b')"></div>
+            <div class="color-box" style="background-color: #F8F2E9" onclick="changeNavbarColor('#F8F2E9')"></div>
+          </div>
+        </div>
+<hr class="divider">
+
+<!-- Navbar color choices -->
+<div class="mt-4 text-center">
+  <h5>Válassza ki a háttérnek a színét:</h5>
+  <hr class="divider">  
+  <div class="color-palette border-box">
+    <div class="color-box" style="background-color: #c59362" onclick="changeBackgroundColor('#c59362')"></div>
+    <div class="color-box" style="background-color: #DFCBAC" onclick="changeBackgroundColor('#DFCBAC')"></div>
+    <div class="color-box" style="background-color: #fff" onclick="changeBackgroundColor('#fff')"></div>
+    <div class="color-box" style="background-color: #000000" onclick="changeBackgroundColor('#000000')"></div>
+    <div class="color-box" style="background-color: #FFE4C4" onclick="changeBackgroundColor('#FFE4C4')"></div>
+  </div>
+</div>
+
+
+<hr class="divider">
+
+<!-- Footer color choices -->
+<div class="mt-4 text-center">
+  <h5>Válassza ki a alsó menűsor színét:</h5>
+  <hr class="divider">
+  <div class="color-palette border-box" id="footer-color-palette">
+    <div class="color-box" style="background-color: #c59362" onclick="changeFooterColor('#c59362')"></div>
+    <div class="color-box" style="background-color: #a99c49ae" onclick="changeFooterColor('#a99c49ae')"></div>
+    <div class="color-box" style="background-color: #9b9b9b" onclick="changeFooterColor('#9b9b9b')"></div>
+    <div class="color-box" style="background-color: #F8F2E9" onclick="changeFooterColor('#F8F2E9')"></div>
+  </div>
+</div>
+<hr class="divider">
+      </div>
+    </div>
+  </div>
+  <!-- Login vege-->
+
+<!-- Itt kezdődik a tartalom -->
+
+
+<!-- Carousel -->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="img/recepciocarousel.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="margin-bottom: 10%;">
+          <h1 style=" text-transform: uppercase; font-weight: bold;font-style: italic;color: #000000;text-shadow: 3px 3px 2px #ddc77d,-11px 3px 22px rgba(127, 124, 71, 1);">
+            <span>Foglaljon</span>
+            <span>nálunk</span>
+            <span>szobát </span>
+            <span>bizalommal!</span>
+          </h1>
+          <button type="button" class="btn btn-warning btn-lg foglalas" style="color:black; border-radius: 5px;border: solid 2px black;">Foglalás</button>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="img/etterem/etterem6atmeretezettblur.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="margin-bottom: 10%;">
+          
+          <h1 style=" text-transform: uppercase; font-weight: bold;font-style: italic;color: #000000;text-shadow: 3px 3px 2px rgb(221, 199, 125),-11px 3px 22px rgba(127, 124, 71, 1);">
+            <span>A</span>
+            <span>szálloda</span>
+            <span>éttermében</span>
+            <br>
+            <span>első</span>
+            <span>osztályú</span>
+            <span>ételeket</span>
+            <span>kínálunk!</span>
+          </h1>
+          <button type="button" class="btn btn-warning btn-lg megnezetterem" style="border-radius: 5px;border: solid 2px black;color:#000000">Megnézem az éttermet</button>
+        </div>
+      </div>
+
+      
+
+      <div class="carousel-item">
+        <img src="img/szobaink/szoba6.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="margin-bottom: 10%;">
+          
+          <h1 style=" text-transform: uppercase; font-weight: bold;font-style: italic;color: #000000;text-shadow: 3px 3px 2px rgb(221, 199, 125),-11px 3px 22px rgba(127, 124, 71, 1);">
+            <span>Szobáink</span>
+            <span>megnyugvást </span>
+            <span>nyújtanak,</span>
+            <br>
+            <span>helyezze</span>
+            <span>magát</span>
+            <span>nálunk</span>
+            <span>kényelembe!</span>
+          </h1>
+            <button type="button" class="btn btn-warning btn-lg" style="border-radius: 5px;border: solid 2px black;">Megnézem az szobákat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1 style="font-weight:bold ;font-style:italic;text-align:center;">Szobák</h1>
+  <div >
+    <ul>
+      <li>
+        Nagyvonalú szállodánk 35 szobával rendelkezik,melyek közül több típusból is választhat-Standard,Superior,Deluxe,
+        <br>melyekre nagy hangsúlyt fektetünk elegancia,kényelem és a mai világhoz tartozó modernitás terén is.
+      </li>
+
+      <li>Deluxe kategóriás szobáinkban kád található. Családos vendégeink részére néhány szobánk felnőtt-, gyermek- 
+        és babaággyal pótágyazható. <br> A szobaár magába foglalja a wellness-, fitness szolgáltatások használatát, parkolóhelyet.
+      </li>
+
+      
+
+      <li>
+        Szállodánkban és 5 méteres körzetében tilos a dohányzás,figyelünk a vendégeink és a saját egészségünkre.
+      </li>
+
+      <li>
+        Rendelkezünk 2 akadálymentesített szobával is.
+      </li>
+
+      <li>
+        Szobáink lifttel és lépcsőn is kényelmesen megközelíthetőek.
+      </li>
+    </ul>
+  </div>
+  
+  <!--szobáink/ikonok-->
+    <div class="icons row d-flex justify-content-around mb-5">
+        <div class="col-4 col-md-auto d-flex flex-column">
+          <div class='hajszarito text-center'>
+            <img src="img/ikonok/hajszarito/hajszarito2.png" alt="Hajszárító" title="Hajszárító" class="iconitem img-fluid">
+            <p>Hajszárító</p>
+          </div>
+        </div>
+
+        <div class="col-4 col-md-auto d-flex flex-column">
+            <div class="lcdtv text-center">
+              <img src="img/ikonok/lcdtv/tvgradient1.png" alt="LCD TV" title="LCD TV" class="iconitem img-fluid">
+              <p>LCD TV</p>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-auto d-flex flex-column">
+            <div class="wifi text-center">
+              <img src="img/ikonok/wifi/wifigradient.png" alt="Wifi" title="Wifi" class="iconitem img-fluid">
+              <p>Wifi</p>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-auto d-flex flex-column">
+            <div class="telefon text-center">
+              <img src="img/ikonok/telefon/telefongradient2.png" alt="Telefon" title="Telefon" class="iconitem img-fluid">
+              <p>Telefon</p>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-auto d-flex flex-column">
+            <div class="minibar text-center">
+              <img src="img/ikonok/minibar/minibargradient2.png" alt="Minibár" title="Minibár" class="iconitem img-fluid">
+              <p>Minibár</p>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-auto d-flex flex-column">
+            <div class="szef text-center">
+              <img src="img/ikonok/szef/szefgradient2.png" alt="Széf" title="Széf" class="iconitem img-fluid">
+              <p>Széf</p>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-auto d-flex flex-column">
+            <div class="legkondicionalo text-center">
+              <img src="img/ikonok/legkondi/legkondi5.png" alt="Légkondicionáló" title="Légkondicionáló" class="iconitem img-fluid">
+              <p>Légkondicionáló</p>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-auto d-flex flex-column">
+            <div class="potagy text-center">
+              <img src="img/ikonok/potagy/potagygradient1.png" alt="Pótágy" title="Pótágy" class="iconitem img-fluid">
+              <p>Pótágy</p>
+            </div>
+        </div>
+
+        <div class="col-4 col-md-auto d-flex flex-column">
+            <div class="szobaszerviz text-center">
+              <img src="img/ikonok/szobaszerviz/szobaszervizgradient1.png" alt="Szobaszervíz" title="Szobaszervíz" class="iconitem img-fluid">
+              <p>Szobaszervíz</p>
+            </div>
+        </div>
+    </div>
+
+    <!--
+      <div>
+      <div class="card szobacard">
+        <img src="img/szobaink/vasagy.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="font-style:italic;text-transform: uppercase;">Standard szoba</h5>
+          <p class="card-text" style="font-weight:bold;">Ágy típusa: vaságy</p>
+          <p class="card-text" style="font-weight:bold;">Férőhelyek: 1</p>
+          <p class="card-text" style="font-weight:bold;">Világítás: gyufa</p>
+          <p class="card-text" style="font-weight:bold;">Vakolat: nincs</p>
+
+
+          <a href="#" class="btn btn-primary">Megnézem a szobát</a>
+        </div>
+      </div>
+
+      
+    </div>
+    -->
+    
+      
+    <!--szobak carousel-->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/szobaink/szoba2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="carouselstandardszoba">Standard szoba</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/szobaink/szoba1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Deluxe szoba</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/szobaink/szoba1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Deluxe+ szoba</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+<!--szobak-->
+
+
+<div class="position1 container">
+  <h1>Legjobb</h1>
+  <div class="position2 row">
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="img/Szoba/lakosztaly1.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Cím 1</h5>
+              <p class="card-text">Tágas minden jó és szép stb...</p>
+              <button type="button" class="btn btn-secondary btn-lg btn-block">Nézd meg</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="img/Szoba/lakosztaly2.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Cím 2</h5>
+              <p class="card-text">Leírás 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="img/Szoba/lakosztaly2.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Cím 3</h5>
+              <p class="card-text">Leírás 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="img/Szoba/lakosztaly4.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Cím 4</h5>
+              <p class="card-text">Leírás 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="img/Szoba/lakosztaly5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Cím 5</h5>
+              <p class="card-text">Leírás 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="img/Szoba/lakosztaly5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Cím 6</h5>
+              <p class="card-text">Leírás 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="img/Szoba/lakosztaly5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Cím 7</h5>
+              <p class="card-text">Leírás 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="img/Szoba/lakosztaly5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Cím 8</h5>
+              <p class="card-text">Leírás 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="img/Szoba/lakosztaly5.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">Cím 9</h5>
+              <p class="card-text">Leírás 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+  </div>
+</div>
+
+
+
+
+
+
+
+  <!-- Footer eleje -->
+  <footer class="footer mt-5" id="footer">
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <div class="me-5 d-none d-lg-block">
+          <span>Csatlakozz hozzánk könnyedén a közösségi oldalainkon!:</span>
+        </div>   
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i><img src="img/Icon/facebook.png" class="iconm"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i><img src="img/Icon/instagram.png" class="iconm"></i>
+          </a>
+        </div>
+       
+      </section>
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+        
+          <div class="row mt-3">
+           
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              
+              <h6 class="text-uppercase fw-bold mb-4 d-flex align-items-start">
+                
+                  <img src="LogoNeve.png" alt="Logo" class="navbar-brand img-fluid me-3 ms-0"> 
+              </h6>
+              <p>
+                "Éljen át egy felejthetetlen tartózkodást nálunk. Fedezze fel belső harmóniáját,
+                 és bízza ránk a többit! Mindössze egy kattintásnyira van a tökéletes pihenéstől.
+                 Várjuk Önt a Diamond Lake Wellness Szállodában,
+                 ahol a nyugalom és kényelem találkozik az emlékezetes élményekkel."
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                Oldalaink
+              </h6>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Szállodánk</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Szobáink</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Éttermünk</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Szolgáltatások</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                Lehetőségeink
+              </h6>
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Rendezvények
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Szabadulószoba</a></li>
+                    <li><a class="dropdown-item" href="#">Esküvőszervezés</a></li>
+                    <li><a class="dropdown-item" href="#">Családi események</a></li>
+                  </ul>
+                </li> 
+      
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Útbaigazítás
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Vendégtájékoztató</a></li>
+                    <li><a class="dropdown-item" href="#">Elérhetőség</a></li>
+                    <li><a class="dropdown-item" href="#">Magunkról</a></li>
+                    <li><a class="dropdown-item" href="#">Árak</a></li>
+                  </ul>
+                </li> 
+              </ul>
+             
+              
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Kapcsolat</h6>
+              <p><i class=""></i>Diamondlake,mako,6900</p>
+              <p>
+                <i class=""></i>
+                diamondlakewellness@gmail.com
+              </p>
+              <p><i class=""></i> + 01 234 567 88</p>
+            </div>
+          </div>
+        </div>
+      </section>    
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Minden jog fenntartva.
+        |<a class="text-reset fw-bold" href="">Diamond Lake Wellness Szálloda</a>|
+      </div>
+    </footer>
+    <!-- footer vege -->
+
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap" async defer></script>
+  <script src="diamond.js"></script>
+  <script src="szobainkcarousel.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Great+Vibes&family=Handjet&family=Vidaloka&family=Zeyada&display=swap');
+
+.betutipus{
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+
+body {
+    transition: background-color 0.5s ease; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #000000;
+  }
+  .color-palette {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .color-box {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  /*....*/
+  .navbar,
+  .footer {
+    background-color: #f8f2e9;
+  }
+  .navbar,
+  .footer a {
+    color: #333;
+  }
+  /*....*/
+  .footer {
+    position: none;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 30px;
+  }
+
+  .navbar-right-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-right-container>*:not(:last-child) {
+    margin-right: 15px;
+  }
+  .navbar .btn {
+  margin-right: 10px;
+}
+.divider {
+border: none;
+border-top: 1px solid #ccc; 
+margin: 20px 0; 
+}
+.color-box{border: #000000 1px solid; border-radius: 5px;}
+.navbar-brand{border: #000000 1px solid; border-radius: 5px; background-color: #525252; margin-left: 10px; }
+
+
+/* Középre igazítás kicsi nézetre */
+@media (max-width: 991.98px) {
+#navbarNav {
+  justify-content: center;
+}
+.navbar-nav {
+  text-align: center;
+}
+.navbar-nav .nav-item {
+  display: inline-block;
+}
+}
+
+/* Reszponzív stílusok */
+@media (max-width: 575.98px) {
+.navbar-brand {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  text-align: center;
+}
+.navbar-toggler {
+  margin-left: auto;
+}
+}
+
+.iconm{width: 50px;}
+
+.position1{
+  padding: 20px;
+}
+.position2{
+  padding: 20px;
+}
+
+.card-body-container {
+max-height: 454px; 
+overflow: auto;
+}
+.info-box {
+
+height: 230px; 
+}
+.card-body1{  height: 200px; }
+
+
+/*-----carousel------*/
+.carousel-item {
+  height: 600px;
+  animation-duration: 6ms;
+ 
+  border-bottom: black 4px solid;
+}
+
+
+.carousel-item img {
+  object-fit: cover; /* hogy a képek kitöltsék a Carousel teljes terét */
+  height: 100%;
+  width: 100%;
+}
+
+h1{
+  font-family: 'Muli', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+/*carousel szöveganimáció*/
+
+span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 1s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 1s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+  animation: fade-in 1s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+  animation: fade-in 1s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+  animation: fade-in 1s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+  animation: fade-in 1s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+  animation: fade-in 1s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+  animation: fade-in 1s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+  animation: fade-in 1s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+  animation: fade-in 1s 0.10s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.img-hover-zoom--blur img {
+  transition: transform 1s, filter 2s ease-in-out;
+  filter: blur(2px);
+  transform: scale(1.2);
+}
+
+/* The Transformation */
+.img-hover-zoom--blur:hover img {
+  filter: blur(0);
+  transform: scale(1);
+}
+
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.image-box {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+.image-box img {
+  max-width: 100%;
+  transition: all 0.7s;
+  display: block;
+  width: auto;
+  height: auto;
+  transform: scale(1);
+}
+
+.image-box:hover img {
+  transform: scale(1.1);
+}
+
+.mycontainer {
+  display: flex;
+  
+  margin-left: 65%;
+  float: top;
+  text-align: center;
+}
+.mycontainer > div {
+  width:30%;
+}
+
+.icon-container {
+  margin-right: 10px; /* Adj megfelelő margót az ikonok között */
+}
+
+.ikon{
+  height: 150px;
+  width: 150px;
+}
+
+.leirasigazit{
+  text-align:center;
+ 
+  list-style-type: none;
+}
+
+.iconitem{
+  width: 100px;
+  height: 100px;
+}
+.icons p{
+  color:peru;
+  opacity: 1;
+  visibility: hidden;
+}
+/*...*/
+.hajszarito:hover p,
+.lcdtv:hover p,
+.telefon:hover p,
+.wifi:hover p,
+.minibar:hover p,
+.szef:hover p,
+.legkondicionalo:hover p,
+.potagy:hover p,
+.szobaszerviz:hover p {
+  visibility: visible;
+}
+/*...*/
+
+
+/* Csúszka */
+::-webkit-scrollbar {
+  width: 5px; /* Vekonyitas*/
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Görgetési sáv háttere */
+}
+::-webkit-scrollbar-thumb {
+  background: #888; /* Csúszka színe */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Aktív csúszka színe, amikor ráviszük*/
+}
+/* Csúszka vege */
+
+.box {
+  background-color: white;
+  border-radius: 5px;
+}
+.kepgaleria{
+  width: 500px;
+}
+.small-image {
+  max-width: 200px; 
+  height: auto; 
+}

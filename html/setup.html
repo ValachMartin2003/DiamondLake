@@ -1,0 +1,148 @@
+<!-- Modal -->
+<div class="modal fade" 
+		 id="setupModal" 
+		 tabindex="-1" 
+		 role="dialog"
+		 data-bs-backdrop="static" 
+		 data-bs-keyboard="false"
+		 aria-labelledby="setupModalLabel"
+		 aria-hidden="true">
+
+	<!-- Modal dialog -->
+	<div class="modal-dialog modal-lg modal-dialog-scrollable" 
+			 role="document">
+		<div class="modal-content">
+
+			<!-- Header -->
+			<div class="modal-header text-center py-2">
+				<div class="w-100">
+					<h4 class="modal-title mx-auto">
+						<i class="fa-solid me-1" 
+							 ng-class="helper.tabButtons[helper.tabPointer].icon"></i>
+						<span class="text-capitalize text-small-caps">
+							{{helper.tabButtons[helper.tabPointer].name}}
+						</span>
+					</h4>
+				</div>
+
+				<!-- Close button -->
+				<button type="button" 
+								class="btn-close me-1" 
+								data-bs-dismiss="modal" 
+								aria-label="Close">
+				</button>
+			</div>
+
+			<!-- Body -->
+			<div class="modal-body">
+
+				<!-- Tab buttons -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="nav-item" 
+							role="presentation"
+							ng-repeat="x in helper.tabButtons track by $index"
+							ng-if="x.condition === null ||
+										(x.condition === 1 && !$root.user.id) ||
+										(x.condition === 2 &&  $root.user.id)">
+						<a class="nav-link"
+							 ng-class="$index === helper.tabPointer ? 'active': ''"
+							 id="tab-btn-{{x.id}}" 
+							 data-bs-toggle="tab" 
+							 href="#tabpanel-{{x.id}}" 
+							 role="tab" 
+							 aria-controls="tabpanel-{{x.id}}"
+							 ng-aria-selected="{{$index === helper.tabPointer}}"
+							 data-tab-pointer="{{$index}}"
+							 ng-click="methods.tabClicked($event)">
+							{{x.name}}
+						</a>
+					</li>
+				</ul>
+
+				<!-- Tab panels -->
+				<div id="tab-content"
+						 class="tab-content pt-3">
+
+					<!-- Login panel -->
+					<div class="tab-pane active"
+							 id="tabpanel-login" 
+							 role="tabpanel" 
+							 aria-labelledby="tab-btn-login"
+							 ng-include src="'./html/login.html'"
+							 ng-if="!$root.user.id">
+					</div>
+
+					<!-- Registration panel -->
+					<div class="tab-pane"
+							 id="tabpanel-register" 
+							 role="tabpanel" 
+							 aria-labelledby="tab-btn-register"
+							 ng-include src="'./html/register.html'"
+							 ng-if="!$root.user.id">
+					</div>
+
+					<!-- Profile panel -->
+					<div class="tab-pane"
+							 id="tabpanel-profile" 
+							 role="tabpanel" 
+							 aria-labelledby="tab-btn-profile"
+							 ng-include src="'./html/profile.html'"
+							 ng-if="$root.user.id">
+					</div>
+
+					<!-- Chang password panel -->
+					<div class="tab-pane"
+							 id="tabpanel-password" 
+							 role="tabpanel" 
+							 aria-labelledby="tab-btn-password"
+							 ng-include src="'./html/password.html'"
+							 ng-if="$root.user.id">
+					</div>
+
+					<!-- Setup panel -->
+					<div class="tab-pane"
+							 id="tabpanel-setup" 
+							 role="tabpanel" 
+							 aria-labelledby="tab-btn-setup">
+						
+						<!-- Background color choices -->
+						<div class="mt-4 text-center"
+								 ng-repeat="palette in helper.palettes track by $index">
+							<h5>{{palette.title}}:</h5>
+							<hr class="divider">  
+						 	<div class="color-palette border-box" 
+									 data-palette-id="{{palette.id}}">
+								<div class="color-box" 
+										 ng-repeat="color in palette.colors track by $index"
+										 ng-style="{'backgroundColor':(color)}"
+										 ng-click="methods.changeColor($event, color)">
+								</div>
+							</div>
+							<hr class="divider">
+						</div>
+
+						<!-- Buttons -->
+						<div class="text-center">
+
+							<!-- Cancel -->
+							<button type="button" 
+											class="btn mx-1 mb-1 btn-secondary"
+											style="min-width:120px;" 
+											data-bs-dismiss="modal">
+								Kilép
+							</button>
+
+							<!-- Reset colors to default -->
+							<button type="button" 
+											class="btn mx-1 mb-1 btn-outline-danger"
+											style="min-width:120px;" 
+											ng-click="methods.resetColors()">
+								Visszaállít
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
