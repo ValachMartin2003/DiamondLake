@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Feb 28. 10:43
+-- Létrehozás ideje: 2024. Már 13. 12:22
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -48,6 +48,31 @@ CREATE TABLE `events_item` (
   `price` int(10) NOT NULL,
   `person_number` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `programok`
+--
+
+CREATE TABLE `programok` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `img` varchar(50) NOT NULL,
+  `expiration` datetime NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- A tábla adatainak kiíratása `programok`
+--
+
+INSERT INTO `programok` (`id`, `name`, `img`, `expiration`, `description`) VALUES
+(1, 'Családi nap', 'csaladinap.png', '2024-06-22 10:00:00', 'A Diamond Lake Wellness szálloda különleges gyereknap programokat kínál, amelyek izgalmas és szórakoztató élményeket nyújtanak a kicsiknek és nagyoknak egyaránt. A rendezvények között szerepelhetnek vidám családi játékok, kreatív műhelyek és akár családi sportversenyek is, hogy mindenki jól szórakozzon és emlékezetes pillanatokkal gazdagodjon a szálloda vendégei között.'),
+(2, 'Nyári buli', 'Nyaribuli.png', '2024-07-05 21:00:00', 'Nyári BULI'),
+(3, 'Szabaduló szoba', 'Szabaduloszoba.png', '2024-09-17 13:00:00', 'Szabaduló szoba'),
+(4, 'Valentínnap', 'Valentinnap.png', '2024-02-14 00:00:00', 'Valentín'),
+(5, 'Husvét', 'Husvet.png', '2024-03-31 00:00:00', 'Husvét');
 
 -- --------------------------------------------------------
 
@@ -165,6 +190,12 @@ ALTER TABLE `events_item`
   ADD KEY `room_id` (`room_id`);
 
 --
+-- A tábla indexei `programok`
+--
+ALTER TABLE `programok`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A tábla indexei `room`
 --
 ALTER TABLE `room`
@@ -193,6 +224,12 @@ ALTER TABLE `users`
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
+
+--
+-- AUTO_INCREMENT a táblához `programok`
+--
+ALTER TABLE `programok`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT a táblához `users`
