@@ -481,28 +481,116 @@
 	// Esemény controller
 	.controller('esemenyController', [
 		'$scope',
-	 	'$timeout',
+		'$interval',
 		'http',
-		function($scope, $timeout, http) {
-			http.request('./php/programok.php')
-			.then(response => {
-				for (let i=0; i< response.future.length; i++) {
-					response.future[i].days = "55";
-					response.future[i].hours = "55";
-					response.future[i].minutes = "55";
-					response.future[i].seconds = "55";
-				}
-				$scope.data = response;
-				$scope.$applyAsync();
-			});
+		function($scope, $interval, http) {
 
-			$scope.description = (evemt) => {
-				let element = evemt.currentTarget,
-						key 		= element.getAttribute('key'),
-						index 	= parseInt(element.getAttribute('index'));
-				$scope.description = $scope.data[key][index].description;
-				$scope.$applyAsync();
+			// Conntstants
+			const MILLISECOND 	= 1000,
+						MINUTE 				= MILLISECOND * 60,
+						HOUR 					= MINUTE * 60,
+						DAY 					= HOUR * 24;
+
+			// Set methods
+			let methods = {
+
+				// Initialize
+				init: () => {
+
+					// Set interval identifier
+					$scope.intervalID = null;
+
+					// Get programmes
+					methods.get().then(() => {
+
+						// Calculate
+						methods.calculate();
+
+						// Set interval
+						$scope.intervalID = $interval(() => {
+
+							// Calculate again, and again
+							methods.calculate();
+						}, 1000);
+					});
+
+					// Set events
+					methods.events();
+				},
+
+				// Get 
+				get: () => {
+
+					// Create new promise
+					return new Promise((resolve, reject) => {
+
+						// Get programmes
+						http.request('./php/programok.php')
+						.then(response => {
+							$scope.data = response;
+							resolve();
+						});
+					});
+				},
+
+				// Events
+				events: () => {
+
+					// Scope destroy event
+					$scope.$on('$destroy', function () {
+						if ($scope.intervalID) {
+							$interval.cancel($scope.intervalID);
+							$scope.intervalID = null;
+						}
+					});
+				},
+
+				// Calculate
+				calculate: () => {
+					if ($scope.data.future.length) {
+						let currentTime = moment().toDate().getTime(),
+								removeItems = [];
+						for (let i=0; i < $scope.data.future.length; i++) {
+							let expireTime	= moment($scope.data.future[i].expiration).toDate().getTime(),
+									distance 		= expireTime - currentTime;
+							if (distance > 0) {
+								$scope.data.future[i].days = Math.floor(distance / (DAY)).toString().padStart(2, '0');
+								$scope.data.future[i].hours = Math.floor((distance % (DAY)) / (HOUR)).toString().padStart(2, '0');
+								$scope.data.future[i].minutes = Math.floor((distance % (HOUR)) / (MINUTE)).toString().padStart(2, '0');
+								$scope.data.future[i].seconds = Math.floor((distance % (MINUTE)) / MILLISECOND).toString().padStart(2, '0');
+							} else {
+								removeItems.push(i);
+							}
+						}
+						if (removeItems.length) {
+							for (let i=0; i < removeItems.length; i++) {
+								$scope.data.past.push($scope.data.future[removeItems[i]]);
+								$scope.data.future.splice(removeItems[i], 1);
+							}
+						}
+						$scope.$applyAsync();
+					} else if ($scope.intervalID) {
+						$interval.cancel($scope.intervalID);
+						$scope.intervalID = null;
+					}
+				}
 			};
+
+			// Set scope methods
+			$scope.methods = {
+
+				// Display program description
+				description: (evemt) => {
+					let element = evemt.currentTarget,
+							key 		= element.getAttribute('key'),
+							index 	= parseInt(element.getAttribute('index'));
+					$scope.description = $scope.data[key][index].description;
+					$scope.$applyAsync();
+				}
+			};
+
+			// Initialize
+			methods.init();
 	 	}
 	])
 
