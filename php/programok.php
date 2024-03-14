@@ -26,6 +26,9 @@ $query ="SELECT `name`,
 // Execute query
 $result['future'] = $db->execute($query, array($currDateTime));
 
+// Check result
+if (is_null($result['future'])) $result['future'] = array();
+
 // Set query
 $query ="SELECT `name`, 
 								`img`, 
@@ -37,6 +40,9 @@ $query ="SELECT `name`,
 
 // Execute query
 $result['past'] = $db->execute($query, array($currDateTime));
+
+// Check result
+if (is_null($result['past'])) $result['past'] = array();
 
 // Close connection
 $db = null;
