@@ -69,7 +69,7 @@ margin: 20px 0;
 
 
 /* Középre igazítás kicsi nézetre 991.98px */
-@media (max-width: 1412.919px) {
+@media (max-width: 1452.827px) {
 #navbarNav {
   justify-content: center;
 }
@@ -81,8 +81,8 @@ margin: 20px 0;
 }
 }
 
-/* Reszponzív stílusok 575.98px*/
-@media (max-width: 1315.919px) {
+/* Reszponzív stílusok 575.827px*/
+@media (max-width: 1452.827px) {
 .navbar-brand {
   margin-right: auto;
   margin-left: auto;
@@ -311,6 +311,19 @@ span:nth-child(10) {
   height: auto; 
 }
 
-.szobainkleiras{
-  list-style:inside;
+
+.user-icon {
+  
+  width: 40px; /* méret */
+  height: none; /* méret */
+  line-height: 37px; /* középre igazítás */
+  text-align: center; /* középre igazítás */
+  border-radius: 5px; /* kerekítés */
+  background-color: lightgray;/* háttérszín */
+  color: #000000; /* ikon színe */
+  border: 1px solid black;
+}
+
+.no-caret::after {/*Eltávolítja a lenyíló nyílt*/
+  display: none !important;
 }

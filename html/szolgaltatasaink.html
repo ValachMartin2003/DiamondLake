@@ -15,9 +15,26 @@
                     </div>
 
                     <div class="card-footer">
+                       
+                        <!--<a ng-if="service.title !== 'Étterem'" ui-sref="" class="btn btn-dark">Bővebben...</a>-->
                         
-                        <a href="#" class="btn btn-dark" ng-click="loadServiceContent(service)">Bővebben...</a>
+                        <a ng-if="service.title === 'Wellness'" ui-sref="" class="btn btn-dark">Bővebben</a>
+                        <a ng-if="service.title === 'Medencék'" ui-sref="" class="btn btn-dark">Bővebben</a>
+
+                        <a ng-if="service.title === 'Szauna világ'" ui-sref="" class="btn btn-dark">Bővebben</a>
+                        <a ng-if="service.title === 'Konzolszoba'" ui-sref="consoleroom" class="btn btn-dark">Bővebben</a>
+
+                        <a ng-if="service.title === 'Étterem'" ui-sref="restaurant" class="btn btn-dark">Bővebben</a>
+                        <a ng-if="service.title === 'Bár'" ui-sref="" class="btn btn-dark">Bővebben</a>
+
+                        <a ng-if="service.title === 'Sportolási lehetőségeink'" ui-sref="" class="btn btn-dark">Bővebben</a>
+                        <a ng-if="service.title === 'Szórakozás'" ui-sref="" class="btn btn-dark">Bővebben</a>
+                    
                     </div>
+                   
+                 
+                    
+                    
             </div>
         </div>
     </div> 

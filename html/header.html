@@ -31,9 +31,6 @@
 					<a class="nav-link" ui-sref="rooms">Szobáink</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" ui-sref="restaurant">Éttermünk</a>
-				</li>
-				<li class="nav-item">
 					<a class="nav-link" ui-sref="szolgaltatasaink">Szolgáltatások</a>
 				</li>	 
 				<li class="nav-item dropdown">
@@ -47,7 +44,6 @@
 					</a>
 					<ul class="dropdown-menu" 
 							aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" ui-sref="consoleroom">Konzolszoba</a></li>
 						<li><a class="dropdown-item" ui-sref="wendings">Esküvőszervezés</a></li>
 						<li><a class="dropdown-item" ui-sref="esemeny">Jövőbeli és aktuális események</a></li>
 					</ul>
@@ -79,9 +75,10 @@
 							 name="search" 
 							 placeholder="Keresés" 
 							 aria-label="Keresés">
+							
 				<button class="btn btn-outline-dark" 
 								type="submit">
-					Keresés
+								<i class="fas fa-search"></i>
 				</button>
 			</form>
 
@@ -94,15 +91,35 @@
 				</button></a>
 			</div>
 			
-		
-			<!-- Belépés gomb/link -->
-			<button type="button" 
-							class="btn btn-outline-dark ms-auto" 
-							data-bs-toggle="modal" 
-							data-bs-target="#setupModal">
-				<span ng-if="!$root.user.id">Bejelentkezés</span>
-				<span ng-if="$root.user.id">Beállítások</span>
-			</button>
+			<ul class="navbar-nav ms-auto align-items-center">
+				<li class="nav-item dropdown" ng-if="$root.user.id">
+					<a class="nav-link dropdown-toggle no-caret" 
+					   href="#" 
+					   id="navbarDropdown" 
+					   role="button" 
+					   data-bs-toggle="dropdown"
+					   aria-expanded="false">
+						<i class="fas fa-user user-icon"></i> <!-- FontAwesome ikon megjelenítése -->
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li class="dropdown-item text-center">
+							<span class="d-inline">Üdvözöljük! 
+								 <span class="d-block">{{$root.user.name}}</span>
+							</span>
+						</li>
+					</ul>
+				</li> 
+				<li>
+					<button type="button" 
+									class="btn btn-outline-dark" 
+									data-bs-toggle="modal" 
+									data-bs-target="#setupModal">
+						<span ng-if="!$root.user.id">Bejelentkezés</span>
+						<span ng-if="$root.user.id">Beállítások</span>
+					</button>
+				</li>
+			</ul>
+			
 		</div>
 	</div>
 </nav>

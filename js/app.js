@@ -49,7 +49,6 @@
 				url: '/restaurant',
 				parent: 'root',
 				templateUrl: './html/etterem.html',
-				controller: 'EtteremController'
 			})
 			.state('wendings', {
 				url: '/wendings',
@@ -71,21 +70,18 @@
 				url: '/information',
 				parent: 'root',
 				templateUrl: './html/vendegtajekoztato.html',
-				controller: 'vendegtajekoztatoController'
 			})
 			
 			.state('obout_us', {
 				url: '/obout_us',
 				parent: 'root',
 				templateUrl: './html/rolunk.html',
-				controller: 'RolunkController'
 			})
 			
 			.state('elerhetoseg', {
 				url: '/elerhetoseg',
 				parent: 'root',
 				templateUrl: './html/elerhetoseg.html',
-				controller: 'elerhetosegController'
 			})
 			.state('szolgaltatasaink', {
 				url: '/szolgaltatasaink',
@@ -603,42 +599,6 @@
 			}
 		])	
 
-	// Rolunk controller		
-	.controller('RolunkController', [
-		'$scope',
-		function($scope) {
-			
-			}
-	    ])	
-
-	// Etterem controller
-	.controller('EtteremController', [
-		'$scope',
-		function($scope) {
-				
-			}
-		])		
-
-	
-    // Elérhetőség controller
-		.controller('elerhetosegController', [
-			'$scope',
-		   '$timeout',
-		function($scope, $timeout) {
-			
-		   }
-		])
-
-
-
-	// Vendegtajekoztato controller
-    .controller('vendegtajekoztatoController', [
-		'$scope',
-		   '$timeout',
-		function($scope, $timeout) {
-			
-		   }
-	   ])
 	   .controller('foglalasController', [
 		'$scope',
 		   '$timeout',
@@ -657,7 +617,6 @@
 			{img: 'kondi', title:'Sportolási lehetőségeink'},
 			{img: 'Disco', title:'Szórakozás'}
 		];
-		
 	}]);
 	
 	
