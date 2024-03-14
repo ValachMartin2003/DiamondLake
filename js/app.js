@@ -118,7 +118,7 @@
 	// Setup controller
   .controller('setupController', [
 		'$rootScope',
-    '$scope',
+        '$scope',
 		'$timeout',
 		'util',
 		'http',
