@@ -45,7 +45,7 @@ body {
   }
 
   .navbar-nav .nav-item {
-    margin-right: 30px;
+    margin-right: 18px;/*30px*/
   }
 
   .navbar-right-container {
@@ -68,8 +68,8 @@ margin: 20px 0;
 .navbar-brand{border: #000000 1px solid; border-radius: 5px; background-color: #525252; margin-left: 10px; }
 
 
-/* Középre igazítás kicsi nézetre */
-@media (max-width: 991.98px) {
+/* Középre igazítás kicsi nézetre 991.98px */
+@media (max-width: 1412.919px) {
 #navbarNav {
   justify-content: center;
 }
@@ -81,8 +81,8 @@ margin: 20px 0;
 }
 }
 
-/* Reszponzív stílusok */
-@media (max-width: 575.98px) {
+/* Reszponzív stílusok 575.98px*/
+@media (max-width: 1315.919px) {
 .navbar-brand {
   margin-right: auto;
   margin-left: auto;
