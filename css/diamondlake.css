@@ -310,3 +310,7 @@ span:nth-child(10) {
   max-width: 200px; 
   height: auto; 
 }
+
+.szobainkleiras{
+  list-style:inside;
+}
