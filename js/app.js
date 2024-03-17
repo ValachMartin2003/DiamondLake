@@ -94,8 +94,13 @@
 				parent: 'root',
 				templateUrl: './html/foglalas.html',
 				controller: 'foglalasController'
+			})
+
+			.state('sport', {
+				url: '/sport',
+				parent: 'root',
+				templateUrl: './html/sport.html',
 			});
-			
 			
       $urlRouterProvider.otherwise('/');
     }

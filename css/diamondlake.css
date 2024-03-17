@@ -68,7 +68,7 @@ margin: 20px 0;
 .navbar-brand{border: #000000 1px solid; border-radius: 5px; background-color: #525252; margin-left: 10px; }
 
 
-/* Középre igazítás kicsi nézetre 991.98px */
+/* Középre igazítás kicsi nézetre px */
 @media (max-width: 1452.827px) {
 #navbarNav {
   justify-content: center;
@@ -81,7 +81,7 @@ margin: 20px 0;
 }
 }
 
-/* Reszponzív stílusok 575.827px*/
+/* Reszponzív stílusok px*/
 @media (max-width: 1452.827px) {
 .navbar-brand {
   margin-right: auto;
@@ -306,11 +306,6 @@ span:nth-child(10) {
 .kepgaleria{
   width: 500px;
 }
-.small-image {
-  max-width: 200px; 
-  height: auto; 
-}
-
 
 .user-icon {
   
@@ -326,4 +321,51 @@ span:nth-child(10) {
 
 .no-caret::after {/*Eltávolítja a lenyíló nyílt*/
   display: none !important;
+}
+
+.custom-card {
+  border: 1px solid #ccc; /* Szegély */
+  border-radius: 5px; /* Kerekített sarkok */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék */
+  padding: 20px; /* Belső tér */
+  background-color: #fff; /* Háttérszín */
+  position: relative;
+}
+
+.custom-card .card-title {
+  font-size: 1.2rem; /* Címsor mérete */
+  font-weight: bold; /* Vastagság */
+}
+
+.custom-card .card-body {
+  color: #333; /* Szövegszín */
+}
+
+.custom-card img {
+  max-width: 100%; /* Képek maximális szélessége */
+  height: auto; /* Automatikus magasság */
+  border-radius: 5px; /* Kerekített sarkok */
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Átlátszó fekete háttér */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Kezdetben átlátszó, csak a hover hatásnál lesz látható */
+  transition: opacity 0.3s ease;
+}
+
+.custom-card:hover .image-overlay {
+  opacity: 1; /* Amikor a kártya fölé viszik az egeret, az overlay megjelenik */
+}
+
+.image-text {
+  color: white; /* A szöveg színe */
+  font-size: 24px; /* A szöveg mérete */
 }

@@ -82,16 +82,19 @@
 				</button>
 			</form>
 
-			<!-- Foglalás gomb/link -->
-			<div class="d-grid gap-2 col-2 mx-auto">
-				<a href="foglalas.html"><button class="btn btn-secondary border-3 border-dark" 
-								ng-disabled="!$root.user.id" 
+		   
+				<!-- Foglalás gomb/link -->
+				<div class="d-grid gap-2 col-2 mx-auto">
+					<a ui-sref="foglalas">
+						<button class="btn btn-secondary border-3 border-dark" 
+								ng-if="$root.user.id" 
 								type="button">
-					Szobafoglalás
-				</button></a>
-			</div>
+							Szobafoglalás
+						</button>
+					</a>
+				</div>
 			
-			<ul class="navbar-nav ms-auto align-items-center">
+		   <ul class="navbar-nav ms-auto align-items-center">
 				<li class="nav-item dropdown" ng-if="$root.user.id">
 					<a class="nav-link dropdown-toggle no-caret" 
 					   href="#" 

@@ -30,18 +30,18 @@
   <!--Reggeli és Vacsora-->
   <div class="position1 container-fluid">
       <div class="position2 row row-cols-1 row-cols-md-2 g-4">
-        
+       
           <div class="col">
-              <div class="card" data-bs-toggle="modal" data-bs-target="#kiflik">
+              <div class="custom-card" data-bs-toggle="modal" data-bs-target="#kiflik">
                 <img ng-src="img/etterem/reggeli.png" class="card-img-top" alt="Sajtos-vajas kiflik">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Sajtos-vajas kiflik</h5>
-                </div>
+                <div class="image-overlay">
+                  <span class="image-text">Sajtos-vajas kiflik</span>
+              </div>
               </div>
           </div>
           
           <div class="col">
-            <div class="card" data-bs-toggle="modal" data-bs-target="#svedasztal">
+            <div class="custom-card" data-bs-toggle="modal" data-bs-target="#svedasztal">
               <img ng-src="img/etterem/svedasztal.png" class="card-img-top" alt="Svédasztal">
               <div class="card-body">
                 <h5 class="card-title text-center">Svédasztal</h5>
@@ -50,7 +50,7 @@
           </div>
   
           <div class="col">
-            <div class="card" data-bs-toggle="modal" data-bs-target="#forrocsokik">
+            <div class="custom-card" data-bs-toggle="modal" data-bs-target="#forrocsokik">
               <img ng-src="img/etterem/orange.png" class="card-img-top" alt="Forró csoki választékaink">
               <div class="card-body">
                 <h5 class="card-title text-center">Forró csoki választékaink</h5>
@@ -59,7 +59,7 @@
           </div>
   
           <div class="col">
-            <div class="card" data-bs-toggle="modal" data-bs-target="#kavejaink">
+            <div class="custom-card" data-bs-toggle="modal" data-bs-target="#kavejaink">
               <img ng-src="img/etterem/coffee.png" class="card-img-top" alt="Kávéjaink">
               <div class="card-body">
                 <h5 class="card-title text-center">Kávéjaink</h5>
@@ -68,7 +68,7 @@
           </div>
   
           <div class="col">
-            <div class="card" data-bs-toggle="modal" data-bs-target="#drink">
+            <div class="custom-card" data-bs-toggle="modal" data-bs-target="#drink">
               <img ng-src="img/etterem/drink.png" class="card-img-top" alt="Hideg italok">
               <div class="card-body">
                 <h5 class="card-title text-center">Hideg italok</h5>
@@ -77,7 +77,7 @@
           </div>
   
           <div class="col">
-            <div class="card" data-bs-toggle="modal" data-bs-target="#dessert">
+            <div class="custom-card" data-bs-toggle="modal" data-bs-target="#dessert">
               <img ng-src="img/etterem/dessert.png" class="card-img-top" alt="Jégkása és fagylalt">
               <div class="card-body">
                 <h5 class="card-title text-center">Jégkása és fagylalt</h5>
@@ -93,30 +93,40 @@
   
   
   <!--[1]---modal-->
-  <div class="modal" id="kiflik" tabindex="-1">
-    <div class="modal-dialog modal-xl"> 
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Kiflik</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fulid">
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                  <div class="col">
-                    <img ng-src="img/etterem/kifli1.jpg" class="img-fluid rounded border-2 border border-dark" alt="Mákos">
-                  </div>
-               
-                  <div class="col">
-                    <img ng-src="img/etterem/kifli2.jpg" class="img-fluid rounded border-2 border border-dark" alt="Sajtos">
-                  </div>
+<div class="modal" id="kiflik" tabindex="-1">
+  <div class="modal-dialog modal-xl"> 
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Kiflik</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fulid">
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+              <div class="custom-card">
+                <img src="img/etterem/kifli1.jpg" class="img-fluid rounded image-hover" alt="Mákos">
+                <div class="image-overlay">
+                  <div class="image-text">Mákos Kifli</div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="custom-card">
+                <img src="img/etterem/kifli2.jpg" class="img-fluid rounded image-hover" alt="Sajtos">
+                <div class="image-overlay">
+                  <div class="image-text">Sajtos Kifli</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--[1]---modal-->
+</div>
+<!--[1]---modal-->
+
   
   <!--[2]---modal-->
   <div class="modal" id="svedasztal" tabindex="-1">
@@ -131,19 +141,25 @@
             <div class="row row-cols-1 row-cols-md-4 g-4">
   
                   <div class="col">
-                    <img ng-src="img/etterem/buffetbreakfast.png" class="img-fluid rounded border-2 border border-dark" alt="">
+                    <div class="custom-card">
+                      <img ng-src="img/etterem/buffetbreakfast.png" class="img-fluid rounded" alt="..">
+                      <div class="image-overlay">
+                        <div class="image-text">...</div>
+                      </div>
+                    </div>
+                   
                   </div>
   
                   <div class="col">
-                    <img ng-src="img/etterem/chesseplatter.png" class="img-fluid rounded border-2 border border-dark" alt="">
+                    <img ng-src="img/etterem/chesseplatter.png" class="img-fluid rounded" alt="">
                   </div>
   
                   <div class="col">
-                    <img ng-src="img/etterem/toastmuffin.jpg" class="img-fluid rounded border-2 border border-dark" alt="">
+                    <img ng-src="img/etterem/toastmuffin.jpg" class="img-fluid rounded" alt="">
                   </div>
   
                   <div class="col">
-                    <img ng-src="img/etterem/husok.jpg" class="img-fluid rounded border-2 border border-dark" alt="">
+                    <img ng-src="img/etterem/husok.jpg" class="img-fluid rounded" alt="">
                   </div>
   
             </div>
@@ -166,7 +182,7 @@
           <div class="container-fulid">
             <div class="row row-cols-1 row-cols-md-4 g-4">
                   <div class="col">
-                    <img ng-src="img/etterem/csoki1.jpg" class="img-fluid rounded border-2 border border-dark" alt="">
+                    <img ng-src="img/etterem/csoki1.jpg" class="img-fluid rounded" alt="">
                   </div>
             </div>
           </div>
@@ -188,19 +204,19 @@
           <div class="container-fulid">
             <div class="row row-cols-1 row-cols-md-4 g-4">
                   <div class="col">
-                    <img ng-src="img/etterem/fajta1.png" class="img-fluid rounded border-2 border border-dark" alt="Espresso">
+                    <img ng-src="img/etterem/fajta1.png" class="img-fluid rounded" alt="Espresso">
                   </div>
                
                   <div class="col">
-                    <img ng-src="img/etterem/fajta2.png" class="img-fluid rounded border-2 border border-dark" alt="Espresso Macchiato">
+                    <img ng-src="img/etterem/fajta2.png" class="img-fluid rounded" alt="Espresso Macchiato">
                   </div>
               
                   <div class="col">
-                    <img ng-src="img/etterem/fajta3.png" class="img-fluid rounded border-2 border border-dark" alt="Török kávé">
+                    <img ng-src="img/etterem/fajta3.png" class="img-fluid rounded" alt="Török kávé">
                   </div>
   
                   <div class="col">
-                    <img ng-src="img/etterem/fajta4.png" class="img-fluid rounded border-2 border border-dark" alt="Sötét Szerenád">
+                    <img ng-src="img/etterem/fajta4.png" class="img-fluid rounded" alt="Sötét Szerenád">
                   </div>
             </div>
           </div>
@@ -222,15 +238,15 @@
           <div class="container-fulid">
             <div class="row row-cols-1 row-cols-md-4 g-4">
                   <div class="col">
-                    <img ng-src="img/etterem/ital1.jpg" class="img-fluid rounded border-2 border border-dark" alt="">
+                    <img ng-src="img/etterem/ital1.jpg" class="img-fluid rounded" alt="">
                   </div>
                
                   <div class="col">
-                    <img ng-src="img/etterem/udito1.jpg" class="img-fluid rounded border-2 border border-dark" alt="">
+                    <img ng-src="img/etterem/udito1.jpg" class="img-fluid rounded" alt="">
                   </div>
               
                   <div class="col">
-                    <img ng-src="img/etterem/udito2.jpg" class="img-fluid rounded border-2 border border-dark" alt="">
+                    <img ng-src="img/etterem/udito2.jpg" class="img-fluid rounded" alt="">
                   </div>
             </div>
           </div>
@@ -252,13 +268,13 @@
           <div class="container-fulid">
             <div class="row row-cols-1 row-cols-md-4 g-4">
                   <div class="col">
-                    <img ng-src="img/etterem/icecream1.jpg" class="img-fluid rounded border-2 border border-dark" alt="Fagylalt tálban">
+                    <img ng-src="img/etterem/icecream1.jpg" class="img-fluid rounded" alt="Fagylalt tálban">
                   </div>
                   <div class="col">
-                    <img ng-src="img/etterem/icecream2.jpg" class="img-fluid rounded border-2 border border-dark" alt="Fagylalt kehelyben">
+                    <img ng-src="img/etterem/icecream2.jpg" class="img-fluid rounded" alt="Fagylalt kehelyben">
                   </div>
                   <div class="col">
-                    <img ng-src="img/etterem/dessert.png" class="img-fluid rounded border-2 border border-dark" alt="Jégkása">
+                    <img ng-src="img/etterem/dessert.png" class="img-fluid rounded" alt="Jégkása">
                   </div>
             </div>
           </div>
