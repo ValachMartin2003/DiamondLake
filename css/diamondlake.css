@@ -129,9 +129,7 @@ height: 230px;
   width: 100%;
 }
 
-h1{
-  font-family: 'Muli', sans-serif;
-}
+
 
 * {
   padding: 0;
@@ -372,6 +370,9 @@ span:nth-child(10) {
 
 .elsokozerdeku{
   background-color:peachpuff;
-  
 }
 
+.leirasigazit{
+  list-style:outside;
+  list-style-position: inside;
+}
