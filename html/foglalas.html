@@ -26,24 +26,14 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="input_from">Gyerekek száma:</label>
-              <input type="number" class="form-control" min="0" max="3">
+              <input type="number" class="form-control" min="0" max="3"ng-model="bekapcsi">
             </div>
           </div>
-          <div class="form-check form-check-reverse">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+          <div class="form-check form-check-reverse"ng-show="bekapcsi">
+            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1" >
             <label class="form-check-label" for="reverseCheck1">
              Babaágy:
             </label>
-          </div>
-          <div class="dropdown mt-3">
-            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
           </div>
           <div class="col-12">
             <button type="submit" class="btn btn-dark">Foglalás küldése</button>
