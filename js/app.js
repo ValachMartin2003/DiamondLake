@@ -66,11 +66,6 @@
 				templateUrl: './html/esemeny.html',
 				controller: 'esemenyController'
 			})
-			.state('information', {
-				url: '/information',
-				parent: 'root',
-				templateUrl: './html/vendegtajekoztato.html',
-			})
 			
 			.state('obout_us', {
 				url: '/obout_us',
