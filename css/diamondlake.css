@@ -372,7 +372,14 @@ span:nth-child(10) {
   background-image:url("/img/etterem/etterem1.jpg");
 }
 
-.leirasigazit{
+
+
+.leirasigazit li {
+  background: linear-gradient(to right, #FFA500, #FFFF00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   list-style:outside;
   list-style-position: inside;
+  display: inline-block;
+  transition: background-color 0.3s ease; /* Átmenet hozzáadása a háttérszínhez */
 }
