@@ -263,7 +263,7 @@ span:nth-child(10) {
   height: 100px;
 }
 .icons p{
-  color:peru;
+  color:orangered;
   opacity: 1;
   visibility: hidden;
 }
@@ -374,12 +374,27 @@ span:nth-child(10) {
 
 
 
-.leirasigazit li {
-  background: linear-gradient(to right, #FFA500, #FFFF00);
+.leirasigazit li{
+  background: linear-gradient(to right, black, rgb(197, 53, 1), rgb(209, 115, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  list-style:outside;
-  list-style-position: inside;
-  display: inline-block;
+  transition: background-color 0.3s ease; /* Átmenet hozzáadása a háttérszínhez */
+  font-style: italic;
+}
+
+.szobainkh1{
+  background: linear-gradient(to right, black, rgb(197, 53, 1), rgb(209, 115, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-color 0.3s ease; /* Átmenet hozzáadása a háttérszínhez */
+  text-transform:uppercase;
+  font-style: italic;
+}
+
+.szobainkhr{
+  border-top: 1px solid red;
+  background: linear-gradient(to right, black, rgb(197, 53, 1), rgb(209, 115, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: background-color 0.3s ease; /* Átmenet hozzáadása a háttérszínhez */
 }
