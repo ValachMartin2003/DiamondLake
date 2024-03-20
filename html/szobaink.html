@@ -238,7 +238,6 @@
 
     <!--szobak-->
 
-
     <div class="position1 container">
     <h1 class="text-center">Foglalható szobáink listája</h1>
     <div class="position2 row">
@@ -247,13 +246,13 @@
         <div class="card mb-3">
           <div class="row g-0">
             <div class="col-md-5">
-              <img ng-src="img/Szoba/lakosztaly1.jpg" class="img-fluid rounded-start" alt="...">
+              <img ng-src="img/Szoba/lakosztaly1.jpg" class="img-fluid rounded-start" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="...">
             </div>
 
             <div class="col-md-7">
               <div class="card-body">
                 <h5 class="card-title">Cím 1</h5>
-                <p class="card-text">Tágas minden jó és szép stb...</p>
+                <p class="card-text">Tágas minden szép és jó stb...</p>
                 <button type="button" class="btn btn-secondary btn-lg btn-block">Megtekintem</button>
               </div>
             </div>
@@ -261,6 +260,25 @@
           </div>
         </div>
       </div>
+
+      <!--Első modal-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Deluxe szoba</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia vero quam dolores, voluptatibus enim itaque quisquam officia consequuntur doloremque explicabo tempora, temporibus possimus expedita sequi fuga ipsam numquam quia cumque.</p>
+
+              <!--Ide majd kerülni fog egy szobás carousel-->
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Első modal vége-->
 
       <div class="col-md-6">
         <div class="card mb-3">
