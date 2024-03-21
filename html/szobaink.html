@@ -245,15 +245,18 @@
       <div class="col-md-6">
         <div class="card mb-3">
           <div class="row g-0">
+
+            
+
             <div class="col-md-5">
-              <img ng-src="img/Szoba/lakosztaly1.jpg" class="img-fluid rounded-start" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="...">
+              <img ng-src="img/Szoba/lakosztaly1.jpg" class="img-fluid rounded-start" >
             </div>
 
             <div class="col-md-7">
               <div class="card-body">
                 <h5 class="card-title">Cím 1</h5>
-                <p class="card-text">Tágas minden szép és jó stb...</p>
-                <button type="button" class="btn btn-secondary btn-lg btn-block">Megtekintem</button>
+                <p class="card-text">Tágas,minden szép és jó stb...</p>
+                <button type="button" class="btn btn-secondary btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="...">Megtekintem</button>
               </div>
             </div>
 
@@ -263,18 +266,41 @@
 
       <!--Első modal-->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-centered modal-xl custom-modal">
           <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Deluxe szoba</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia vero quam dolores, voluptatibus enim itaque quisquam officia consequuntur doloremque explicabo tempora, temporibus possimus expedita sequi fuga ipsam numquam quia cumque.</p>
+              <div class="modal-header">
+                <h2 class="modal-title deluxeszobacim" id="exampleModalLabel">Deluxe szoba</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>A deluxe típusú szoba azoknak ajánlott akik prémium,de annal visszafogottabb környezetben szeretnének pihenni a párjukkal vagy akár egyedül. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro quibusdam eveniet eligendi aliquam qui, beatae incidunt vitae, consequatur, omnis nostrum praesentium commodi? Ut voluptatum cupiditate consequuntur a tempora odit laborum.</p>
+                <hr>
+                <h4 class="amikettartalmazaszobadeluxe">Amiket tartalmaz a szoba:</h4>
+                <ul>
+                  <li>kényelmes,puha ágy</li>
+                  <li>utcára nyíló ablakok</li>
+                  <li>erkély csodás kilátással</li>
+                  <li>kicsempézett fürdőszoba</li>
+                </ul>
+                <div class="img-wrapper">
+                  <img ng-src="img/Szoba/lakosztaly2atmeretezett.jpg" class="elsokep inner-img">
+                </div>
 
-              <!--Ide majd kerülni fog egy szobás carousel-->
-              
-            </div>
+                <div class="img-wrapper">
+                  <img ng-src="img/Szoba/lakosztaly3.jpg" class="masodikkep inner-img">
+                </div>
+
+                <div class="img-wrapper">
+                  <img ng-src="img/Szoba/lakosztaly4.jpg" class="harmadikkep inner-img">
+                </div>
+
+                <div class="img-wrapper">
+                  <img ng-src="img/Szoba/lakosztaly5.jpg" class="negyedikkep inner-img">
+                </div>
+
+                <!--Ide majd kerülni fog egy szobás carousel-->
+                
+              </div>
           </div>
         </div>
       </div>
