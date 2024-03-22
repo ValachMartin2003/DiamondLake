@@ -472,6 +472,7 @@ span:nth-child(10) {
 .deluxeszobacim{
   text-transform:uppercase;
   font-style: italic;
+  text-shadow: rgb(144, 144, 144) 1px 0 10px;
 }
 
 .inner-img {
