@@ -91,6 +91,11 @@
 				controller: 'foglalasController'
 			})
 
+			.state('bar', {
+				url: '/bar',
+				parent: 'root',
+				templateUrl: './html/bar.html',
+			})
 			.state('sport', {
 				url: '/sport',
 				parent: 'root',
