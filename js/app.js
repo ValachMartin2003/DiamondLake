@@ -91,7 +91,18 @@
 				controller: 'foglalasController'
 			})
 
-			
+			.state('barpult', {
+				url: '/barpult',
+				parent: 'root',
+				templateUrl: './html/barpult.html',
+			})
+
+			.state('diszkoparti', {
+				url: '/diszkoparti',
+				parent: 'root',
+				templateUrl: './html/diszkoparti.html',
+			})
+
 			.state('sport', {
 				url: '/sport',
 				parent: 'root',
