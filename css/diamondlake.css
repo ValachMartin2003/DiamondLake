@@ -451,4 +451,8 @@ span:nth-child(10) {
 
 }
 */
-
+.custom {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
