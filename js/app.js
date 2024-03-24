@@ -617,6 +617,8 @@
 		function($scope, $timeout) {
 		   }
 	   ])
+
+	 
 	
 	   .controller('szolgaltatasainkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 		$scope.data = [
