@@ -91,16 +91,16 @@
 				controller: 'foglalasController'
 			})
 
-			.state('barpult', {
-				url: '/barpult',
+			.state('barcounter', {
+				url: '/barcounter',
 				parent: 'root',
-				templateUrl: './html/barpult.html',
+				templateUrl: './html/barcounter.html',
 			})
 
-			.state('diszkoparti', {
-				url: '/diszkoparti',
+			.state('discoparty', {
+				url: '/discoparty',
 				parent: 'root',
-				templateUrl: './html/diszkoparti.html',
+				templateUrl: './html/discoparty.html',
 			})
 
 			.state('saunaworld', {
