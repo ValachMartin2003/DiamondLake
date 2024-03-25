@@ -91,6 +91,36 @@
 				controller: 'foglalasController'
 			})
 
+			.state('barpult', {
+				url: '/barpult',
+				parent: 'root',
+				templateUrl: './html/barpult.html',
+			})
+
+			.state('diszkoparti', {
+				url: '/diszkoparti',
+				parent: 'root',
+				templateUrl: './html/diszkoparti.html',
+			})
+
+			.state('saunaworld', {
+				url: '/saunaworld',
+				parent: 'root',
+				templateUrl: './html/saunaworld.html',
+			})
+			
+			.state('pools', {
+				url: '/pools',
+				parent: 'root',
+				templateUrl: './html/pools.html',
+			})
+
+			.state('wellness', {
+				url: '/wellness',
+				parent: 'root',
+				templateUrl: './html/wellness.html',
+			})
+
 			.state('sport', {
 				url: '/sport',
 				parent: 'root',
@@ -605,6 +635,8 @@
 		function($scope, $timeout) {
 		   }
 	   ])
+
+	 
 	
 	   .controller('szolgaltatasainkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 		$scope.data = [
