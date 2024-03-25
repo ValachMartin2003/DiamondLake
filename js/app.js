@@ -103,6 +103,24 @@
 				templateUrl: './html/diszkoparti.html',
 			})
 
+			.state('saunaworld', {
+				url: '/saunaworld',
+				parent: 'root',
+				templateUrl: './html/saunaworld.html',
+			})
+			
+			.state('pools', {
+				url: '/pools',
+				parent: 'root',
+				templateUrl: './html/pools.html',
+			})
+
+			.state('wellness', {
+				url: '/wellness',
+				parent: 'root',
+				templateUrl: './html/wellness.html',
+			})
+
 			.state('sport', {
 				url: '/sport',
 				parent: 'root',
