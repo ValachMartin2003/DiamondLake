@@ -194,6 +194,7 @@ span:nth-child(10) {
     filter: blur(0);
   }
 }
+/*carousel szöveganimáció vége*/
 
 .img-hover-zoom--blur img {
   transition: transform 1s, filter 2s ease-in-out;
@@ -470,7 +471,7 @@ span:nth-child(10) {
     0 10px 10px rgba(0,0,0,0.50);
 }
 
-.deluxeszobacim{
+.standardszobacim{
   text-transform:uppercase;
   font-style: italic;
   text-shadow: rgb(144, 144, 144) 1px 0 10px;
@@ -491,8 +492,11 @@ span:nth-child(10) {
 /*Deluxe szoba vége*/
 
 
-/*
-.amikettartalmazaszobadeluxe{
 
+.amikettartalmazaszobastandard{
+  text-transform: uppercase;
 }
-*/
+
+.foglalhatoszobakcim{
+  text-transform: uppercase;
+}
