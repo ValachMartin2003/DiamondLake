@@ -301,6 +301,7 @@ span:nth-child(10) {
   width: 500px;
 }
 
+/* user */
 .user-icon {
   
   width: 40px; /* méret */
@@ -316,7 +317,9 @@ span:nth-child(10) {
 .no-caret::after {/*Eltávolítja a lenyíló nyílt*/
   display: none !important;
 }
+/* user */
 
+/* Átlátszóság Étterem */
 .custom-card {
   border: 1px solid #ccc; /* Szegély */
   border-radius: 5px; /* Kerekített sarkok */
@@ -363,6 +366,7 @@ span:nth-child(10) {
   color: white; /* A szöveg színe */
   font-size: 24px; /* A szöveg mérete */
 }
+/* Átlátszóság Étterem */
 
 .elsokozerdeku{
   background-image:url("/img/etterem/etterem1.jpg");
