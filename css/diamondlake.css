@@ -424,64 +424,22 @@ span:nth-child(10) {
     0 10px 10px rgba(0,0,0,0.50);
 }
 
-.elsokep{
+.elsokep,.masodikkep,.harmadikkep,.negyedikkep{
   margin-bottom: 3%;
   border-radius: 1%;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
   transition: all 2s cubic-bezier(.25,.8,.25,1);
 }
 
-.elsokep:hover {
+.elsokep:hover,.masodikkep:hover,.harmadikkep:hover,.negyedikkep:hover {
   box-shadow: 
     0 14px 28px rgba(0,0,0,0.50), 
     0 10px 10px rgba(0,0,0,0.50), 
     0 10px 10px rgba(0,0,0,0.50), 
     0 10px 10px rgba(0,0,0,0.50);
 }
+/*Hover effektes szobák vége*/
 
-.masodikkep{
-  margin-bottom: 3%;
-  border-radius: 1%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
-  transition: all 2s cubic-bezier(.25,.8,.25,1);
-}
-
-.masodikkep:hover {
-  box-shadow: 
-    0 14px 28px rgba(0,0,0,0.50), 
-    0 10px 10px rgba(0,0,0,0.50), 
-    0 10px 10px rgba(0,0,0,0.50), 
-    0 10px 10px rgba(0,0,0,0.50);
-}
-
-.harmadikkep{
-  margin-bottom: 3%;
-  border-radius: 1%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
-  transition: all 2s cubic-bezier(.25,.8,.25,1);
-}
-
-.harmadikkep:hover {
-  box-shadow: 
-    0 14px 28px rgba(0,0,0,0.50), 
-    0 10px 10px rgba(0,0,0,0.50), 
-    0 10px 10px rgba(0,0,0,0.50), 
-    0 10px 10px rgba(0,0,0,0.50);
-}
-.negyedikkep{
-  margin-bottom: 3%;
-  border-radius: 1%;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
-  transition: all 2s cubic-bezier(.25,.8,.25,1);
-}
-
-.negyedikkep:hover {
-  box-shadow: 
-    0 14px 28px rgba(0,0,0,0.50), 
-    0 10px 10px rgba(0,0,0,0.50), 
-    0 10px 10px rgba(0,0,0,0.50), 
-    0 10px 10px rgba(0,0,0,0.50);
-}
 
 .standardszobacim{
   text-transform:uppercase;
