@@ -386,12 +386,8 @@ span:nth-child(10) {
   background: linear-gradient(to right, black, rgb(197, 53, 1), rgb(209, 115, 0));
   background-clip: text;
   color: transparent;
-  transition: background-color 0.3s ease; /* Átmenet hozzáadása a háttérszínhez */
-}
-
-.leirasigazit li,
-.szobainkh1 {
   font-style: italic;
+  transition: background-color 0.3s ease; /* Átmenet hozzáadása a háttérszínhez */
 }
 
 .szobainkh1 {
@@ -421,6 +417,21 @@ span:nth-child(10) {
 
 /* Hover effekt az összes képhez */
 .szobakepek:hover {
+  box-shadow: 
+    0 14px 28px rgba(0,0,0,0.50), 
+    0 10px 10px rgba(0,0,0,0.50), 
+    0 10px 10px rgba(0,0,0,0.50), 
+    0 10px 10px rgba(0,0,0,0.50);
+}
+
+.elsokep{
+  margin-bottom: 3%;
+  border-radius: 1%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
+  transition: all 2s cubic-bezier(.25,.8,.25,1);
+}
+
+.elsokep:hover {
   box-shadow: 
     0 14px 28px rgba(0,0,0,0.50), 
     0 10px 10px rgba(0,0,0,0.50), 
@@ -495,9 +506,7 @@ span:nth-child(10) {
 
 
 
-.amikettartalmazaszobastandard{
-  text-transform: uppercase;
-}
+
 
 .foglalhatoszobakcim{
   text-transform: uppercase;
