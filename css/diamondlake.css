@@ -58,8 +58,8 @@ body {
   }
   
   .navbar .btn {
-  margin-right: 10px;
- }
+    margin-right: 10px;
+   }
 .divider {
 border: none;
 border-top: 1px solid #ccc; 
