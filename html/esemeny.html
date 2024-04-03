@@ -13,9 +13,12 @@
   <div class="position2 row" ng-repeat="(k, v) in  data">
 
     <!-- Title -->
+    <div class="alert alert-light text-center" role="alert">
     <h2 class="text-center mt-3" ng-if="k==='future'">Jővöbeli eseményeink</h2>
     <h2 class="text-center mt-3" ng-if="k==='past'">Régebbi eseményeink</h2>
+    </div>
 
+   
     <!-- Cards -->
     <div class="col-md-4 cursor-pointer" 
          ng-repeat="x in data[k] track by $index"
