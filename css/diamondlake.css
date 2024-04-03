@@ -444,12 +444,6 @@ span:nth-child(10) {
 /*Hover effektes szobák vége*/
 
 
-.standardszobacim{
-  text-transform:uppercase;
-  font-style: italic;
-  text-shadow: rgb(144, 144, 144) 1px 0 10px;
-}
-
 
 .inner-img {
   transition: 0.3s;
@@ -476,3 +470,4 @@ span:nth-child(10) {
 /*szobacarousel*/
 
 /*szobacarousel vége*/
+
