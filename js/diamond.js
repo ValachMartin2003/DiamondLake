@@ -62,4 +62,5 @@ function changeBackgroundColor(color) {
     $(".card-body-container").css("overflow", "auto");
   });
 
+ /*szoveg effect*/
  
