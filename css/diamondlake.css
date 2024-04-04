@@ -55,7 +55,7 @@ body {
   }
   
   .navbar-nav .nav-item {
-    margin-right: 18px;/*30px*/
+    margin-right: 18px;
   }
 
   .navbar-right-container {
@@ -308,14 +308,14 @@ span:nth-child(10) {
 /* Csúszka vege */
 
 .box {
-  background-color: white;
+  background-color: #F5F5F5;
   border-radius: 5px;
 }
 .kepgaleria{
   width: 500px;
 }
 
-/* user */
+/* user ikon kénézet létrehozása */
 .user-icon {
   
   width: 40px; /* méret */
@@ -331,7 +331,12 @@ span:nth-child(10) {
 .no-caret::after {/*Eltávolítja a lenyíló nyílt*/
   display: none !important;
 }
-/* user */
+
+.menuLeft{
+  left: auto !important;
+  right: 0;
+}
+/* user......*/
 
 /* Átlátszóság Étterem */
 .custom-card {
@@ -563,3 +568,4 @@ span:nth-child(10) {
     }
   }
 /*Discoparty*/
+

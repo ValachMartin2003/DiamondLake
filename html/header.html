@@ -45,7 +45,7 @@
 					<ul class="dropdown-menu" 
 							aria-labelledby="navbarDropdown">
 						<li><a class="dropdown-item" ui-sref="wendings">Esküvőszervezés</a></li>
-						<li><a class="dropdown-item" ui-sref="esemeny">Jövőbeli és aktuális események</a></li>
+						<li><a class="dropdown-item" ui-sref="esemeny">Jövőbeli aktuális események</a></li>
 					</ul>
 				</li>
 				<li class="nav-item dropdown">
@@ -80,22 +80,26 @@
 								<i class="fas fa-search"></i>
 				</button>
 			</form>
-
-		  
-				<!-- Foglalás gomb/link -->
-				
-					<div class="d-grid gap-2 col-2 mx-auto">
-						<a ui-sref="foglalas">
-							<button class="btn btn-secondary border-3 border-dark" 
-									ng-if="$root.user.id" 
-									type="button">
-								Szobafoglalás
-							</button>
-						</a>
-					</div>
 			
 		   <ul class="navbar-nav ms-auto align-items-center">
-			
+				<li><!-- Foglalás gomb/link -->
+					<a ui-sref="foglalas">
+						<button class="btn btn-outline-dark border-dark" 
+								ng-if="$root.user.id" 
+								type="button">
+								Szálláshely foglalás
+						</button>
+					</a>
+				</li>
+				<li>
+					<button type="button" 
+									class="btn btn-outline-dark" 
+									data-bs-toggle="modal" 
+									data-bs-target="#setupModal">
+						<span ng-if="!$root.user.id">Bejelentkezés</span>
+						<span ng-if="$root.user.id">Beállítások</span>
+					</button>
+				</li>
 				<li class="nav-item dropdown" ng-if="$root.user.id">
 					<a class="nav-link dropdown-toggle no-caret" 
 					   href="#" 
@@ -105,22 +109,13 @@
 					   aria-expanded="false">
 						<i class="fas fa-user user-icon"></i> <!-- FontAwesome ikon megjelenítése -->
 					</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<ul class="dropdown-menu menuLeft" aria-labelledby="navbarDropdown">
 						<li class="dropdown-item text-center">
 							<span class="d-inline">Üdvözöljük! 
 								 <span class="d-block">{{$root.user.name}}</span>
 							</span>
 						</li>
 					</ul>
-				</li> 
-				<li>
-					<button type="button" 
-									class="btn btn-outline-dark" 
-									data-bs-toggle="modal" 
-									data-bs-target="#setupModal">
-						<span ng-if="!$root.user.id">Bejelentkezés</span>
-						<span ng-if="$root.user.id">Beállítások</span>
-					</button>
 				</li>
 			</ul>
 			
