@@ -513,10 +513,9 @@ span:nth-child(10) {
 
 /*szobacarousel vége*/
 
-<<<<<<< HEAD
 
 
-/*home*/
+/*Discoparty*/
 #grid {
   width: calc(none - 5vmin);
   aspect-ratio: 16 / 7;
@@ -540,27 +539,59 @@ span:nth-child(10) {
 }
 
 .left {
-  background-image: url('../img/Szoba/deluxe+1.jpg');
+  background-image: url('../img/Esemenyek/disco1.jpg');
   border-right: 1px solid #804a00;
 }
 
 .middle {
   font-size: 0rem;
-  background-image: url('../img/Szoba/deluxe+2.jpg');
+  background-image: url('../img/Esemenyek/disco3.jpg');
 }
 
 .right {
-  background-image: url('../img/Szoba/deluxe+3.jpg');
+  background-image: url('../img/Esemenyek/disco2.jpg');
   border-left: 1px solid #804a00;
 }
 
 #grid:hover {
   grid-template-columns: 0fr 1fr 0fr;
 }
-/*home*/
 
 
 
-=======
-/*szoveg effect*/
->>>>>>> 88e9748004d16f2ca39f2544662c8b8094b5e452
+:root {
+  /*  change this for scaling  */
+    --m: 4rem;
+    
+    --red: #8c0000;
+    --pink: #ff00f7;
+    --purple: #6B5FFF;
+    --blue: #0059ff;
+    --green: #5BFF89;
+    --yellow: #FFEE55;
+    --orange: #ff5e00;
+    
+  }
+
+  .tesztalany {
+    border: calc(0.08 * var(--m)) solid transparent;
+    background:linear-gradient(#121213, #121213),
+    linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)),
+    linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 200%;
+    animation: animate 2s infinite linear;
+  }
+  
+  @keyframes animate {
+    0% {background-position: 0}
+    100% {background-position: 200%}
+  }
+  
+  @media screen and (max-width: 1000px) {
+    :root {
+      --m: 2rem;
+    }
+  }
+/*Discoparty*/
