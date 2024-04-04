@@ -334,7 +334,7 @@ span:nth-child(10) {
 /* user */
 
 /* Átlátszóság Étterem */
-.custom-card {
+.custom-card{
   border: 1px solid #ccc; /* Szegély */
   border-radius: 5px; /* Kerekített sarkok */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék */
@@ -343,7 +343,7 @@ span:nth-child(10) {
   position: relative;
 }
 
-.custom-card .card-title {
+.custom-card .card-title{
   font-size: 1.2rem; /* Címsor mérete */
   font-weight: bold; /* Vastagság */
 }
@@ -358,7 +358,49 @@ span:nth-child(10) {
   border-radius: 5px; /* Kerekített sarkok */
 }
 
-.image-overlay {
+/*Barpult eleje*/
+.barcard{
+  max-width: 30%; 
+  height: auto; 
+  border-radius: 5px; 
+  font-size: 1.2rem; 
+  font-weight: bold; 
+  border: 1px solid #ccc; /* Szegély */
+  border-radius: 5px; /* Kerekített sarkok */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék */
+  padding: 20px; /* Belső tér */
+  background-color: #fff; /* Háttérszín */
+  position: relative;
+}
+.barcard img {
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 5px; 
+}
+.barcard:hover .image-overlay {
+  opacity: 1; 
+}
+
+.barcard{
+  border: 1px solid #ccc; /* Szegély */
+  border-radius: 5px; /* Kerekített sarkok */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék */
+  padding: 20px; /* Belső tér */
+  background-color: #fff; /* Háttérszín */
+  position: relative;
+}
+
+.barcard .card-title{
+  font-size: 1.2rem; /* Címsor mérete */
+  font-weight: bold; /* Vastagság */
+}
+
+.barcard .card-body {
+  color: #333; /* Szövegszín */
+}
+/*Barpult vege*/
+
+.image-overlay{
   position: absolute;
   top: 0;
   left: 0;
@@ -481,4 +523,54 @@ span:nth-child(10) {
 
 /*szobacarousel vége*/
 
+<<<<<<< HEAD
+
+
+/*home*/
+#grid {
+  width: calc(none - 5vmin);
+  aspect-ratio: 16 / 7;
+  background: linen;
+  display: grid;
+  grid-template-columns: 1fr 0fr 1fr;
+  place-items: center;
+  outline: 2px solid #804a00;
+  border-radius: 5vmin;
+  box-shadow: 0 1rem 2rem -1rem rgba(68, 50, 4, 1);
+}
+
+.left,
+.right,
+.middle {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+}
+
+.left {
+  background-image: url('../img/Szoba/deluxe+1.jpg');
+  border-right: 1px solid #804a00;
+}
+
+.middle {
+  font-size: 0rem;
+  background-image: url('../img/Szoba/deluxe+2.jpg');
+}
+
+.right {
+  background-image: url('../img/Szoba/deluxe+3.jpg');
+  border-left: 1px solid #804a00;
+}
+
+#grid:hover {
+  grid-template-columns: 0fr 1fr 0fr;
+}
+/*home*/
+
+
+
+=======
 /*szoveg effect*/
+>>>>>>> 88e9748004d16f2ca39f2544662c8b8094b5e452
