@@ -131,7 +131,7 @@ height: 230px;
 }
 
 .carouselkepek{
-  height: 750px;
+  height: 875px;
 }
 
 
@@ -324,7 +324,7 @@ span:nth-child(10) {
 /* user */
 
 /* Átlátszóság Étterem */
-.custom-card{
+.custom-card {
   border: 1px solid #ccc; /* Szegély */
   border-radius: 5px; /* Kerekített sarkok */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék */
@@ -333,7 +333,7 @@ span:nth-child(10) {
   position: relative;
 }
 
-.custom-card .card-title{
+.custom-card .card-title {
   font-size: 1.2rem; /* Címsor mérete */
   font-weight: bold; /* Vastagság */
 }
@@ -348,49 +348,7 @@ span:nth-child(10) {
   border-radius: 5px; /* Kerekített sarkok */
 }
 
-/*Barpult eleje*/
-.barcard{
-  max-width: 30%; 
-  height: auto; 
-  border-radius: 5px; 
-  font-size: 1.2rem; 
-  font-weight: bold; 
-  border: 1px solid #ccc; /* Szegély */
-  border-radius: 5px; /* Kerekített sarkok */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék */
-  padding: 20px; /* Belső tér */
-  background-color: #fff; /* Háttérszín */
-  position: relative;
-}
-.barcard img {
-  max-width: 100%; 
-  height: auto; 
-  border-radius: 5px; 
-}
-.barcard:hover .image-overlay {
-  opacity: 1; 
-}
-
-.barcard{
-  border: 1px solid #ccc; /* Szegély */
-  border-radius: 5px; /* Kerekített sarkok */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Árnyék */
-  padding: 20px; /* Belső tér */
-  background-color: #fff; /* Háttérszín */
-  position: relative;
-}
-
-.barcard .card-title{
-  font-size: 1.2rem; /* Címsor mérete */
-  font-weight: bold; /* Vastagság */
-}
-
-.barcard .card-body {
-  color: #333; /* Szövegszín */
-}
-/*Barpult vege*/
-
-.image-overlay{
+.image-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -513,6 +471,7 @@ span:nth-child(10) {
 
 /*szobacarousel vége*/
 
+<<<<<<< HEAD
 
 
 /*Discoparty*/
@@ -595,3 +554,6 @@ span:nth-child(10) {
     }
   }
 /*Discoparty*/
+=======
+/*szoveg effect*/
+>>>>>>> 09d84be3a1c753be55ad2bceef8e11d859641a46
