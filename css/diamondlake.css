@@ -6,6 +6,16 @@
   font-style: normal;
   font-size: 50px;
 }
+div.scroll-container {
+  background-color: rgb(147, 147, 147);
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
 
 
 body {
