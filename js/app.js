@@ -200,7 +200,7 @@
 							{
 								id: 'body',
 								title: 'Válassza ki a háttér színét!', 		
-								colors: ['#c59362','#DFCBAC','#fff','#000000','#FFE4C4'],
+								colors: ['#F5F5DC','#DFCBAC','#fff','#000000','#FFE4C4'],
 								default: '#fff'
 							},
 							{
