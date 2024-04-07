@@ -30,47 +30,4 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
 
      Így egy egyszerű, de hatékony bejelentkezési és felhasználói fiókkezelési rendszer biztosítja a felhasználók számára a kényelmet és a személyre szabott élményt az oldalon.
 
-## Szobáink
 
-Itt találhatók a szállodánkban elérhető szobatípusok és azok részletes leírása.
-
-## Szolgáltatások
-
-Ebben a menüpontban részletesen bemutatjuk a szállodánk által kínált különféle szolgáltatásokat.
-
-## Rendezvények
-
-Ezen az oldalon tájékoztatást találhatsz az általunk szervezett rendezvényekről, valamint lehetőséged van részt venni ezeken.
-
-## Esküvőszervezés
-
-Ha esküvőt tervezel, itt minden szükséges információt megtalálsz az esküvőd tökéletes megszervezéséhez.
-
-## Jövőbeli Események
-
-Ebben a részben folyamatosan frissítjük a közelgő eseményeinket és programjainkat.
-
-## Útválasztás
-
-Itt megtalálod az útbaigazítást, hogy hogyan jutsz el hozzánk, illetve segítséget nyújtunk az utazás tervezésében.
-
-## Elérhetőség
-
-Ha kérdésed van vagy szeretnél velünk kapcsolatba lépni, itt találod az elérhetőségeinket.
-
-## Rólunk
-
-Ebben a részben bemutatjuk a szállodánkat és annak történetét, valamint a csapatunk tagjait.
-
-## Foglalás
-
-A foglalás menüpont alatt lehetőség van közvetlenül foglalni szállást.
-
-## Bejelentkezés
-
-Itt a felhasználók bejelentkezhetnek a saját fiókjukba.
-
-## Beállítások
-
-A bejelentkezés után itt lehetőség van a felhasználói fiók beállításainak módosítására és személyre szabására.
-                                                
