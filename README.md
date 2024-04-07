@@ -13,6 +13,7 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
 
 1. **Logo**: Az oldal logója, ami visszavezet a főoldalra, ha rákattintasz.
 2. **Navigációs Menü**: Egy sor link, amelyek segítségével a felhasználók könnyen elérhetik a különböző részeket és funkciókat az oldalon. Például:
+
    - Szobáink
    - Szolgáltatások
    - Rendezvények
@@ -21,7 +22,8 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
    - Útbaigazítás
    - Elérhetőség
    - Rólunk
-3. **A bejelentkezés/felhasználói fiók funkciója az, hogy ha a felhasználó be van jelentkezve, akkor a menüben megjelenik a "Beállítások" opció, valamint egy felhasználói ikon, ami üdvözli és megjeleníti a 
+     
+4. **A bejelentkezés/felhasználói fiók funkciója az, hogy ha a felhasználó be van jelentkezve, akkor a menüben megjelenik a "Beállítások" opció, valamint egy felhasználói ikon, ami üdvözli és megjeleníti a 
      felhasználó nevét (pl. "Martin Valach"). Ezenkívül, mivel be van jelentkezve, láthatja és kezelheti a Szálláshely foglalás lehetőségeket is.
 
      A beállítások menüben lehetősége van a felhasználónak módosítani a fiókjához kapcsolódó adatokat, például a nevét, lakcímét, telefonszámát, és jelszavát. Emellett személyre szabhatja az oldal színét is a 
@@ -33,14 +35,23 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
 Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
 **Logo**: Az oldal logója, ami visszavezet a főoldalra, ha rákattintasz.
 **Navigációs Menü:**
-- **Szobáink**
-- **Szolgáltatások**
-- **Rendezvények**
-- **Esküvőszervezés**
-- **Jövőbeli Események**
-- **Útbaigazítás**
-- **Elérhetőség**
-- **Rólunk**
+3. OLDALAINK
+   - **Szobáink**
+   - **Szolgáltatások**
+4. Lehetőségeink
+   - **Rendezvények**
+     
+   - **Esküvőszervezés**
+   - **Jövőbeli Események**
+     
+   - **Útbaigazítás**
+     
+   - **Elérhetőség**
+   - **Rólunk**
+5. KAKCSOLAT
+   - Hely
+   - Email
+   - Telefon
 ## Bal odalon
    Leirás:Csatlakozz hozzánk közösségi oldalainkon!
 ## Jobb oldalon
