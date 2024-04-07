@@ -45,8 +45,8 @@ Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
    Leirás:Csatlakozz hozzánk közösségi oldalainkon!
 ## Jobb oldalon
    Közösségi Oldalaink:Facebook,Instagram
-Ezek az elemek segítik a felhasználókat a könnyű navigációban és az információk megtalálásában az oldalon. A lábléc hasonló funkciót tölt be, mint a fejléc, de a weboldal alján található, és általában minden oldalon megtalálható, hogy a felhasználók könnyen hozzáférjenek az alapvető információkhoz és szolgáltatásokhoz.
 ## Licensz
 Copyright © [2024] [DiamondLake Wellness Szalloda]
+**Ezek az elemek segítik a felhasználókat a könnyű navigációban és az információk megtalálásában az oldalon. A lábléc hasonló funkciót tölt be, mint a fejléc, de a weboldal alján található, és általában minden oldalon megtalálható, hogy a felhasználók könnyen hozzáférjenek az alapvető információkhoz és szolgáltatásokhoz.
 
 
