@@ -22,7 +22,7 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
    - Elérhetőség
    - Rólunk
 3. **A bejelentkezés/felhasználói fiók funkciója az, hogy ha a felhasználó be van jelentkezve, akkor a menüben megjelenik a "Beállítások" opció, valamint egy felhasználói ikon, ami üdvözli és megjeleníti a 
-     felhasználó nevét (pl. "Martin Valach"). Ezenkívül, mivel be van jelentkezve, láthatja és kezelheti a szállásfoglalási lehetőségeket is.
+     felhasználó nevét (pl. "Martin Valach"). Ezenkívül, mivel be van jelentkezve, láthatja és kezelheti a Szálláshely foglalás lehetőségeket is.
 
      A beállítások menüben lehetősége van a felhasználónak módosítani a fiókjához kapcsolódó adatokat, például a nevét, lakcímét, telefonszámát, és jelszavát. Emellett személyre szabhatja az oldal színét is a 
      beállítások részen keresztül.
