@@ -43,5 +43,7 @@ Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
 - **Rólunk**
 
 Ezek az elemek segítik a felhasználókat a könnyű navigációban és az információk megtalálásában az oldalon. A lábléc hasonló funkciót tölt be, mint a fejléc, de a weboldal alján található, és általában minden oldalon megtalálható, hogy a felhasználók könnyen hozzáférjenek az alapvető információkhoz és szolgáltatásokhoz.
+## Licensz
+Copyright © [2024] [Szerző Neve]
 
 
