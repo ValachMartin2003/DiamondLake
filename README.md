@@ -33,12 +33,13 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
 
 ## Footer (Lábléc)
 Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
-**Logo**: Az oldal logója, ami visszavezet a főoldalra, ha rákattintasz.
-**Navigációs Menü:**
-3. OLDALAINK
+1. **Logo**: Az oldal logója, ami visszavezet a főoldalra, ha rákattintasz.
+   - **Logo alat lévő rovid leirás** -
+3. **Navigációs Menü:**
+4. OLDALAINK
    - **Szobáink**
    - **Szolgáltatások**
-4. Lehetőségeink
+5. Lehetőségeink
    - **Rendezvények**
      
    - **Esküvőszervezés**
@@ -48,7 +49,7 @@ Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
      
    - **Elérhetőség**
    - **Rólunk**
-5. KAKCSOLAT
+6. KAKCSOLAT
    - Hely
    - Email
    - Telefon
