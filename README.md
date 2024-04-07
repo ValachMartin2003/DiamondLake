@@ -13,7 +13,6 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
 
 1. **Logo**: Az oldal logója, ami visszavezet a főoldalra, ha rákattintasz.
 2. **Navigációs Menü**: Egy sor link, amelyek segítségével a felhasználók könnyen elérhetik a különböző részeket és funkciókat az oldalon. Például:
-   - Főoldal
    - Szobáink
    - Szolgáltatások
    - Rendezvények
