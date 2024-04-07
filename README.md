@@ -23,7 +23,7 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
    - Elérhetőség
    - Rólunk
      
-4. **A bejelentkezés/felhasználói fiók funkciója az, hogy ha a felhasználó be van jelentkezve, akkor a menüben megjelenik a "Beállítások" opció, valamint egy felhasználói ikon, ami üdvözli és megjeleníti a 
+3. **A bejelentkezés/felhasználói fiók funkciója az, hogy ha a felhasználó be van jelentkezve, akkor a menüben megjelenik a "Beállítások" opció, valamint egy felhasználói ikon, ami üdvözli és megjeleníti a 
      felhasználó nevét (pl. "Martin Valach"). Ezenkívül, mivel be van jelentkezve, láthatja és kezelheti a Szálláshely foglalás lehetőségeket is.
 
      A beállítások menüben lehetősége van a felhasználónak módosítani a fiókjához kapcsolódó adatokat, például a nevét, lakcímét, telefonszámát, és jelszavát. Emellett személyre szabhatja az oldal színét is a 
@@ -39,11 +39,11 @@ Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
    Közösségi Oldalaink: Facebook  Instagram
 1. **Logo**: Az oldal logója, ami visszavezet a főoldalra, ha rákattintasz.
    - **Logo alat lévő rovid leirás** -
-3. **Navigációs Menü:**
-4. OLDALAINK
+2. **Navigációs Menü:**
+3. OLDALAINK
    - **Szobáink**
    - **Szolgáltatások**
-5. Lehetőségeink
+4. Lehetőségeink
    - **Rendezvények**
      
    - **Esküvőszervezés**
@@ -53,7 +53,7 @@ Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
      
    - **Elérhetőség**
    - **Rólunk**
-6. KAKCSOLAT
+5. KAKCSOLAT
    - Hely
    - Email
    - Telefon
@@ -61,6 +61,6 @@ Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
 ## Licensz
 Copyright © 2024 Minden jog fenntartva. |DiamondLake Wellness Szalloda|
 
-7. **Ezek az elemek segítik a felhasználókat a könnyű navigációban és az információk megtalálásában az oldalon. A lábléc hasonló funkciót tölt be, mint a fejléc, de a weboldal alján található, és általában minden oldalon megtalálható, hogy a felhasználók könnyen hozzáférjenek az alapvető információkhoz és szolgáltatásokhoz.
+6. Ezek az elemek segítik a felhasználókat a könnyű navigációban és az információk megtalálásában az oldalon. A lábléc hasonló funkciót tölt be, mint a fejléc, de a weboldal alján található, és általában minden oldalon megtalálható, hogy a felhasználók könnyen hozzáférjenek az alapvető információkhoz és szolgáltatásokhoz.
 
 
