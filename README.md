@@ -29,4 +29,19 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
 
      Így egy egyszerű, de hatékony bejelentkezési és felhasználói fiókkezelési rendszer biztosítja a felhasználók számára a kényelmet és a személyre szabott élményt az oldalon.
 
+## Footer (Lábléc)
+Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
+**Logo**: Az oldal logója, ami visszavezet a főoldalra, ha rákattintasz.
+**Navigációs Menü:**
+- **Szobáink**
+- **Szolgáltatások**
+- **Rendezvények**
+- **Esküvőszervezés**
+- **Jövőbeli Események**
+- **Útbaigazítás**
+- **Elérhetőség**
+- **Rólunk**
+
+Ezek az elemek segítik a felhasználókat a könnyű navigációban és az információk megtalálásában az oldalon. A lábléc hasonló funkciót tölt be, mint a fejléc, de a weboldal alján található, és általában minden oldalon megtalálható, hogy a felhasználók könnyen hozzáférjenek az alapvető információkhoz és szolgáltatásokhoz.
+
 
