@@ -7,20 +7,22 @@
 - Pixaby
 - Szobákról készült képek a booking.com oldalról származnak
 
-## Tartalom
+## Header (Fejléc)
 
-- [Főoldal](#főoldal)
-- [Szobáink](#szobáink)
-- [Szolgáltatások](#szolgáltatások)
-- [Rendezvények](#rendezvények)
-- [Esküvőszervezés](#esküvőszervezés)
-- [Jövőbeli Események](#jövőbeli-események)
-- [Útválasztás](#útválasztás)
-- [Elérhetőség](#elérhetőség)
-- [Rólunk](#rólunk)
-- [Foglalás](#foglalás)
-- [Bejelentkezés](#bejelentkezés)
-- [Beállítások](#beállítások)
+A weboldalunk fejlécében megtalálhatóak a következő elemek:
+
+1. **Logo**: Az oldal logója, ami visszavezet a főoldalra, ha rákattintasz.
+2. **Navigációs Menü**: Egy sor link, amelyek segítségével a felhasználók könnyen elérhetik a különböző részeket és funkciókat az oldalon. Például:
+   - Főoldal
+   - Szobáink
+   - Szolgáltatások
+   - Rendezvények
+   - Esküvőszervezés
+   - Jövőbeli Események
+   - Útválasztás
+   - Elérhetőség
+   - Rólunk
+3. **Bejelentkezés/Felhasználói Fiók**: Ha a felhasználó be van jelentkezve akkor a bejelentkezés meg változik beálitásokra és itt láthatja a fiókhoz kapcsolódó lehetőségeket, például a kijelentkezés vagy a fiókbeállítások elérését.
 
 ## Főoldal
 
