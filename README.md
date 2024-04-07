@@ -19,7 +19,7 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
    - Rendezvények
    - Esküvőszervezés
    - Jövőbeli Események
-   - Útválasztás
+   - Útbaigazítás
    - Elérhetőség
    - Rólunk
 3. **A bejelentkezés/felhasználói fiók funkciója az, hogy ha a felhasználó be van jelentkezve, akkor a menüben megjelenik a "Beállítások" opció, valamint egy felhasználói ikon, ami üdvözli és megjeleníti a 
