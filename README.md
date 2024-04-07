@@ -33,6 +33,10 @@ A weboldalunk fejlécében megtalálhatóak a következő elemek:
 
 ## Footer (Lábléc)
 Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
+## Bal odalon
+   Leirás: Csatlakozz hozzánk közösségi oldalainkon!
+## Jobb oldalon
+   Közösségi Oldalaink: Facebook  Instagram
 1. **Logo**: Az oldal logója, ami visszavezet a főoldalra, ha rákattintasz.
    - **Logo alat lévő rovid leirás** -
 3. **Navigációs Menü:**
@@ -53,12 +57,10 @@ Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
    - Hely
    - Email
    - Telefon
-## Bal odalon
-   Leirás:Csatlakozz hozzánk közösségi oldalainkon!
-## Jobb oldalon
-   Közösségi Oldalaink:Facebook,Instagram
+
 ## Licensz
-Copyright © [2024] [DiamondLake Wellness Szalloda]
-**Ezek az elemek segítik a felhasználókat a könnyű navigációban és az információk megtalálásában az oldalon. A lábléc hasonló funkciót tölt be, mint a fejléc, de a weboldal alján található, és általában minden oldalon megtalálható, hogy a felhasználók könnyen hozzáférjenek az alapvető információkhoz és szolgáltatásokhoz.
+Copyright © 2024 Minden jog fenntartva. |DiamondLake Wellness Szalloda|
+
+7. **Ezek az elemek segítik a felhasználókat a könnyű navigációban és az információk megtalálásában az oldalon. A lábléc hasonló funkciót tölt be, mint a fejléc, de a weboldal alján található, és általában minden oldalon megtalálható, hogy a felhasználók könnyen hozzáférjenek az alapvető információkhoz és szolgáltatásokhoz.
 
 
