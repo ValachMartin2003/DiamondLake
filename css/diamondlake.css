@@ -570,4 +570,28 @@ span:nth-child(10) {
     }
   }
 /*Discoparty*/
+/*
+.wrapper {
+  padding: 120px;
+}
 
+  .valami {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
+  }
+
+  .card-body {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
+    text-align: center;
+  }
+*/
+.socials{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 5px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
