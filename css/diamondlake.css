@@ -571,4 +571,24 @@ span:nth-child(10) {
   }
 /*Discoparty*/
 
-
+.overlay {
+  position: absolute;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.7); /* Átlátszó fekete háttér */
+  display: flex;
+  margin: 60px;
+  width: 60%;
+  height: 50%;
+  justify-content: center;
+  align-items:center;
+ 
+  border-bottom:  1px solid #ffffff;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.keptext {
+  color: white; /* A szöveg színe */
+  font-size: 30px; /* A szöveg mérete */
+}
