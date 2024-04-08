@@ -68,15 +68,15 @@ body {
   .navbar-right-container>*:not(:last-child) {
     margin-right: 15px;
   }
-  
   .navbar .btn {
     margin-right: 10px;
    }
-.divider {
-border: none;
-border-top: 1px solid #ccc; 
-margin: 20px 0; 
-}
+  
+   .divider {
+    border: none;
+    border-top: 1px solid #ccc; 
+    margin: 20px 0; 
+    }
 .color-box{border: #000000 1px solid; border-radius: 5px;}
 .navbar-brand{border: #000000 1px solid; border-radius: 5px; background-color: #525252; margin-left: 10px;}
 
