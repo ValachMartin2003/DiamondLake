@@ -71,6 +71,7 @@
 				url: '/obout_us',
 				parent: 'root',
 				templateUrl: './html/rolunk.html',
+				controller: 'rolunkController'
 			})
 			
 			.state('elerhetoseg', {
@@ -635,8 +636,15 @@
 		function($scope, $timeout) {
 		   }
 	   ])
-
-	 
+	   
+	  .controller('rolunkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
+		$scope.rolunk = [
+			{img: 'ikonok/Systemproperty/Systemproperty1', title:'Valach Martin', job:'Software Developer'},
+			{img: 'ikonok/Systemproperty/Systemproperty2', title:'Surányi Csenge', job:'Software Developer'},
+			{img: 'ikonok/Systemproperty/Systemproperty1', title:'Kiss Benjámin Zoltán', job:'Software Developer'},
+			
+		];
+	}])
 	
 	   .controller('szolgaltatasainkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 		$scope.data = [

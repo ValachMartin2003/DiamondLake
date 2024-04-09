@@ -1,35 +1,36 @@
 <div class="position1 container-fluid">
     <div class="position2 row ">
-        
-        <div class="alert alert-light text-center" role="alert" 
-             style="width: 400px; margin: 0 auto;">
-            Szolgáltatásaink
-        </div>
-
-        <div class="row row-cols-1 row-cols-md-4 g-2" ng-controller="szolgaltatasainkController">
-            <div class="col" ng-repeat="service in data track by $index">
-                <div class="card mt-2">
-                    <img ng-src="./img/{{service.img}}.png" class="card-img-top" alt="{{service.title}}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{service.title}}</h5>
-                    </div>
-
-                    <div class="card-footer">
-                       
-                        <a ng-if="service.title === 'Wellness'" ui-sref="wellness" class="btn btn-dark">Bővebben</a>
-                        <a ng-if="service.title === 'Medencék'" ui-sref="pools" class="btn btn-dark">Bővebben</a>
-
-                        <a ng-if="service.title === 'Szauna világ'" ui-sref="saunaworld" class="btn btn-dark">Bővebben</a>
-                        <a ng-if="service.title === 'Konzolszoba'" ui-sref="consoleroom" class="btn btn-dark">Bővebben</a>
-
-                        <a ng-if="service.title === 'Étterem'" ui-sref="restaurant" class="btn btn-dark">Bővebben</a>
-                        <a ng-if="service.title === 'Bár'" ui-sref="barcounter" class="btn btn-dark">Bővebben</a>
-
-                        <a ng-if="service.title === 'Sportolási lehetőségeink'" ui-sref="sport" class="btn btn-dark">Bővebben</a>
-                        <a ng-if="service.title === 'Szórakozás'" ui-sref="discoparty" class="btn btn-dark">Bővebben</a>
-                    
-                    </div>  
+            
+            <div class="alert alert-light text-center" role="alert" 
+                style="width: 400px; margin: 0 auto;">
+                Szolgáltatásaink
             </div>
-        </div>
-    </div> 
+
+            <div class="row row-cols-1 row-cols-md-4 g-2" ng-controller="szolgaltatasainkController">
+                <div class="col" ng-repeat="service in data track by $index">
+                    <div class="card mt-2">
+                        <img ng-src="./img/{{service.img}}.png" class="card-img-top" alt="{{service.title}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{service.title}}</h5>
+                        </div>
+
+                        <div class="card-footer">
+                        
+                            <a ng-if="service.title === 'Wellness'" ui-sref="wellness" class="btn btn-dark">Bővebben</a>
+                            <a ng-if="service.title === 'Medencék'" ui-sref="pools" class="btn btn-dark">Bővebben</a>
+
+                            <a ng-if="service.title === 'Szauna világ'" ui-sref="saunaworld" class="btn btn-dark">Bővebben</a>
+                            <a ng-if="service.title === 'Konzolszoba'" ui-sref="consoleroom" class="btn btn-dark">Bővebben</a>
+
+                            <a ng-if="service.title === 'Étterem'" ui-sref="restaurant" class="btn btn-dark">Bővebben</a>
+                            <a ng-if="service.title === 'Bár'" ui-sref="barcounter" class="btn btn-dark">Bővebben</a>
+
+                            <a ng-if="service.title === 'Sportolási lehetőségeink'" ui-sref="sport" class="btn btn-dark">Bővebben</a>
+                            <a ng-if="service.title === 'Szórakozás'" ui-sref="discoparty" class="btn btn-dark">Bővebben</a>
+                        
+                        </div>  
+                  </div>
+              </div>
+        </div> 
+    </div>
 </div>
