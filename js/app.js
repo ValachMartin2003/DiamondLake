@@ -644,6 +644,33 @@
 			{img: 'ikonok/Systemproperty/Systemproperty1', title:'Kiss Benjámin Zoltán', job:'Software Developer'},
 			
 		];
+
+		$scope.gondolatok = [
+			{ cim: 'Kényelmes szobák', 
+			  leiras: 'Vendégeink szerint kényelmesek és jól felszereltek a szobáink.', 
+			  velemeny: ' Vendég: Fantasztikus élmény volt itt megszállni!' },
+			
+			{ cim: 'Kiváló szolgáltatás', 
+			  leiras: 'Barátságos és segítőkész személyzetünk mindenben a rendelkezésére áll.',
+			  velemeny: ' Egy elégedett vendég: Nagyon kedves és figyelmes személyzet!' },
+			
+			{ cim: 'Kitűnő elhelyezkedés',  
+			  leiras: 'A szálloda központi elhelyezkedése könnyű hozzáférést biztosít a város látnivalóihoz.',
+			  velemeny: ' Szállodánk hűséges vendégei: "Csodálatos kilátás és közel mindenhez!' }, 
+
+			{ cim: 'Bőséges reggeli', 
+			  leiras: 'A reggelik változatosak és bőségesek, mindenki megtalálja a kedvére valót.',
+			  velemeny: ' Egy újabb elégedett vendég: "A reggeli választék kiváló!' }, 
+
+			{ cim: 'Kellemes környezet', 
+			  leiras: 'A szálloda környezete nyugodt és barátságos, ideális pihenéshez.',
+			  velemeny: ' Egy elégedett vendég: "Csodálatos és nyugodt környezet!' }, 
+
+			{ cim: 'Vidám diszkóparty', 
+			  leiras: 'A szálloda rendezvénytermeiben rendszeresen vidám és felejthetetlen diszkópartikat szervezünk.',
+			  velemeny: ' Egy bulizni vágyó vendég: "Fantasztikus hangulat és jó zenék a diszkópartykon!' }, 
+		];
+
 	}])
 	
 	   .controller('szolgaltatasainkController', ['$scope', '$http', '$location', function($scope, $http, $location) {

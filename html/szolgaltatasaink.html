@@ -1,15 +1,11 @@
 <div class="position1 container-fluid">
     <div class="position2 row ">
-            
-            <div class="alert alert-light text-center" role="alert" 
-                style="width: 400px; margin: 0 auto;">
-                Szolgáltatásaink
-            </div>
-
+                <h1>Szolgáltatásaink</h1>
             <div class="row row-cols-1 row-cols-md-4 g-2" ng-controller="szolgaltatasainkController">
                 <div class="col" ng-repeat="service in data track by $index">
                     <div class="card mt-2">
                         <img ng-src="./img/{{service.img}}.png" class="card-img-top" alt="{{service.title}}">
+                        
                         <div class="card-body">
                             <h5 class="card-title">{{service.title}}</h5>
                         </div>
@@ -29,6 +25,7 @@
                             <a ng-if="service.title === 'Szórakozás'" ui-sref="discoparty" class="btn btn-dark">Bővebben</a>
                         
                         </div>  
+
                   </div>
               </div>
         </div> 
