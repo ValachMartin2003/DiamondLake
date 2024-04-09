@@ -644,18 +644,7 @@
             { img: 'etterem/etterem6atmeretezettblur.jpg', caption: 'A szálloda éttermében első osztályú ételeket kínálunk!', buttonLabel: 'Megnézem az éttermet', buttonLink: 'etterem' },
             { img: 'szobaink/szoba6.jpg', caption: 'Szobáink megnyugvást nyújtanak, helyezze magát nálunk kényelembe!', buttonLabel: 'Megnézem az szobákat', buttonLink: 'rooms' }
 		];
-		$scope.images = [
-			{ src: 'img/Szoba/lakosztaly1.jpg', modalId: 'szoba1' },
-			{ src: 'img/Szoba/lakosztaly2.jpg', modalId: 'szoba2' },
-			{ src: 'img/Szoba/lakosztaly3.jpg', modalId: 'szoba3' },
-			{ src: 'img/Szoba/lakosztaly4.jpg', modalId: 'szoba4' },
-			{ src: 'img/Szoba/lakosztaly5.jpg', modalId: 'szoba5' },
-			{ src: 'img/Szoba/szoba1.jpg', modalId: 'szoba6' },
-			{ src: 'img/Szoba/szoba2.jpg', modalId: 'szoba7' },
-			{ src: 'img/Szoba/szoba8.jpg', modalId: 'szoba8' },
-			{ src: 'img/Szoba/szoba4.jpg', modalId: 'szoba9' },
-			{ src: 'img/Szoba/szoba5.jpg', modalId: 'szoba10' }
-		];
+		
 	   }])
 
 	   .controller('rolunkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
@@ -688,9 +677,9 @@
 			  leiras: 'A szálloda környezete nyugodt és barátságos, ideális pihenéshez.',
 			  velemeny: ' Egy elégedett vendég: "Csodálatos és nyugodt környezet!' }, 
 
-			{ cim: 'Vidám diszkóparty', 
+			{ cim: 'Vidám diszkóparti', 
 			  leiras: 'A szálloda rendezvénytermeiben rendszeresen vidám és felejthetetlen diszkópartikat szervezünk.',
-			  velemeny: ' Egy bulizni vágyó vendég: "Fantasztikus hangulat és jó zenék a diszkópartykon!' }, 
+			  velemeny: ' Egy bulizni vágyó vendég: "Fantasztikus hangulat és jó zenék a diszkópartikon!' }, 
 		];
 
 	}])
