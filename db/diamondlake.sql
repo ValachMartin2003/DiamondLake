@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Már 13. 12:22
+-- Létrehozás ideje: 2024. Ápr 09. 11:47
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -25,33 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `events`
---
-
-CREATE TABLE `events` (
-  `id` int(10) NOT NULL,
-  `user_id` int(10) NOT NULL,
-  `begin` date NOT NULL,
-  `end` date NOT NULL,
-  `deposit` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
-
--- --------------------------------------------------------
-
---
--- Tábla szerkezet ehhez a táblához `events_item`
---
-
-CREATE TABLE `events_item` (
-  `events_id` int(10) NOT NULL,
-  `room_id` int(10) NOT NULL,
-  `price` int(10) NOT NULL,
-  `person_number` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
-
--- --------------------------------------------------------
-
---
 -- Tábla szerkezet ehhez a táblához `programok`
 --
 
@@ -69,10 +42,10 @@ CREATE TABLE `programok` (
 
 INSERT INTO `programok` (`id`, `name`, `img`, `expiration`, `description`) VALUES
 (1, 'Családi nap', 'csaladinap.png', '2024-06-22 10:00:00', 'A Diamond Lake Wellness szálloda különleges gyereknap programokat kínál, amelyek izgalmas és szórakoztató élményeket nyújtanak a kicsiknek és nagyoknak egyaránt. A rendezvények között szerepelhetnek vidám családi játékok, kreatív műhelyek és akár családi sportversenyek is, hogy mindenki jól szórakozzon és emlékezetes pillanatokkal gazdagodjon a szálloda vendégei között.'),
-(2, 'Nyári buli', 'Nyaribuli.png', '2024-07-05 21:00:00', 'Nyári BULI'),
-(3, 'Szabaduló szoba', 'Szabaduloszoba.png', '2024-09-17 13:00:00', 'Szabaduló szoba'),
-(4, 'Valentínnap', 'Valentinnap.png', '2024-02-14 00:00:00', 'Valentín'),
-(5, 'Husvét', 'Husvet.png', '2024-03-31 00:00:00', 'Husvét');
+(2, 'Nyári buli', 'Nyaribuli.png', '2024-07-05 21:00:00', 'A Diamond Lake Wellness Hotel nyári bulija a vendégek számára tökéletes kikapcsolódást nyújt egy gyönyörű környezetben. A buli a szálloda kertjében vagy medenceterületén zajlik, hangulatos dekorációkkal és zenészekkel, DJ-kkel teremtve jó hangulatot. Frissítő koktélok és ingyenes sörök szolgálják az italkínálatot, míg a grillezett ételek és könnyű fogások kiegészítik az élményt. Ez a buli ideális lehetőség a vendégek számára, hogy lazítsanak és élvezzék a nyári estéket a szálloda kellemes környezetében.'),
+(3, 'Szabaduló szoba', 'Szabaduloszoba.png', '2024-09-17 13:00:00', 'A \"Gyilkosság a Szállodában\" nevű szabadulószoba a Diamond Lake Wellness Hotel egyedi és izgalmas kalandja. A résztvevők rejtélyeket fejtenek meg és nyomokat követnek, hogy kiderítsék, mi történt a szállodában egy rejtélyes gyilkosság napján. Korlátozott időn belül kell megoldaniuk az összes feladatot, és sikeres kijutással dicséretben részesülnek. Ez az élmény ideális csapatok számára, akik szeretik a kihívásokat és az együttműködést.'),
+(4, 'Valentín nap', 'Valentinnap.png', '2024-02-14 00:00:00', 'A Diamond Lake Wellness Szálloda Valentin-napi estje különleges élményt nyújt a szerelmes pároknak. A romantikus környezet, üdvözlő italok és szív alakú csokoládék előkészítik a hangulatot. Az exkluzív étteremben kreatív menüt kínálnak, melyet élőzenével tesznek még emlékezetesebbé. A vacsora után a párok romantikus sétát tehetnek a hotel kertjében, majd wellness részlegükben pihenhetnek a szaunában és jakuzziban.\r\n\r\n\r\n\r\n\r\n'),
+(5, 'Húsvét', 'Husvet.png', '2024-03-31 00:00:00', 'A Diamond Lake Wellness Szálloda húsvéti hétvégéje varázslatos élményeket kínál vendégeinek. A festői környezetben elhelyezkedő szálloda kényeztető programokkal várja látogatóit, mint például wellness kezelések és tojáskeresés. Az elegáns szobákban pihenésre és feltöltődésre nyílik lehetőség, míg az étteremben tradicionális húsvéti vacsorát szolgálnak fel. Az esti szórakozásról élőzenés előadások és tematikus bulik gondoskodnak. A Diamond Lake Wellness Hotel egy igazi oázis az ünnepek alatt.');
 
 -- --------------------------------------------------------
 
@@ -83,26 +56,23 @@ INSERT INTO `programok` (`id`, `name`, `img`, `expiration`, `description`) VALUE
 CREATE TABLE `room` (
   `id` int(10) NOT NULL,
   `type` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
-  `houseroom` int(10) NOT NULL,
-  `wifi` tinyint(1) NOT NULL,
-  `minibar` tinyint(1) NOT NULL,
-  `aircondicional` tinyint(1) NOT NULL,
-  `tv` tinyint(1) NOT NULL,
   `price` int(11) NOT NULL,
   `img` varchar(50) CHARACTER SET utf8mb4 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
--- --------------------------------------------------------
-
 --
--- Tábla szerkezet ehhez a táblához `room_img`
+-- A tábla adatainak kiíratása `room`
 --
 
-CREATE TABLE `room_img` (
-  `id` int(10) NOT NULL,
-  `room_id` int(10) NOT NULL,
-  `image` varchar(50) CHARACTER SET utf8mb4 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+INSERT INTO `room` (`id`, `type`, `price`, `img`) VALUES
+(1, 'Standard', 12000, 'standardszoba.jpg'),
+(2, 'Superior', 20900, 'superior1.jpg'),
+(3, 'Deluxe', 25900, 'deluxe1.jpg'),
+(4, 'Deluxe+', 29900, 'deluxe+1.jpg'),
+(5, 'Lakosztály', 31900, 'lakosztalyteljes.jpg'),
+(6, 'Nászutas Lakosztály', 34990, 'naszutaslakosztaly1.jpg'),
+(7, 'Elnöki Lakosztály', 63500, 'elnokilakosztaly1.jpg'),
+(8, 'Akadálymentesített', 69270, 'akadalymentesitett1.jpg');
 
 -- --------------------------------------------------------
 
@@ -177,19 +147,6 @@ INSERT INTO `users` (`id`, `type`, `name`, `born`, `gender`, `country_code`, `ph
 --
 
 --
--- A tábla indexei `events`
---
-ALTER TABLE `events`
-  ADD PRIMARY KEY (`id`);
-
---
--- A tábla indexei `events_item`
---
-ALTER TABLE `events_item`
-  ADD PRIMARY KEY (`events_id`,`room_id`),
-  ADD KEY `room_id` (`room_id`);
-
---
 -- A tábla indexei `programok`
 --
 ALTER TABLE `programok`
@@ -200,13 +157,6 @@ ALTER TABLE `programok`
 --
 ALTER TABLE `room`
   ADD PRIMARY KEY (`id`);
-
---
--- A tábla indexei `room_img`
---
-ALTER TABLE `room_img`
-  ADD PRIMARY KEY (`id`,`room_id`),
-  ADD KEY `room_id` (`room_id`);
 
 --
 -- A tábla indexei `type`
@@ -229,30 +179,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `programok`
 --
 ALTER TABLE `programok`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
--- Megkötések a kiírt táblákhoz
---
-
---
--- Megkötések a táblához `events_item`
---
-ALTER TABLE `events_item`
-  ADD CONSTRAINT `events_item_ibfk_1` FOREIGN KEY (`events_id`) REFERENCES `events` (`id`),
-  ADD CONSTRAINT `events_item_ibfk_2` FOREIGN KEY (`room_id`) REFERENCES `room` (`id`);
-
---
--- Megkötések a táblához `room_img`
---
-ALTER TABLE `room_img`
-  ADD CONSTRAINT `room_img_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
