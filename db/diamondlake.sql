@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Ápr 09. 11:47
+-- Létrehozás ideje: 2024. Ápr 09. 12:14
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -21,6 +21,22 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `diamondlake`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `booking`
+--
+
+CREATE TABLE `booking` (
+  `start` date NOT NULL,
+  `and` date NOT NULL,
+  `adult` int(10) NOT NULL,
+  `kids` int(10) NOT NULL,
+  `baby_bed` tinyint(1) NOT NULL,
+  `room` int(11) NOT NULL,
+  `comment` varchar(300) COLLATE utf8_hungarian_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 -- --------------------------------------------------------
 
@@ -145,6 +161,12 @@ INSERT INTO `users` (`id`, `type`, `name`, `born`, `gender`, `country_code`, `ph
 --
 -- Indexek a kiírt táblákhoz
 --
+
+--
+-- A tábla indexei `booking`
+--
+ALTER TABLE `booking`
+  ADD PRIMARY KEY (`room`);
 
 --
 -- A tábla indexei `programok`
