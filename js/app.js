@@ -639,13 +639,25 @@
 	   ])
 	   
 	   .controller('homeController', ['$scope', '$http', '$location', function($scope, $http, $location) {
-		$scope.otthon = [
-			{ img: 'recepciocarousel.jpg', caption: 'Foglaljon nálunk szobát bizalommal!', buttonLabel: 'Foglalás', buttonLink: 'foglalas' },
-            { img: 'etterem/etterem6atmeretezettblur.jpg', caption: 'A szálloda éttermében első osztályú ételeket kínálunk!', buttonLabel: 'Megnézem az éttermet', buttonLink: 'etterem' },
-            { img: 'szobaink/szoba6.jpg', caption: 'Szobáink megnyugvást nyújtanak, helyezze magát nálunk kényelembe!', buttonLabel: 'Megnézem az szobákat', buttonLink: 'rooms' }
+		$scope.images = [
+			{ src: 'img/Szoba/lakosztaly1.jpg', alt: 'lakosztaly1' },
+			{ src: 'img/Szoba/lakosztaly2.jpg', alt: 'lakosztaly2' },
+			{ src: 'img/Szoba/lakosztaly3.jpg', alt: 'lakosztaly3' },
+			{ src: 'img/Szoba/lakosztaly4.jpg', alt: 'lakosztaly4' },
+			{ src: 'img/Szoba/lakosztaly5.jpg', alt: 'lakosztaly5' },
+			{ src: 'img/Szoba/szoba1.jpg', alt: 'szoba1' },
+			{ src: 'img/Szoba/szoba2.jpg', alt: 'szoba2' },
+			{ src: 'img/Szoba/szoba10.jpg', alt: 'szoba10' },
+			{ src: 'img/Szoba/szoba11.jpg', alt: 'szoba11' },
+			{ src: 'img/Szoba/szoba8.jpg', alt: 'szoba8' },
+			{ src: 'img/Szoba/deluxe1.jpg', alt: 'deluxe1' },
+			{ src: 'img/Szoba/deluxe2.jpg', alt: 'deluxe2' },
+			{ src: 'img/Szoba/deluxe+1.jpg', alt: 'deluxe+1' },
+			{ src: 'img/Szoba/deluxe+2.jpg', alt: 'deluxe+2' },
+			{ src: 'img/Szoba/superiorglorius.jpg', alt: 'superiorglorius' },
 		];
-		
-	   }])
+	}])
+	
 
 	   .controller('rolunkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 		$scope.rolunk = [
