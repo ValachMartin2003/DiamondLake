@@ -1,69 +1,22 @@
- <!-- Carousel -->
  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-
-    <div class="carousel-item active">
-      <img ng-src="img/recepciocarousel.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block" style="margin-bottom: 10%;">
-        
-        <h1 style=" text-transform: uppercase; font-weight: bold;font-style: italic;color: #000000;text-shadow: 3px 3px 2px #ddc77d,-11px 3px 22px rgba(127, 124, 71, 1);">
-          <span>Foglaljon</span>
-          <span>nálunk</span>
-          <span>szobát </span>
-          <span>bizalommal!</span>
-        </h1>
-
-        <a ui-sref="foglalas"><button ng-if="$root.user.id"  type="button" class="btn btn-warning btn-lg foglalas" style="color:black; border-radius: 5px;border: solid 2px black;">Foglalás</button></a>
-      </div>
+    <div class="carousel-inner">
+        <div class="carousel-item" ng-class="{ active: $index === 0 }" ng-repeat="slide in otthon">
+            <img ng-src="{{ slide.img }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="margin-bottom: 10%;">
+                <h1 style="text-transform: uppercase; font-weight: bold; font-style: italic; color: #000000; text-shadow: 3px 3px 2px rgba(221, 199, 125, 1), -11px 3px 22px rgba(127, 124, 71, 1);">
+                    <span ng-repeat="word in slide.caption.split(' ')">{{ word }} </span>
+                </h1>
+                <a ui-sref="{{ slide.buttonLink }}" href="{{ slide.buttonLink }}"><button type="button" class="btn btn-warning btn-lg" style="border-radius: 5px; border: solid 2px black;">{{ slide.buttonLabel }}</button></a>
+            </div>
+        </div>
     </div>
-
-    <div class="carousel-item">
-      <img ng-src="img/etterem/etterem6atmeretezettblur.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block" style="margin-bottom: 10%;">
-        
-        <h1 style=" text-transform: uppercase; font-weight: bold;font-style: italic;color: #000000;text-shadow: 3px 3px 2px rgb(221, 199, 125),-11px 3px 22px rgba(127, 124, 71, 1);">
-          <span>A</span>
-          <span>szálloda</span>
-          <span>éttermében</span>
-          <br>
-          <span>első</span>
-          <span>osztályú</span>
-          <span>ételeket</span>
-          <span>kínálunk!</span>
-        </h1>
-
-        <a ui-sref="restaurant" href="etterem.html"><button type="button" class="btn btn-warning btn-lg megnezetterem" style="border-radius: 5px;border: solid 2px black;color:#000000">Megnézem az éttermet</button></a>
-      </div>
-    </div>
-
-    
-
-    <div class="carousel-item">
-      <img ng-src="img/szobaink/szoba6.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block" style="margin-bottom: 10%;">
-        
-        <h1 style=" text-transform: uppercase; font-weight: bold;font-style: italic;color: #000000;text-shadow: 3px 3px 2px rgb(221, 199, 125),-11px 3px 22px rgba(127, 124, 71, 1);">
-          <span>Szobáink</span>
-          <span>megnyugvást </span>
-          <span>nyújtanak,</span>
-          <br>
-          <span>helyezze</span>
-          <span>magát</span>
-          <span>nálunk</span>
-          <span>kényelembe!</span>
-        </h1>
-
-        <a ui-sref="rooms" href="szobaink.html"><button type="button" class="btn btn-warning btn-lg" style="border-radius: 5px;border: solid 2px black;">Megnézem az szobákat</button></a>
-      </div>
-    </div>
-  </div>
-   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
     </button>
 </div>
 
@@ -257,8 +210,9 @@
   </div>
     <!-- Képgaléria[vege] -->
 
-
 </div>
+
+
 
 
 

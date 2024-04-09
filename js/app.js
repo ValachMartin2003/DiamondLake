@@ -37,6 +37,7 @@
 				url: '/',
 				parent: 'root',
 				templateUrl: './html/home.html',
+				controller: 'homeController'
 			})
 			
 			.state('rooms', {
@@ -637,13 +638,34 @@
 		   }
 	   ])
 	   
-	  .controller('rolunkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
+	   .controller('homeController', ['$scope', '$http', '$location', function($scope, $http, $location) {
+		$scope.otthon = [
+			{ img: 'recepciocarousel.jpg', caption: 'Foglaljon nálunk szobát bizalommal!', buttonLabel: 'Foglalás', buttonLink: 'foglalas' },
+            { img: 'etterem/etterem6atmeretezettblur.jpg', caption: 'A szálloda éttermében első osztályú ételeket kínálunk!', buttonLabel: 'Megnézem az éttermet', buttonLink: 'etterem' },
+            { img: 'szobaink/szoba6.jpg', caption: 'Szobáink megnyugvást nyújtanak, helyezze magát nálunk kényelembe!', buttonLabel: 'Megnézem az szobákat', buttonLink: 'rooms' }
+		];
+		$scope.images = [
+			{ src: 'img/Szoba/lakosztaly1.jpg', modalId: 'szoba1' },
+			{ src: 'img/Szoba/lakosztaly2.jpg', modalId: 'szoba2' },
+			{ src: 'img/Szoba/lakosztaly3.jpg', modalId: 'szoba3' },
+			{ src: 'img/Szoba/lakosztaly4.jpg', modalId: 'szoba4' },
+			{ src: 'img/Szoba/lakosztaly5.jpg', modalId: 'szoba5' },
+			{ src: 'img/Szoba/szoba1.jpg', modalId: 'szoba6' },
+			{ src: 'img/Szoba/szoba2.jpg', modalId: 'szoba7' },
+			{ src: 'img/Szoba/szoba8.jpg', modalId: 'szoba8' },
+			{ src: 'img/Szoba/szoba4.jpg', modalId: 'szoba9' },
+			{ src: 'img/Szoba/szoba5.jpg', modalId: 'szoba10' }
+		];
+	   }])
+
+	   .controller('rolunkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 		$scope.rolunk = [
 			{img: 'ikonok/Systemproperty/Systemproperty1', title:'Valach Martin', job:'Software Developer'},
 			{img: 'ikonok/Systemproperty/Systemproperty2', title:'Surányi Csenge', job:'Software Developer'},
 			{img: 'ikonok/Systemproperty/Systemproperty1', title:'Kiss Benjámin Zoltán', job:'Software Developer'},
 			
 		];
+
 
 		$scope.gondolatok = [
 			{ cim: 'Kényelmes szobák', 
