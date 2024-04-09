@@ -656,6 +656,25 @@
 			{ src: 'img/Szoba/deluxe+2.jpg', alt: 'deluxe+2' },
 			{ src: 'img/Szoba/superiorglorius.jpg', alt: 'superiorglorius' },
 		];
+
+		$scope.welcomeImageSrc = 'img/Szoba/szoba13.jpg';
+		$scope.welcomeTitle = 'Üdvözöljük';
+		$scope.welcomeSubtitle = 'DiamondLake Wellness Szállodában!';
+		$scope.welcomeMessage1 = 'Szeretettel köszöntjük Önt a Diamond Lake Wellness Szálloda varázslatos világában, ahol a kikapcsolódás és az élmények új dimenzióit fedezheti fel.';
+		$scope.welcomeSection1Title = 'Fedezze fel új lehetőségeinket!';
+		$scope.welcomeSection1Content = 'Válassza a pihenést és feltöltődést a lenyűgöző wellness szolgáltatásaink révén, ahol testét és lelkét egyaránt ápolhatja. Engedje, hogy a nyugtató masszázsok és a gyógyító fürdők egészséget és harmóniát hozzanak az életébe.';
+		$scope.welcomeSection2Title = 'Kalandra fel a játékosoknak!';
+		$scope.welcomeSection2Content = 'Azoknak, akik inkább izgalmakra vágynak, számtalan lehetőséget kínálunk a szórakozásra. Élvezze a modern konzolok által nyújtott élményeket a Konzolszobánkban, ahol a legújabb játékokkal találkozhat és versenyezhet barátaival.';
+		$scope.restaurantImageSrc = 'img/Esemenyek/pihi.jpg';
+		$scope.restaurantSectionTitle = 'Étterem és Gasztronómia';
+		$scope.restaurantSectionContent = 'Az étterem a hotel egyik büszkesége, ahol ízletes ételek és italok várják Önt. Legyen szó reggeliről, ebédről vagy vacsoráról, szakácsaink friss és helyi alapanyagokból készítik ételeinket, hogy minden falat egy igazi gasztronómiai élmény legyen.';
+		$scope.natureSectionTitle = 'Élvezze a természet szépségét!';
+		$scope.natureSectionContent = 'Ha pedig a friss levegő és a természet közelsége hívja, sétáljon körbe varázslatos tóparti kertünkben, vagy merüljön el a környék lenyűgöző tájainak felfedezésében. A túrázás, kerékpározás és horgászat kiváló lehetőségeket kínál a kikapcsolódásra.';
+		$scope.entertainmentSectionTitle = 'Szórakozás és barátság minden nap!';
+		$scope.entertainmentSectionContent = 'A Diamond Lake Wellness Szálloda minden nap új élményekkel és lehetőségekkel várja Önt és szeretteit. Legyen részese egy olyan helynek, ahol a jókedv, a barátság és az élmények örök emlékeket teremtenek.';
+		$scope.relaxationSectionTitle = 'Kapcsolódjon ki nálunk, és élvezze az élet szépségeit!';
+		$scope.relaxationSectionContent = 'A Diamond Lake Wellness Szálloda csapata mindenben segítségére lesz, hogy Önnek és társainak felejthetetlen élményekben legyen része. Várjuk Önt szeretettel a legközelebbi pihenésre és kalandra!';
+
 	}])
 	
 

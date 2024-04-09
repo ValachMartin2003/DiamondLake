@@ -68,45 +68,37 @@
 </div>
 
 
+
+
+
 <div class="position1 container">
   <div class="position2 row">
-    <div class="card mt-3">
+     <!-- Home Leírás[eleje] -->
+    <div class="card mt-3" ng-controller="homeController">
       <div class="col">
         <div class="mt-5 text-center">
-            <img src="img/Szoba/lakosztaly3.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 rounded img-fluid" alt="...">
-          <h1 class="text-center">Üdvözöljük</h1>
-          <h5><strong>DiamondLake Wellness Szállodában!</strong></h5>
-          <p>Szeretettel köszöntjük Önt a Diamond Lake Wellness Szálloda varázslatos világában,
-             ahol a kikapcsolódás és az élmények új dimenzióit fedezheti fel.</p>
-          <h2>Fedezze fel új lehetőségeinket!</h2>
-          <p>Válassza a pihenést és feltöltődést a lenyűgöző wellness szolgáltatásaink révén, ahol testét és lelkét egyaránt ápolhatja. Engedje, 
-             hogy a nyugtató masszázsok és a gyógyító fürdők egészséget és harmóniát hozzanak az életébe.</p>
-          <h2>Kalandra fel a játékosoknak!</h2>
-          <p>Azoknak, akik inkább izgalmakra vágynak, számtalan lehetőséget kínálunk a szórakozásra. Élvezze a modern konzolok által nyújtott élményeket a Konzolszobánkban,
-             ahol a legújabb játékokkal találkozhat és versenyezhet barátaival.</p>
-             <img src="img/Esemenyek/pihi.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 rounded img-fluid" alt="...">
-          <h2>Élvezze a természet szépségét!</h2>
-          <p>Ha pedig a friss levegő és a természet közelsége hívja, sétáljon körbe varázslatos tóparti kertünkben, vagy merüljön el a környék lenyűgöző tájainak felfedezésében. A túrázás, kerékpározás és horgászat kiváló lehetőségeket kínál a kikapcsolódásra.</p>
-          <h2>Szórakozás és barátság minden nap!</h2>
-          <p>A Diamond Lake Wellness Szálloda minden nap új élményekkel és lehetőségekkel várja Önt és szeretteit. Legyen részese egy olyan helynek, ahol a jókedv, a barátság és az élmények örök emlékeket teremtenek.</p>
-          <h2>Kapcsolódjon ki nálunk, és élvezze az élet szépségeit!</h2>
-          <p>A Diamond Lake Wellness Szálloda csapata mindenben segítségére lesz, hogy Önnek és társainak felejthetetlen élményekben legyen része. Várjuk Önt szeretettel a legközelebbi pihenésre és kalandra!</p>
+            <img ng-src="{{welcomeImageSrc}}" class="col-md-6 float-md-end mb-3 ms-md-3 rounded img-fluid" alt="...">
+          <h1 class="text-center">{{welcomeTitle}}</h1>
+          <h5><strong>{{welcomeSubtitle}}</strong></h5>
+          <p>{{welcomeMessage1}}</p>
+          <h2>{{welcomeSection1Title}}</h2>
+          <p>{{welcomeSection1Content}}</p>
+          <h2>{{welcomeSection2Title}}</h2>
+          <p>{{welcomeSection2Content}}</p>
+          <img ng-src="{{restaurantImageSrc}}" class="col-md-6 float-md-end mb-3 ms-md-3 rounded img-fluid" alt="...">
+          <h2>{{restaurantSectionTitle}}</h2>
+          <p>{{restaurantSectionContent}}</p>
+          <h2>{{natureSectionTitle}}</h2>
+          <p>{{natureSectionContent}}</p>
+          <h2>{{entertainmentSectionTitle}}</h2>
+          <p>{{entertainmentSectionContent}}</p>
+          <h2>{{relaxationSectionTitle}}</h2>
+          <p>{{relaxationSectionContent}}</p>
         </div>
       </div>
-    </div>	
-
-
- 
-  </div>
-  
-
-  
- 
-</div>
-
-
-<div class="position1 container">
-  <div class="position2 row">
+    </div>
+    <!-- Home Leírás[vege] -->
+    
     <div ng-controller="homeController">
       <!-- Képgaléria[eleje] -->
       <div class="card mt-3">
@@ -136,8 +128,6 @@
       </div>
       <!-- Képgaléria[vege] -->
     </div>
-    
-    
   </div>
 </div>
 
