@@ -638,6 +638,7 @@
 		   }
 	   ])
 	   
+	
 	   .controller('homeController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 		$scope.images = [
 			{ src: 'img/Szoba/lakosztaly1.jpg', alt: 'lakosztaly1' },
