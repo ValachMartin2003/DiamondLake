@@ -195,7 +195,7 @@
 						palettes: [					// Color palettes
 							{
 								id: 'navbar',
-								title: 'Válassza ki a felső menűsor színét!', 	
+								title: 'Válassza ki a felső menüsor színét!', 	
 								colors: ['#8FBC8F','#00CED1','#FFE4C4','#dda15e','#9b9b9b'],
 								default: '#F8F2E9'
 							},
