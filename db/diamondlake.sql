@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Ápr 09. 12:14
+-- Létrehozás ideje: 2024. Ápr 10. 09:38
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -81,13 +81,13 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`id`, `type`, `price`, `img`) VALUES
-(1, 'Standard', 12000, 'standardszoba.jpg'),
-(2, 'Superior', 20900, 'superior1.jpg'),
-(3, 'Deluxe', 25900, 'deluxe1.jpg'),
-(4, 'Deluxe+', 29900, 'deluxe+1.jpg'),
-(5, 'Lakosztály', 31900, 'lakosztalyteljes.jpg'),
-(6, 'Nászutas Lakosztály', 34990, 'naszutaslakosztaly1.jpg'),
-(7, 'Elnöki Lakosztály', 63500, 'elnokilakosztaly1.jpg'),
+(1, 'Standard', 15860, 'standardszoba.jpg'),
+(2, 'Superior', 47530, 'superior1.jpg'),
+(3, 'Deluxe', 72180, 'deluxe1.jpg'),
+(4, 'Deluxe+', 103370, 'deluxe+1.jpg'),
+(5, 'Lakosztály', 138740, 'lakosztalyteljes.jpg'),
+(6, 'Nászutas Lakosztály', 162540, 'naszutaslakosztaly1.jpg'),
+(7, 'Elnöki Lakosztály', 197470, 'elnokilakosztaly1.jpg'),
 (8, 'Akadálymentesített', 69270, 'akadalymentesitett1.jpg');
 
 -- --------------------------------------------------------
