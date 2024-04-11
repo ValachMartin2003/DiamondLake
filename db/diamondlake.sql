@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Ápr 10. 09:38
+-- Létrehozás ideje: 2024. Ápr 11. 09:19
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `booking` (
+  `user_id` int(11) NOT NULL,
   `start` date NOT NULL,
   `and` date NOT NULL,
   `adult` int(10) NOT NULL,
@@ -166,7 +167,7 @@ INSERT INTO `users` (`id`, `type`, `name`, `born`, `gender`, `country_code`, `ph
 -- A tábla indexei `booking`
 --
 ALTER TABLE `booking`
-  ADD PRIMARY KEY (`room`);
+  ADD PRIMARY KEY (`user_id`);
 
 --
 -- A tábla indexei `programok`
