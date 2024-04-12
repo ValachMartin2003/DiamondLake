@@ -196,19 +196,19 @@
 							{
 								id: 'navbar',
 								title: 'Válassza ki a felső menüsor színét!', 	
-								colors: ['#D1BB9E','#E5DDC5','#C4E4FF','#94A684','#9b9b9b'],
+								colors: ['#E5DDC5','#C4E4FF','#94A684','#9b9b9b','#D1BB9E'],
 								default: '#F8F2E9'
 							},
 							{
 								id: 'body',
 								title: 'Válassza ki a háttér színét!', 		
-								colors: ['#EAD8C0','#F0EBE3','#E4F1FF','#CEDEBD','#ced4da'],
+								colors: ['#F0EBE3','#E4F1FF','#CEDEBD','#ced4da','#EAD8C0'],
 								default: '#fff'
 							},
 							{
 								id: 'footer',
 								title: 'Válassza ki az alsó menüsor színét!',	
-								colors: ['#D1BB9E','#E5DDC5','#C4E4FF','#94A684','#9b9b9b'],
+								colors: ['#E5DDC5','#C4E4FF','#94A684','#9b9b9b','#D1BB9E'],
 								default: '#F8F2E9'
 							}
 						],
