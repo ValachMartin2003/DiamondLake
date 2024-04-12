@@ -1,0 +1,6 @@
+Select optons default unselected hidden
+Adatokat ellenőrizni
+foglaláskor
+csak bejelenkezett felhasználó foglalhasson
+
+Önmagától kijelenkezik

@@ -3,43 +3,61 @@
     <div class="position2 row justify-content-center">
       <div class="col-lg-10  bg-secondary-subtle rounded" >
         <h2 class="text-center mt-2">Foglalás</h2>
-        <form action="#" class="row">
+        <form name="foglalasForm" class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label for="input_from">Kérem válasszon érkezési időpontot:</label>
+              <label for="start">Kérem válasszon érkezési időpontot:</label>
               <br>
-              <input type="date" class="form-control">
+              <input type="date" class="form-control" id="start"
+                     ng-model="model.start"
+                     ng-init="model.start=null"
+                     required>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="input_from">Kérem válasszon távozási időpontot:</label>
-              <input type="date" class="form-control">
+              <label for="and">Kérem válasszon távozási időpontot:</label>
+              <input type="date" class="form-control" id="and" 
+                     ng-model="model.and"
+                     ng-init="model.and=null"
+                     required>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="input_from">Felnőttek száma:</label>
-              <input type="number" class="form-control" min="0" max="10">
+              <label for="adult">Felnőttek száma:</label>
+              <input type="number" class="form-control" min="0" max="10" id="adult"
+                     ng-model="model.adult"
+                     ng-init="model.adult=null"
+                     required>
             </div>
           </div>
+
           <div class="col-md-6">
             <div class="form-group">
-              <label for="input_from">Gyerekek száma:</label>
-              <input type="number" class="form-control" min="0" max="5"ng-model="bekapcsi">
+              <label for="kids" >Gyerekek száma:</label>
+              <input type="number" id="kids" class="form-control" min="0" max="5" 
+                     ng-model="model.kids"
+                     ng-init="model.kids=null"
+                     required>
             </div>
           </div>
-          <div class="form-check form-check-reverse"ng-show="bekapcsi">
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1" >
-            <label class="form-check-label" for="reverseCheck1">
+
+          <div class="form-check form-check-reverse">
+            <input class="form-check-input" type="checkbox" value="" id="baby_bed" 
+                   ng-model="model.baby_bed"
+                   ng-init="model.baby_bed=null">
+            <label class="form-check-label" for="baby_bed">
              Babaágy:
             </label>
           </div>
           
           <div class="form-group mt-3">
-            <label for="input_from">Kérem válasszon szobatípust:</label>
-            <select class="form-select" id="inputGroupSelect01">
-              <option selected>Válasszon...</option>
+            <label for="room">Kérem válasszon szobatípust:</label>
+            <select class="form-select" id="room"
+                    ng-model="model.room"
+                    required>
+              <option selected disabled hidden>Válasszon...</option>
               <option value="1">Standard szoba</option>
               <option value="2">Superior szoba </option>
               <option value="3">Deluxe szoba</option>
@@ -52,11 +70,19 @@
           </div>
           <p class="mt-2">Megjegyzés:</p>
           <div class="form-floating col-md-6">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <textarea class="form-control" placeholder="Leave a comment here" 
+                      id="floatingTextarea2" style="height: 100px"
+                      ng-model="model.comment"
+                      ng-init="model.comment=null">
+            </textarea>
           </div>
 
           <div class="col-12">
-            <button type="submit" class="btn btn-dark mt-2">Foglalás küldése</button>
+            <button type="button" class="btn btn-dark mt-2"
+                    ng-disabled="foglalasForm.$invalid"
+                    ng-click="foglalas()">
+              Foglalás küldése
+            </button>
           </div>
         </form>
       </div>

@@ -631,12 +631,38 @@
 			}
 		])	
 
-	   .controller('foglalasController', [
-		'$scope',
-		   '$timeout',
-		function($scope, $timeout) {
-		   }
-	   ])
+	  .controller('foglalasController', [
+			'$rootScope',
+			'$scope',
+		  '$timeout',
+			'http',
+			'util',
+			function($rootScope, $scope, $timeout, http, util) {
+
+				$scope.foglalas = () => {
+					
+					let args = util.objFilterByKeys($scope.model, [
+					], false);
+
+					args.start = moment(args.start).format('YYYY-MM-DD');
+					args.and = moment(args.and).format('YYYY-MM-DD');
+					args.user_id = $rootScope.user.id;
+
+					// Http request
+					http.request({
+						method: 'POST',
+						url 	: `./php/foglalas.php`,
+						data 	: args
+					})
+					.then(response => {
+						alert(response);
+					}).catch(e => () => { 
+						alert(e); 
+					});
+				}
+
+		  }
+	  ])
 	   
 	
 	   .controller('homeController', ['$scope', '$http', '$location', function($scope, $http, $location) {
