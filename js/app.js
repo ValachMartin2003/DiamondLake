@@ -624,12 +624,16 @@
 
     
 	// Szobaink controller		
-	.controller('SzobainkController', [
-		'$scope',
-		function($scope) {
+		.controller('SzobainkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
+			$scope.szobakepek = [
+				
+				
+			
+			];
+		}])
 		
-			}
-		])	
+
+		
 
 	  .controller('foglalasController', [
 			'$rootScope',
