@@ -1,6 +1,6 @@
 # DiamondLake Wellness Szálloda
 ##### Készítették: Surányi Csenge, Valach Martin és Kiss Benjámin Zoltán
-#### A weboldalunk elérése a következö úton lehetséges:
+## A weboldalunk elérése a következö úton lehetséges:
 ###### http://localhost/2_14_a/vizsgaremek/DiamondLake/#!/
 ## A képeket a következő oldalakról gyűjtöttünk: 
 - Unsplah
