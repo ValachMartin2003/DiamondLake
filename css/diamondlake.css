@@ -47,6 +47,7 @@ body {
   .footer a {
     color: #333;
   }
+  
   /*....*/
   .footer {
     position: none;
@@ -217,7 +218,7 @@ span:nth-child(10) {
   transform: scale(1.2);
 }
 
-/* The Transformation */
+/*Kép zoom animáció szobáink oldalon*/
 .img-hover-zoom--blur:hover img {
   filter: blur(0);
   transform: scale(1);
@@ -279,7 +280,9 @@ span:nth-child(10) {
   opacity: 1;
   visibility: hidden;
 }
-/*...*/
+/*Kép zoom animáció szobáink oldalon*/
+
+/*Ikonok*/
 .hajszarito:hover p,
 .lcdtv:hover p,
 .telefon:hover p,
@@ -291,7 +294,7 @@ span:nth-child(10) {
 .szobaszerviz:hover p {
   visibility: visible;
 }
-/*...*/
+/*Ikonok vége*/
 
 
 /* Csúszka */
