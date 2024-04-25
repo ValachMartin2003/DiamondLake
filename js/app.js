@@ -44,7 +44,7 @@
 				url: '/rooms',
 				parent: 'root',
 				templateUrl: './html/szobaink.html',
-				controller: 'SzobainkController'
+				controller: 'szobainkController'
 			})
 			.state('restaurant', {
 				url: '/restaurant',
@@ -624,12 +624,17 @@
 
     
 	// Szobaink controller		
-		.controller('SzobainkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
-			$scope.szobakepek = [
-				
-				
-			
-			];
+		.controller('szobainkController', [
+			'$scope', 
+			'$http', 
+			'$location',
+			 function($scope, $http, $location) {
+			$scope.szoba = [
+				{ 
+				  src: 'img/Szoba/superiorhaloszoba',
+				  title: 'Superior',
+				  leiras: 'Akik egy kis extrára vágynak az alapokon túl' }
+			  ];
 		}])
 		
 
