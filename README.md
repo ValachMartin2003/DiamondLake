@@ -41,7 +41,7 @@ Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
 1. **Logo**: Az oldal logója, ami visszavezet a főoldalra, ha rákattintasz.
    - **Logo alat lévő rovid leirás** -
 2. **Navigációs Menü:**
-3. OLDALAINK
+3. Oldalaink
    - **Szobáink**
    - **Szolgáltatások**
 4. Lehetőségeink
@@ -54,7 +54,7 @@ Az alábbiakban megtalálhatóak a weboldal láblécében szereplő elemek:
      
    - **Elérhetőség**
    - **Rólunk**
-5. KAKCSOLAT
+5. Kapcsolat
    - Hely
    - Email
    - Telefon
