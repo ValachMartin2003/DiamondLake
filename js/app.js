@@ -627,7 +627,7 @@
 	.controller('RoomController', function($scope) {
 		// Sample room data
 		$scope.rooms = [
-		  {
+		  {// 1 szoba adatai
 			name: 'Standard',
 			description: 'Alap minőség alap kivitelben',
 			img: 'img/Szoba/standardszoba.jpg',
@@ -646,7 +646,7 @@
             ]
 
 		  },
-		  {
+		  {// 2 szoba adatai
 			name: 'Superior',
 			description: 'Akik egy kis extrára vágynak az alapokon túl',
 			img: 'img/Szoba/superiorhaloszoba.jpg',
@@ -664,7 +664,7 @@
                 'img/Szoba/superiorhaloszoba.jpg'
             ]
 		  },
-		  {
+		  {// 3 szoba adatai
 			name: 'Deluxe',
 			description: 'Deluxe mínőség kedvelőinek',
 			img: 'img/Szoba/deluxe1.jpg',
@@ -682,7 +682,7 @@
                 'img/Szoba/deluxefurdo.jpg'
             ]
 		  },
-		  {
+		  {// 4 szoba adatai
 			name: 'Deluxe+',
 			description: 'Deluxe mínőség plusszokkal',
 			img: 'img/Szoba/deluxe+1.jpg',
@@ -700,7 +700,7 @@
                 'img/Szoba/deluxe+8.jpg'
             ]
 		  },
-		  {
+		  {// 5 szoba adatai
 			name: 'Lakosztály',
 			description: 'Titanic szintű lakosztály',
 			img: 'img/Szoba/lakosztalyteljes.jpg',
@@ -719,7 +719,7 @@
 				'img/Szoba/lakosztalyfurdo.jpg'
             ]
 		  },
-		  {
+		  {// 6 szoba adatai
 			name: 'Nászutas lakosztály',
 			description: 'Nászutas pároknak',
 			img: 'img/Szoba/naszutaslakosztaly1.jpg',
@@ -736,15 +736,45 @@
                 'img/Szoba/naszutaslakosztalykonyha.jpg',
                 'img/Szoba/naszutaslakosztalyfurdo.jpg'
             ]
+		  },
+		  {// 7 szoba adatai
+			name: 'Elnöki lakosztály',
+			description: 'Az elnöknek személyesen',
+			img: 'img/Szoba/elnokilakosztaly1.jpg',
+			price: '197.470',
+			modalId: 'exampleModal7',
+
+			modalTitle: 'Elnöki lakosztály',
+            modalDescription: 'Az Elnöki lakosztály az abszolút luxus és kényelem megtestesítője, mely ideális választás azoknak, akik a legmagasabb színvonalú szolgáltatásokra és kényelemre vágynak. Ez a lakosztály a szálloda csúcsa, exkluzív atmoszférával és impozáns méretével kiemelkedik a többi szobából. Tágas tér, kifinomult design és privát szolgáltatások biztosítják, hogy a vendégek teljes mértékben átéljék az exkluzivitás és a kényelem érzését, hogy teljesen kikapcsolódhassanak a mindennapok stresszétől.',
+            features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+            modalImages: [
+                'img/Szoba/elnokilakosztaly1.jpg',
+                'img/Szoba/elnokilakosztaly2.jpg',
+                'img/Szoba/elnokilakosztaly3.jpg',
+                'img/Szoba/elnokilakosztaly4.jpg',
+                'img/Szoba/elnokilakosztaly5.jpg',
+				'img/Szoba/elnokilakosztalynappali.jpg',
+				'img/Szoba/elnokilakosztalyfurdo.jpg',
+				'img/Szoba/elnokilakosztalykonyha.jpg'
+            ]
+		  },
+		  {// 8 szoba adatai
+			name: 'Akadálymentesített szoba',
+			description: 'Mozgássérülteknek rendelkezésre álló lakosztály',
+			img: 'img/Szoba/akadalymentesitett1.jpg',
+			price: '69.270',
+			modalId: 'exampleModal8',
+
+			modalTitle: 'Akadálymentesített szoba',
+            modalDescription: 'Az Akadálymentesített lakosztály kényelmes és befogadó környezetet biztosít mozgássérült vendégek számára, anélkül, hogy kompromisszumot kellene kötniük a luxus és a kényelem terén. Kiemelkedő jellemzői közé tartozik a tágas tér, az alacsonyan elhelyezett bútorok és az akadálymentesített fürdőszoba, amelyek gondosan tervezettek annak érdekében, hogy a vendégek teljes mértékben élvezhessék tartózkodásukat a szállodában.',
+            features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+            modalImages: [
+                'img/Szoba/akadalymentesitett1.jpg',
+                'img/Szoba/akadalymentesitett2.jpg',
+                'img/Szoba/akadalymentesitettfurdo.jpg',
+                'img/Szoba/akadalymentesitettfurdo1.jpg'
+            ]
 		  }
-
-
-
-
-
-
-
-
 		];
 	  })
 		

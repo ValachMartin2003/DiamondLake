@@ -265,12 +265,12 @@
 
       
 
-    <!--szobak--> 
+    <!--szobak--
     
     <div class="position1 container">
     <h1 class="text-center foglalhatoszobak" style="margin-top: 5%; text-decoration: underline; font-style: italic;">Foglalható szobáink listája</h1>
     <div class="position2 row">
-      <!--Első szoba-
+      -Első szoba-
       <div class="col-md-6">
         <div class="card mb-3">
           <div class="row g-0">
@@ -739,7 +739,7 @@
 
       --Hatodik szobához tartozó modal vége-->
 
-      <!--Hetedik szoba-->
+      <!--Hetedik szoba--
       <div class="col-md-6">
         <div class="card mb-3">
           <div class="row g-0">
@@ -759,9 +759,9 @@
           </div>
         </div>
       </div>
-      <!--Hetedik szoba-->
+      --Hetedik szoba-->
 
-      <!--Hetedik szobához tartozó modal-->
+      <!--Hetedik szobához tartozó modal--
       <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl custom-modal">
           <div class="modal-content">
@@ -825,9 +825,9 @@
         </div>
       </div>
 
-      <!--Hetedik szobához tartozó modal vége-->
+      --Hetedik szobához tartozó modal vége-->
 
-      <!--Nyolcadik szoba-->
+      <!--Nyolcadik szoba--
       <div class="col-md-6">
         <div class="card mb-3">
           <div class="row g-0">
@@ -847,9 +847,9 @@
           </div>
         </div>
       </div>
-      <!--Nyolcadik szoba vége-->
+      --Nyolcadik szoba vége-->
 
-      <!--Nyolcadik szobához tartozó modal-->
+      <!--Nyolcadik szobához tartozó modal--
       <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl custom-modal">
           <div class="modal-content">
@@ -897,10 +897,10 @@
         </div> 
       </div>
 
-      <!--Nyolcadik szobához tartozó modal vége-->
+      --Nyolcadik szobához tartozó modal vége
 
     </div>
-    </div>
+    </div>-->
 
 
 
@@ -941,68 +941,72 @@
     </div>
 
   </div>
-</div>
 
-
-<!-- Modál tartalom -->
-<div ng-repeat="room in rooms">
-  <div class="modal fade" id="{{ room.modalId }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl custom-modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div class="row w-100">
-            <div class="col-lg-8 col-sm-6">
-              <h2 class="modal-title" style="font-weight:bold;">{{ room.modalTitle }}</h2>
+    <!-- Modál tartalom  eleje-->
+    <div ng-repeat="room in rooms">
+      <div class="modal fade" id="{{ room.modalId }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl custom-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="row w-100">
+                <div class="col-lg-8 col-sm-6">
+                  <h2 class="modal-title" style="font-weight:bold;">{{ room.modalTitle }}</h2>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-right">
+                  <h3 style="font-weight:bold;text-decoration:underline;">{{ room.price }} Ft/fő/éj</h3>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-4 col-sm-6 text-right">
-              <h3 style="font-weight:bold;text-decoration:underline;">{{ room.price }} Ft/fő/éj</h3>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+              <p style="font-style:italic;">{{ room.modalDescription }}</p>
+              <hr>
+              <h4>Amiket tartalmaz a szoba:</h4>
+              <ul style="font-style:italic;">
+                <li ng-repeat="feature in room.features">{{ feature }}</li>
+              </ul>
+
+              <!-- Elrendezés javítása a képek esetében -->
+              <div class="row mt-2"> 
+                <div class="col-md-6">
+                  <img ng-src="{{ room.modalImages[0] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;"> <!-- Térköz a képek között -->
+                </div>
+                <div class="col-md-6">
+                  <img ng-src="{{ room.modalImages[1] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;">
+                </div>
+              </div>
+
+              <!-- Új sor a további képekhez -->
+              <div class="row mt-2">
+                <div class="col-md-4">
+                  <img ng-src="{{ room.modalImages[2] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;"> 
+                </div>
+                <div class="col-md-4">
+                  <img ng-src="{{ room.modalImages[3] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;">
+                </div>
+                <div class="col-md-4">
+                  <img ng-src="{{ room.modalImages[4] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;">
+                </div>
+              </div>
+
+              <!-- Új sor a további képekhez -->
+              <div class="row mt-2">
+                <div class="col-md-4">
+                  <img ng-src="{{ room.modalImages[5] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;"> 
+                </div>
+                <div class="col-md-4">
+                  <img ng-src="{{ room.modalImages[6] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;"> 
+                </div>
+                <div class="col-md-4">
+                  <img ng-src="{{ room.modalImages[7] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;"> 
+                </div>
+              </div>
+
             </div>
           </div>
-        </div>
-        <div class="modal-body">
-          <p style="font-style:italic;">{{ room.modalDescription }}</p>
-          <hr>
-          <h4>Amiket tartalmaz a szoba:</h4>
-          <ul style="font-style:italic;">
-            <li ng-repeat="feature in room.features">{{ feature }}</li>
-          </ul>
-
-          <!-- Elrendezés javítása a képek esetében -->
-          <div class="row mt-2"> 
-            <div class="col-md-6">
-              <img ng-src="{{ room.modalImages[0] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;"> <!-- Térköz a képek között -->
-            </div>
-            <div class="col-md-6">
-              <img ng-src="{{ room.modalImages[1] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;">
-            </div>
-          </div>
-
-          <!-- Új sor a további képekhez -->
-          <div class="row mt-2">
-            <div class="col-md-4">
-              <img ng-src="{{ room.modalImages[2] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;"> <!-- Egyenletes térköz -->
-            </div>
-            <div class="col-md-4">
-              <img ng-src="{{ room.modalImages[3] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;">
-            </div>
-            <div class="col-md-4">
-              <img ng-src="{{ room.modalImages[4] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;">
-            </div>
-          </div>
-
-          <!-- Új sor a további képekhez -->
-          <div class="row mt-2">
-            <div class="col-md-4">
-              <img ng-src="{{ room.modalImages[5] }}" class="inner-img" style="max-width:100%; margin-bottom: 10px;"> <!-- Biztosított térköz -->
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
-  </div>
+ <!-- Modál tartalom  vége-->
 </div>
 
-         
-    
+
