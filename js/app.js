@@ -44,7 +44,7 @@
 				url: '/rooms',
 				parent: 'root',
 				templateUrl: './html/szobaink.html',
-				controller: 'szobainkController'
+				controller: 'RoomController'
 			})
 			.state('restaurant', {
 				url: '/restaurant',
@@ -624,18 +624,129 @@
 
     
 	// Szobaink controller		
-		.controller('szobainkController', [
-			'$scope', 
-			'$http', 
-			'$location',
-			 function($scope, $http, $location) {
-			$scope.szoba = [
-				{ 
-				  src: 'img/Szoba/superiorhaloszoba',
-				  title: 'Superior',
-				  leiras: 'Akik egy kis extrára vágynak az alapokon túl' }
-			  ];
-		}])
+	.controller('RoomController', function($scope) {
+		// Sample room data
+		$scope.rooms = [
+		  {
+			name: 'Standard',
+			description: 'Alap minőség alap kivitelben',
+			img: 'img/Szoba/standardszoba.jpg',
+			price: '15,860',
+			modalId: 'exampleModal1',
+
+			modalTitle: 'Standard szoba',
+            modalDescription: 'A Standard szobák egyszerre kényelmesek és meghitt hangulatúak, tökéletes választás azok számára, akik szeretnék élvezni a szálloda kellemes légkörét, miközben visszafogott környezetben pihennek. Az egyszerűség és a praktikum ötvözeteként a Standard szobák ideálisak mind a párkapcsolatok, mind pedig az egyedül érkező vendégek számára.',
+            features: ['kényelmes, puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+            modalImages: [
+                'img/Szoba/standardszoba.jpg',
+                'img/Szoba/standardnappali.jpg',
+                'img/Szoba/standardnappaliteljes.jpg',
+                'img/Szoba/standardkonyha.jpg',
+                'img/Szoba/standardfurdo.jpg'
+            ]
+
+		  },
+		  {
+			name: 'Superior',
+			description: 'Akik egy kis extrára vágynak az alapokon túl',
+			img: 'img/Szoba/superiorhaloszoba.jpg',
+			price: '47,530',
+			modalId: 'exampleModal2',
+
+			modalTitle: 'Superior szoba',
+            modalDescription: 'A Superior szobák kifinomult eleganciájukkal és modern berendezésükkel azonnal otthonos hangulatot teremtenek, ami hozzájárul a vendégek teljes kikapcsolódásához és relaxációjához. Emellett a Superior szobák kényelmi szolgáltatásai és extra felszereltsége teszik lehetővé, hogy minden vendég maximálisan kiélvezhesse tartózkodásának minden pillanatát.',
+            features: ['extra nagy méretű és kényelmes ágyak', 'privát erkély gyönyörű kilátással a környező tájra', 'modernebb berendezések és dekoráció', 'luxus fürdőszoba esőztető zuhannyal'],
+            modalImages: [
+                'img/Szoba/superior1.jpg',
+                'img/Szoba/superior2.jpg',
+                'img/Szoba/superioreloszoba.jpg',
+                'img/Szoba/superiorfurdo.jpg',
+                'img/Szoba/superiorhaloszoba.jpg'
+            ]
+		  },
+		  {
+			name: 'Deluxe',
+			description: 'Deluxe mínőség kedvelőinek',
+			img: 'img/Szoba/deluxe1.jpg',
+			price: '72.180',
+			modalId: 'exampleModal3',
+
+			modalTitle: 'Deluxe szoba',
+            modalDescription: 'A Deluxe szobák exkluzív atmoszférája és gondosan megtervezett kényelmi szolgáltatások minden igényt kielégítenek, miközben a vendégeknek lehetőségük van egyedülálló pihenésre és feltöltődésre. A szoba tágas elrendezése és a kifinomult részletek harmonikus egyensúlyt teremtenek, amely tökéletes helyszínt biztosít az újjászületéshez és a mélyebb kapcsolatok elmélyítéséhez.',
+            features: ['kényelmes, prémium minőségű ágyak', 'nyugtató és elegáns berendezés', 'luxus kiegészítők és kényelmi szolgáltatások', 'minibár és tea/kávé készítési lehetőség'],
+            modalImages: [
+                'img/Szoba/deluxe2.jpg',
+                'img/Szoba/deluxe3.jpg',
+                'img/Szoba/deluxe2kanape.jpg',
+                'img/Szoba/deluxeteljes.jpg',
+                'img/Szoba/deluxefurdo.jpg'
+            ]
+		  },
+		  {
+			name: 'Deluxe+',
+			description: 'Deluxe mínőség plusszokkal',
+			img: 'img/Szoba/deluxe+1.jpg',
+			price: '103.370',
+			modalId: 'exampleModal4',
+
+			modalTitle: 'Deluxe+ szoba',
+            modalDescription: 'A Deluxe+ szoba a luxus és a kényelem csúcspontja, amely ideális választás azoknak, akik mindenben a legmagasabb színvonalat keresik, miközben ragaszkodnak a visszafogott eleganciához és a nyugalomhoz. Ez a szálloda legexkluzívabb szállásopciója, amely az egyedi szolgáltatások és az elképesztő kényelmi szolgáltatások tökéletes összhangját kínálja a vendégeknek. A Deluxe+ szoba minden részlete gondosan megtervezett és kivitelezett, hogy a vendégek teljes kényelemben és luxusban élvezhessék tartózkodásukat.',
+            features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+            modalImages: [
+                'img/Szoba/deluxe+1.jpg',
+                'img/Szoba/deluxe+3.jpg',
+                'img/Szoba/deluxe+7.jpg',
+                'img/Szoba/deluxe+6.jpg',
+                'img/Szoba/deluxe+8.jpg'
+            ]
+		  },
+		  {
+			name: 'Lakosztály',
+			description: 'Titanic szintű lakosztály',
+			img: 'img/Szoba/lakosztalyteljes.jpg',
+			price: '138.740',
+			modalId: 'exampleModal5',
+
+			modalTitle: 'Lakosztály',
+            modalDescription: 'A Lakosztály stílusú szobák exkluzív atmoszférájukkal és aprólékos részleteikkel olyan környezetet teremtenek, amely tökéletes a romantikus kikapcsolódáshoz vagy a személyes luxusélmények megtapasztalásához. Ezek a lakosztályok magas színvonalú kényelemmel és visszafogott eleganciával harmonizálnak, biztosítva, hogy minden vendég teljes mértékben átélhesse a luxust és a nyugalmat.',
+            features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+            modalImages: [
+                'img/Szoba/lakosztalyszoba1.jpg',
+                'img/Szoba/lakosztalyteljes.jpg',
+                'img/Szoba/lakosztalyfolyoso.jpg',
+                'img/Szoba/lakosztalykonyhanappali.jpg',
+                'img/Szoba/lakosztalykonyha.jpg',
+				'img/Szoba/lakosztalyfurdo.jpg'
+            ]
+		  },
+		  {
+			name: 'Nászutas lakosztály',
+			description: 'Nászutas pároknak',
+			img: 'img/Szoba/naszutaslakosztaly1.jpg',
+			price: '162.540',
+			modalId: 'exampleModal6',
+
+			modalTitle: 'Nászutas lakosztály',
+            modalDescription: 'A Nászutas lakosztályok egyedi atmoszférájukkal és romantikus részleteikkel olyan környezetet teremtenek, amely tökéletes az új házasok számára, akik szeretnék megünnepelni az egyedülálló pillanatokat. Ezek a lakosztályok luxus kényelemmel és intimitással rendelkeznek, hogy az esküvői utazás minden pillanata emlékezetes legyen. A Nászutas lakosztályok elegáns kialakításukkal és exkluzív szolgáltatásaikkal garantálják a párok teljes ellazulását és a romantikus élmények maximális élvezetét.',
+            features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+            modalImages: [
+                'img/Szoba/naszutaslakosztaly1.jpg',
+                'img/Szoba/naszutaslakosztaly2.jpg',
+                'img/Szoba/naszutasszoba.jpg',
+                'img/Szoba/naszutaslakosztalykonyha.jpg',
+                'img/Szoba/naszutaslakosztalyfurdo.jpg'
+            ]
+		  }
+
+
+
+
+
+
+
+
+		];
+	  })
 		
 
 		
