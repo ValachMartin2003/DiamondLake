@@ -1,101 +1,40 @@
-
-  <!--Reggeli és Vacsora-->
+<!--  Éttermi opciók és modális tartalmak -->
+<div ng-controller="RestaurantController">
+  <!-- Dinamikus megjelenítés -->
   <div class="position1 container-fluid">
-      <div class="position2 row row-cols-1 row-cols-md-2 g-4">
-       
-          <div class="col">
-              <div class="custom-card" data-bs-toggle="modal" data-bs-target="#kiflik">
-                <img ng-src="img/etterem/reggeli.png" class="card-img-top" alt="Sajtos-vajas kiflik">
-                <div class="image-overlay">
-                  <span class="image-text">Sajtos-vajas kiflik</span>
-                </div>
-              </div>
+    <div class="position2 row row-cols-1 row-cols-md-2 g-4">
+      <div class="col" ng-repeat="option in foodOptions">
+        <div class="custom-card" data-bs-toggle="modal" data-bs-target="#{{ option.modalId }}">
+          <img ng-src="{{ option.img }}" class="card-img-top" alt="{{ option.title }}">
+          <div class="image-overlay">
+            <span class="image-text">{{ option.title }}</span>
           </div>
-          
-          <div class="col">
-            <div class="custom-card" data-bs-toggle="modal" data-bs-target="#svedasztal">
-              <img ng-src="img/etterem/svedasztal.png" class="card-img-top" alt="Svédasztal">
-              <div class="image-overlay">
-                <h5 class="image-text">Svédasztal</h5>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col">
-            <div class="custom-card" data-bs-toggle="modal" data-bs-target="#forrocsokik">
-              <img ng-src="img/etterem/orange.png" class="card-img-top" alt="Forró csoki választékaink">
-              <div  class="image-overlay">
-                <h5 class="image-text">Forró csoki választékaink</h5>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col">
-            <div class="custom-card" data-bs-toggle="modal" data-bs-target="#kavejaink">
-              <img ng-src="img/etterem/coffee.png" class="card-img-top" alt="Kávéjaink">
-              <div  class="image-overlay">
-                <h5 class="image-text">Kávéjaink</h5>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col">
-            <div class="custom-card" data-bs-toggle="modal" data-bs-target="#drink">
-              <img ng-src="img/etterem/drink.png" class="card-img-top" alt="Hideg italok">
-              <div  class="image-overlay">
-                <h5 class="image-text">Hideg italok</h5>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col">
-            <div class="custom-card" data-bs-toggle="modal" data-bs-target="#dessert">
-              <img ng-src="img/etterem/dessert.png" class="card-img-top" alt="Jégkása és fagylalt">
-              <div  class="image-overlay">
-                <h5 class="image-text">Jégkása és fagylalt</h5>
-              </div>
-            </div>
-          </div>
-  
         </div>
-  </div>
-  <!--Reggeli és Vacsora-->
-  
-  
-  
-  
-  <!--[1]---modal-->
-<div class="modal" id="kiflik" tabindex="-1">
-  <div class="modal-dialog modal-xl modal-dialog-centered"> 
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Kiflik</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <div class="container-fulid">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-            <div class="col">
-              <div class="custom-card">
-                <img src="img/etterem/breakfast1.jpg" class="img-fluid rounded image-hover" alt="Reggeli Kiflivel">
-                <div class="image-overlay">
-                  <div class="image-text">Reggeli Kiflivel</div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="custom-card">
-                <img src="img/etterem/breakfast2.png" class="img-fluid rounded image-hover" alt="Sajtos">
-                <div class="image-overlay">
-                  <div class="image-text">Sajtos Kifli</div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="custom-card">
-                <img src="img/etterem/breakfast3.png" class="img-fluid rounded image-hover" alt="Pudingos">
-                <div class="image-overlay">
-                  <div class="image-text">Pudingos Kifli</div>
+    </div>
+  </div>
+
+  <!-- Dinamikus modál -->
+  <div ng-repeat="option in foodOptions">
+    <div class="modal" id="{{ option.modalId }}" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered"> 
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{ option.modalTitle }}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>{{ option.modalDescription }}</p>
+            <div class="container-fluid">
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <!-- Modál tartalom képekkel és szövegekkel -->
+                <div class="col" ng-repeat="item in option.modalContent">
+                  <div class="custom-card">
+                    <img ng-src="{{ item.img }}" class="img-fluid rounded" alt="{{ item.text }}">
+                    <div class="image-overlay">
+                      <div class="image-text">{{ item.text }}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -105,232 +44,3 @@
     </div>
   </div>
 </div>
-<!--[1]---modal-->
-
-  
-  <!--[2]---modal-->
-  <div class="modal" id="svedasztal" tabindex="-1">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Svédasztal</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fulid">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-  
-                  <div class="col">
-                    <div class="custom-card">
-                      <img ng-src="img/etterem/buffetbreakfast.png" class="img-fluid rounded" alt="Hidegtál">
-                      <div class="image-overlay">
-                        <div class="image-text">Hidegtál</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="custom-card">
-                      <img ng-src="img/etterem/chesseplatter.png" class="img-fluid rounded" alt="Szenvicsek">
-                      <div class="image-overlay">
-                        <div class="image-text">Szenvicsek</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="custom-card">
-                      <img ng-src="img/etterem/toastmuffin.jpg" class="img-fluid rounded" alt="Reggeli">
-                      <div class="image-overlay">
-                        <div class="image-text">Reggeli</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="custom-card">
-                      <img ng-src="img/etterem/husok.jpg" class="img-fluid rounded" alt="Vacsora">
-                      <div class="image-overlay">
-                        <div class="image-text">Vacsora</div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--[2]---modal-->
-  
-  <!--[3]---modal-->
-  <div class="modal" id="forrocsokik" tabindex="-1">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Forrócsokik</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fulid">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                  <div class="col">
-                    <div class="custom-card">
-                      <img ng-src="img/etterem/forocsoki1.jpg" class="img-fluid rounded" alt="Mogyorós csokoládé">
-                      <div class="image-overlay">
-                        <div class="image-text"> Mogyorós csokoládé</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="custom-card">
-                      <img ng-src="img/etterem/forocsoki2.jpg" class="img-fluid rounded" alt="Fehér Forrócsokoládé">
-                      <div class="image-overlay">
-                        <div class="image-text">Fehér Forrócsokoládé</div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--[3]---modal-->
-  
-  <!--[4]---modal-->
-  <div class="modal" id="kavejaink" tabindex="-1">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Kávéjaink</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fulid">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-              <div class="col">
-                <div class="custom-card">
-                  <img ng-src="img/etterem/fajta1.png" class="img-fluid rounded" alt="Espresso">
-                  <div class="image-overlay">
-                    <div class="image-text">Espresso</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="custom-card">
-                  <img ng-src="img/etterem/fajta2.png" class="img-fluid rounded" alt="Espresso Macchiato">
-                  <div class="image-overlay">
-                    <div class="image-text">Espresso Macchiato</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="custom-card">
-                  <img ng-src="img/etterem/fajta3.png" class="img-fluid rounded" alt="Török kávé">
-                  <div class="image-overlay">
-                    <div class="image-text">Török kávé</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="custom-card">
-                  <img ng-src="img/etterem/fajta4.png" class="img-fluid rounded" alt="Sötét Szerenád">
-                  <div class="image-overlay">
-                    <div class="image-text">Sötét Szerenád</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--[4]---modal-->
-  
-  <!--[5]---modal-->
-  <div class="modal" id="drink" tabindex="-1">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Hideg italok</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fulid">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-              <div class="col">
-                <div class="custom-card">
-                  <img ng-src="img/etterem/ital1.jpg" class="img-fluid rounded" alt="Martini(koktél)">
-                  <div class="image-overlay">
-                    <div class="image-text">Martini(koktél)</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="custom-card">
-                  <img ng-src="img/etterem/udito1.jpg" class="img-fluid rounded" alt="Narancs Málna">
-                  <div class="image-overlay">
-                    <div class="image-text">Narancs Málna</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="custom-card">
-                  <img ng-src="img/etterem/udito2.jpg" class="img-fluid rounded" alt="Coca-Cola">
-                  <div class="image-overlay">
-                    <div class="image-text">Coca-Cola</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--[5]---modal-->
-  
-  <!--[6]---modal-->
-  <div class="modal" id="dessert" tabindex="-1">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Jégkása és fagylalt</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fulid">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-              <div class="col">
-                <div class="custom-card">
-                  <img ng-src="img/etterem/icecream1.jpg" class="img-fluid rounded" alt="Fagylalt tálban">
-                  <div class="image-overlay">
-                    <div class="image-text">Fagylalt tálban</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="custom-card">
-                  <img ng-src="img/etterem/icecream2.jpg" class="img-fluid rounded" alt="Fagylalt kehelyben">
-                  <div class="image-overlay">
-                    <div class="image-text">Fagylalt kehelyben</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="custom-card">
-                  <img ng-src="img/etterem/dessert.png" class="img-fluid rounded" alt="Jégkása">
-                  <div class="image-overlay">
-                    <div class="image-text">Jégkása</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--[6]---modal-->
-  <!--modal-->
-  
-  

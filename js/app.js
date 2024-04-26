@@ -50,6 +50,7 @@
 				url: '/restaurant',
 				parent: 'root',
 				templateUrl: './html/etterem.html',
+				controller: 'RestaurantController'
 			})
 			.state('wendings', {
 				url: '/wendings',
@@ -623,6 +624,145 @@
 	])
 
     
+
+
+	.controller('RestaurantController', function($scope) {
+		
+		 // Az éttermi opciók adatai
+		 $scope.foodOptions = [
+			{// 1 Kiflik adatai
+			  title: 'Sajtos-vajas kiflik',
+			  img: 'img/etterem/reggeli.png',
+			  modalId: 'kiflik',
+			  modalTitle: 'Kiflik',
+			  modalDescription: 'Ízletes kiflik különféle változatokban.',
+			  modalContent: [
+				{
+				  img: 'img/etterem/breakfast1.jpg',
+				  text: 'Reggeli Kiflivel'
+				},
+				{
+				  img: 'img/etterem/breakfast2.png',
+				  text: 'Sajtos Kifli'
+				},
+				{
+				  img: 'img/etterem/breakfast3.png',
+				  text: 'Pudingos Kifli'
+				}
+			  ]
+			},
+			{// 2 Svédasztal adatai
+			  title: 'Svédasztal',
+			  img: 'img/etterem/svedasztal.png',
+			  modalId: 'svedasztal',
+			  modalTitle: 'Svédasztal',
+			  modalDescription: 'Különféle hideg és meleg ételek.',
+			  modalContent: [
+				{
+				  img: 'img/etterem/buffetbreakfast.png',
+				  text: 'Hidegtál'
+				},
+				{
+				  img: 'img/etterem/chesseplatter.png',
+				  text: 'Szenvicsek'
+				},
+				{
+				  img: 'img/etterem/toastmuffin.jpg',
+				  text: 'Reggeli'
+				},
+				{
+				  img: 'img/etterem/husok.jpg',
+				  text: 'Vacsora'
+				}
+			  ]
+			},
+			{// 3 Forrócsoki adatai
+			  title: 'Forró csoki választékaink',
+			  img: 'img/etterem/orange.png',
+			  modalId: 'forrocsokik',
+			  modalTitle: 'Forrócsokik',
+			  modalDescription: 'Változatos forrócsoki ízek.',
+			  modalContent: [
+				{
+				  img: 'img/etterem/forocsoki1.jpg',
+				  text: 'Mogyorós Csokoládé'
+				},
+				{
+				  img: 'img/etterem/forocsoki2.jpg',
+				  text: 'Fehér Forrócsokoládé'
+				}
+			  ]
+			},
+			{// 4 Kávéjaink adatai
+			  title: 'Kávéjaink',
+			  img: 'img/etterem/coffee.png',
+			  modalId: 'kavejaink',
+			  modalTitle: 'Kávéjaink',
+			  modalDescription: 'Különféle kávévariációk.',
+			  modalContent: [
+				{
+				  img: 'img/etterem/fajta1.png',
+				  text: 'Espresso'
+				},
+				{
+				  img: 'img/etterem/fajta2.png',
+				  text: 'Macchiato'
+				},
+				{
+				  img: 'img/etterem/fajta3.png',
+				  text: 'Török Kávé'
+				},
+				{
+				  img: 'img/etterem/fajta4.png',
+				  text: 'Sötét Szerenád'
+				}
+			  ]
+			},
+			{// 5 Hideg italok adatai
+			  title: 'Hideg italok',
+			  img: 'img/etterem/drink.png',
+			  modalId: 'drink',
+			  modalTitle: 'Hideg Italok',
+			  modalDescription: 'Frissítő hideg italok.',
+			  modalContent: [
+				{
+				  img: 'img/etterem/ital1.jpg',
+				  text: 'Jack Daniels'
+				},
+				{
+				  img: 'img/etterem/udito1.jpg',
+				  text: 'Narancs Málna'
+				},
+				{
+				  img: 'img/etterem/udito2.jpg',
+				  text: 'Coca-Cola'
+				}
+			  ]
+			},
+			{// 6 Frissítők adatai
+			  title: 'Jégkása és fagylalt',
+			  img: 'img/etterem/dessert.png',
+			  modalId: 'dessert',
+			  modalTitle: 'Jégkása és Fagylalt',
+			  modalDescription: 'Frissítő jégkása és finom fagylalt.',
+			  modalContent: [
+				{
+				  img: 'img/etterem/icecream1.jpg',
+				  text: 'Fagylalt tálban'
+				},
+				{
+				  img: 'img/etterem/icecream2.jpg',
+				  text: 'Fagylalt kehelyben'
+				},
+				{
+				  img: 'img/etterem/dessert.png',
+				  text: 'Jégkása'
+				}
+			  ]
+			}
+		  ];
+	  })
+
 	// Szobaink controller		
 	.controller('RoomController', function($scope) {
 		// Sample room data

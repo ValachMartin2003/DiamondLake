@@ -575,23 +575,25 @@ span:nth-child(10) {
 /*Discoparty*/
 
 .overlay {
-  position: absolute;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(0, 0, 0, 0.7); /* Átlátszó fekete háttér */
-  display: flex;
-  margin: 60px;
-  width: 60%;
-  height: 50%;
-  justify-content: center;
-  align-items:center;
- 
-  border-bottom:  1px solid #ffffff;
+  position: absolute; /* Az overlay rögzítése */
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  opacity: 0; 
+  transition: .5s ease; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
+
 .card:hover .overlay {
-  opacity: 1;
+  opacity: 1; /* Teljesen látható, ha hover állapotba kerül */
 }
-.keptext {
+
+.overlay-text {
   color: white; /* A szöveg színe */
   font-size: 30px; /* A szöveg mérete */
+  text-align: center; /* Középre igazítás */
 }
