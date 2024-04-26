@@ -4,3 +4,7 @@ foglaláskor
 csak bejelenkezett felhasználó foglalhasson
 
 Önmagától kijelenkezik
+
+
+kijelentkezési button ne Profilnál legyen, User icon nál jelenjen meg, 
+Meg jelenítettem csak nem jelentkezik ki
