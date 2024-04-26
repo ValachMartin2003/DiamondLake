@@ -6,7 +6,7 @@
         <form name="foglalasForm" class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label for="start">Kérem válasszon érkezési időpontot:</label>
+              <label for="start">*Kérem válasszon érkezési időpontot:</label>
               <br>
               <input type="date" class="form-control" id="start"
                      ng-model="model.start"
@@ -16,7 +16,7 @@
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="and">Kérem válasszon távozási időpontot:</label>
+              <label for="and">*Kérem válasszon távozási időpontot:</label>
               <input type="date" class="form-control" id="and" 
                      ng-model="model.and"
                      ng-init="model.and=null"
@@ -25,7 +25,7 @@
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="adult">Felnőttek száma:</label>
+              <label for="adult">*Felnőttek száma:</label>
               <input type="number" class="form-control" min="0" max="10" id="adult"
                      ng-model="model.adult"
                      ng-init="model.adult=null"
@@ -35,7 +35,7 @@
 
           <div class="col-md-6">
             <div class="form-group">
-              <label for="kids" >Gyerekek száma:</label>
+              <label for="kids" >*Gyerekek száma:</label>
               <input type="number" id="kids" class="form-control" min="0" max="5" 
                      ng-model="model.kids"
                      ng-init="model.kids=null"
@@ -53,7 +53,7 @@
           </div>
           
           <div class="form-group mt-3">
-            <label for="room">Kérem válasszon szobatípust:</label>
+            <label for="room">*Kérem válasszon szobatípust:</label>
             <select class="form-select" id="room"
                     ng-model="model.room"
                     required>
