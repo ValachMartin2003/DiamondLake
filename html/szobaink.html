@@ -945,17 +945,18 @@
     <!-- Modál tartalom  eleje-->
     <div ng-repeat="room in rooms">
       <div class="modal fade" id="{{ room.modalId }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl custom-modal">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header">
               <div class="row w-100">
                 <div class="col-lg-8 col-sm-6">
                   <h2 class="modal-title" style="font-weight:bold;">{{ room.modalTitle }}</h2>
                 </div>
-                <div class="col-lg-4 col-sm-6 text-right">
+                <div class="col-lg-4 col-sm-7">
                   <h3 style="font-weight:bold;text-decoration:underline;">{{ room.price }} Ft/fő/éj</h3>
                 </div>
               </div>
+             
             </div>
             <div class="modal-body">
               <p style="font-style:italic;">{{ room.modalDescription }}</p>
