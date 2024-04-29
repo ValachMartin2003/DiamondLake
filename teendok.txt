@@ -1,10 +1,8 @@
-Select optons default unselected hidden
-Adatokat ellenőrizni
-foglaláskor
-csak bejelenkezett felhasználó foglalhasson
-
-Önmagától kijelenkezik
-
-
+Select optons default unselected hidden  OK
 kijelentkezési button ne Profilnál legyen, User icon nál jelenjen meg, 
-Meg jelenítettem csak nem jelentkezik ki
+Meg jelenítettem csak nem jelentkezik ki  OK
+
+
+
+User maradjon bejelenkezve
+Csak bejelenkezett felhasználó foglalhasson

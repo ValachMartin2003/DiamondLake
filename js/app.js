@@ -136,11 +136,27 @@
 
   // Application run
   .run([
+		'$rootScope',
+		'$timeout',
     'trans',
-    (trans) => {
+    ($rootScope, $timeout, trans) => {
 
       // Transaction events
 			trans.events();
+
+			// Logout
+			$rootScope.logout = () => {
+
+				// Confirm
+				if (confirm('Biztosan ki akar jelentkezni?')) {
+
+					// Reset user
+					Object.keys($rootScope.user).forEach((i) => $rootScope.user[i] = null);
+
+					// Reset model
+					//$timeout(() => { methods.reset(true); });
+				}
+			};
     }
   ])
 
@@ -449,19 +465,19 @@
 					}
 				},
 
-				// Logout
-				logout: () => {
+				// // Logout
+				// logout: () => {
 
-					// Confirm
-					if (confirm('Biztosan ki akar jelentkezni?')) {
+				// 	// Confirm
+				// 	if (confirm('Biztosan ki akar jelentkezni?')) {
 
-						// Reset user
-						Object.keys($rootScope.user).forEach((i) => $rootScope.user[i] = null);
+				// 		// Reset user
+				// 		Object.keys($rootScope.user).forEach((i) => $rootScope.user[i] = null);
 
-						// Reset model
-						$timeout(() => { methods.reset(true); });
-					}
-				},
+				// 		// Reset model
+				// 		$timeout(() => { methods.reset(true); });
+				// 	}
+				// },
 
 				// Tab buttons clicked
 				tabClicked: (event) => {

@@ -99,9 +99,14 @@
 								<span class="d-block">{{$root.user.name}}</span>
 							</span>
 						</li>
-
-						<form name="profileForm">
-								<!-- Logout button -->
+						<li class="dropdown-item text-center">
+							<span 						
+								ng-click="$root.logout()">
+								Kijelenkezés
+							</span>
+						</li>
+						<!-- <form name="profileForm">
+								
 								<button data-key="logout" 
 								type="button" 
 								class="btn mx-1 mb-1 btn-outline-danger"
@@ -109,7 +114,7 @@
 								ng-click="methods.logout()">
 								Kijelenkezés
 								</button>
-						</form>
+						</form> -->
 						
 					</ul>
 				</li>
