@@ -47,6 +47,12 @@ body {
   .footer a {
     color: #333;
   }
+
+  @media (max-width: 1200px) { /* Telefonos nézet */
+    .navbar li {
+        margin-bottom: 10px; /* A gombok közötti távolság */
+    }
+  }
   
   /*....*/
   .footer {
@@ -573,7 +579,7 @@ span:nth-child(10) {
     }
   }
 /*Discoparty*/
-
+/* A bároldal */
 .overlay {
   position: absolute; /* Az overlay rögzítése */
   top: 0; 
@@ -598,3 +604,4 @@ span:nth-child(10) {
   font-size: 30px; /* A szöveg mérete */
   text-align: center; /* Középre igazítás */
 }
+/* A bároldal */
