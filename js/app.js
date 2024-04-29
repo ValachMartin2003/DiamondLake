@@ -787,7 +787,7 @@
 			name: 'Standard',
 			description: 'Alap minőség alap kivitelben',
 			img: 'img/Szoba/standardszoba.jpg',
-			price: '15,860',
+			price: '15860',
 			modalId: 'exampleModal1',
 
 			modalTitle: 'Standard szoba',
@@ -806,7 +806,7 @@
 			name: 'Superior',
 			description: 'Akik egy kis extrára vágynak az alapokon túl',
 			img: 'img/Szoba/superiorhaloszoba.jpg',
-			price: '47,530',
+			price: '47530',
 			modalId: 'exampleModal2',
 
 			modalTitle: 'Superior szoba',
@@ -824,7 +824,7 @@
 			name: 'Deluxe',
 			description: 'Deluxe mínőség kedvelőinek',
 			img: 'img/Szoba/deluxe1.jpg',
-			price: '72.180',
+			price: '72180',
 			modalId: 'exampleModal3',
 
 			modalTitle: 'Deluxe szoba',
@@ -842,7 +842,7 @@
 			name: 'Deluxe+',
 			description: 'Deluxe mínőség plusszokkal',
 			img: 'img/Szoba/deluxe+1.jpg',
-			price: '103.370',
+			price: '103370',
 			modalId: 'exampleModal4',
 
 			modalTitle: 'Deluxe+ szoba',
@@ -860,7 +860,7 @@
 			name: 'Lakosztály',
 			description: 'Titanic szintű lakosztály',
 			img: 'img/Szoba/lakosztalyteljes.jpg',
-			price: '138.740',
+			price: '138740',
 			modalId: 'exampleModal5',
 
 			modalTitle: 'Lakosztály',
@@ -879,7 +879,7 @@
 			name: 'Nászutas lakosztály',
 			description: 'Nászutas pároknak',
 			img: 'img/Szoba/naszutaslakosztaly1.jpg',
-			price: '162.540',
+			price: '162540',
 			modalId: 'exampleModal6',
 
 			modalTitle: 'Nászutas lakosztály',
@@ -897,7 +897,7 @@
 			name: 'Elnöki lakosztály',
 			description: 'Az elnöknek személyesen',
 			img: 'img/Szoba/elnokilakosztaly1.jpg',
-			price: '197.470',
+			price: '197470',
 			modalId: 'exampleModal7',
 
 			modalTitle: 'Elnöki lakosztály',
@@ -918,7 +918,7 @@
 			name: 'Akadálymentesített szoba',
 			description: 'Mozgássérülteknek rendelkezésre álló lakosztály',
 			img: 'img/Szoba/akadalymentesitett1.jpg',
-			price: '69.270',
+			price: '69270',
 			modalId: 'exampleModal8',
 
 			modalTitle: 'Akadálymentesített szoba',
