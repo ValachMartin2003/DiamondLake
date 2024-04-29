@@ -586,6 +586,7 @@ span:nth-child(10) {
   display: flex; 
   justify-content: center; 
   align-items: center; 
+  color: #ffffff;
 }
 
 .card:hover .overlay {
