@@ -136,13 +136,28 @@
 
   // Application run
   .run([
+		'$state',
 		'$rootScope',
 		'$timeout',
     'trans',
-    ($rootScope, $timeout, trans) => {
+    ($state, $rootScope, $timeout, trans) => {
+
+			// Set user properties
+			$rootScope.user = {
+				id: null,
+				type: null,
+				type_name: null,
+				name: null,
+				born: null,
+				gender: null,
+				address: null,
+				country_code: null,
+				phone: null,
+				email: null
+			};
 
       // Transaction events
-			trans.events();
+			trans.events('foglalas');
 
 			// Logout
 			$rootScope.logout = () => {
@@ -153,6 +168,9 @@
 					// Reset user
 					Object.keys($rootScope.user).forEach((i) => $rootScope.user[i] = null);
 
+					if ($rootScope.state.disabled.includes($rootScope.state.id)) {
+						$state.go($rootScope.state.prevEnabled);
+					}
 					// Reset model
 					//$timeout(() => { methods.reset(true); });
 				}
@@ -163,7 +181,7 @@
 	// Setup controller
   .controller('setupController', [
 		'$rootScope',
-        '$scope',
+    '$scope',
 		'$timeout',
 		'util',
 		'http',
@@ -174,20 +192,6 @@
 
 				// Initialize
 				init: () => {
-
-					// Set user properties
-					$rootScope.user = {
-						id: null,
-						type: null,
-						type_name: null,
-						name: null,
-						born: null,
-						gender: null,
-						address: null,
-						country_code: null,
-						phone: null,
-						email: null
-					};
 
 					// Set model
 					$scope.model = {
