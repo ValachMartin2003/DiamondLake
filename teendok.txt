@@ -5,4 +5,4 @@ Meg jelenítettem csak nem jelentkezik ki  OK
 
 
 User maradjon bejelenkezve
-Csak bejelenkezett felhasználó foglalhasson
+Csak bejelenkezett felhasználó foglalhasson	OK
