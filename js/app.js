@@ -157,20 +157,6 @@
           user.user();
         }
       });
-
-			// Logout
-			// $rootScope.logout = () => {
-
-			// 	// Confirm
-			// 	if (confirm('Biztosan ki akar jelentkezni?')) {
-
-			// 		// Reset user
-			// 		Object.keys($rootScope.user).forEach((i) => $rootScope.user[i] = null);
-
-			// 		if ($rootScope.state.disabled.includes($rootScope.state.id))
-			// 			$state.go($rootScope.state.prevEnabled);
-			// 	}
-			// };
     }
   ])
 
@@ -258,11 +244,16 @@
 					// Add evemt listebner on OPEN
 					$scope.helper.modal.addEventListener('shown.bs.modal', () => { 
 						$scope.helper.isModelShow = true;
-						let element = $scope.helper.modal.querySelector('.nav-tabs > .nav-item > a.nav-link');
+						let element = $scope.helper.modal
+																.querySelector('.nav-tabs > .nav-item > a.nav-link');
 						if (element) {
-							let tabPointer = element.dataset.tabPointer;
+							let tabPointer 	= element.dataset.tabPointer,
+									tabPanelId	= element.hash,
+									skeleton 		= `.tab-content > .tab-pane${tabPanelId}`,
+									tabPanel 		= element.closest('.modal-body').querySelector(skeleton);
 							if (tabPointer) {
 								$scope.helper.tabPointer = parseInt(tabPointer);
+								if (tabPanel) tabPanel.classList.add('active', 'show');
 								$scope.$applyAsync();
 								methods.focus();
 							}
