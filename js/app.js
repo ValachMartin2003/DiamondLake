@@ -168,11 +168,8 @@
 					// Reset user
 					Object.keys($rootScope.user).forEach((i) => $rootScope.user[i] = null);
 
-					if ($rootScope.state.disabled.includes($rootScope.state.id)) {
+					if ($rootScope.state.disabled.includes($rootScope.state.id))
 						$state.go($rootScope.state.prevEnabled);
-					}
-					// Reset model
-					//$timeout(() => { methods.reset(true); });
 				}
 			};
     }
@@ -643,10 +640,9 @@
 	 	}
 	])
 
-    
-
-
-	.controller('RestaurantController', function($scope) {
+	.controller('RestaurantController', [
+		'$scope', 
+		function($scope) {
 		
 		 // Az éttermi opciók adatai
 		 $scope.foodOptions = [
@@ -781,290 +777,292 @@
 			  ]
 			}
 		  ];
-	  })
+	  }
+	])
 
 	// Szobaink controller		
-	.controller('RoomController', function($scope) {
-		// Sample room data
-		$scope.rooms = [
-		  {// 1 szoba adatai
-			name: 'Standard',
-			description: 'Alap minőség alap kivitelben',
-			img: 'img/Szoba/standardszoba.jpg',
-			price: '15 860',
-			modalId: 'exampleModal1',
+	.controller('RoomController', [
+		'$scope', 
+		function($scope) {
+			// Sample room data
+			$scope.rooms = [
+				{// 1 szoba adatai
+				name: 'Standard',
+				description: 'Alap minőség alap kivitelben',
+				img: 'img/Szoba/standardszoba.jpg',
+				price: '15 860',
+				modalId: 'exampleModal1',
 
-			modalTitle: 'Standard szoba',
-            modalDescription: 'A Standard szobák egyszerre kényelmesek és meghitt hangulatúak, tökéletes választás azok számára, akik szeretnék élvezni a szálloda kellemes légkörét, miközben visszafogott környezetben pihennek. Az egyszerűség és a praktikum ötvözeteként a Standard szobák ideálisak mind a párkapcsolatok, mind pedig az egyedül érkező vendégek számára.',
-            features: ['kényelmes, puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
-            modalImages: [
-                'img/Szoba/standardszoba.jpg',
-                'img/Szoba/standardnappali.jpg',
-                'img/Szoba/standardnappaliteljes.jpg',
-                'img/Szoba/standardkonyha.jpg',
-                'img/Szoba/standardfurdo.jpg'
-            ]
+				modalTitle: 'Standard szoba',
+							modalDescription: 'A Standard szobák egyszerre kényelmesek és meghitt hangulatúak, tökéletes választás azok számára, akik szeretnék élvezni a szálloda kellemes légkörét, miközben visszafogott környezetben pihennek. Az egyszerűség és a praktikum ötvözeteként a Standard szobák ideálisak mind a párkapcsolatok, mind pedig az egyedül érkező vendégek számára.',
+							features: ['kényelmes, puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+							modalImages: [
+									'img/Szoba/standardszoba.jpg',
+									'img/Szoba/standardnappali.jpg',
+									'img/Szoba/standardnappaliteljes.jpg',
+									'img/Szoba/standardkonyha.jpg',
+									'img/Szoba/standardfurdo.jpg'
+							]
 
-		  },
-		  {// 2 szoba adatai
-			name: 'Superior',
-			description: 'Akik egy kis extrára vágynak az alapokon túl',
-			img: 'img/Szoba/superiorhaloszoba.jpg',
-			price: '47 530',
-			modalId: 'exampleModal2',
+				},
+				{// 2 szoba adatai
+				name: 'Superior',
+				description: 'Akik egy kis extrára vágynak az alapokon túl',
+				img: 'img/Szoba/superiorhaloszoba.jpg',
+				price: '47 530',
+				modalId: 'exampleModal2',
 
-			modalTitle: 'Superior szoba',
-            modalDescription: 'A Superior szobák kifinomult eleganciájukkal és modern berendezésükkel azonnal otthonos hangulatot teremtenek, ami hozzájárul a vendégek teljes kikapcsolódásához és relaxációjához. Emellett a Superior szobák kényelmi szolgáltatásai és extra felszereltsége teszik lehetővé, hogy minden vendég maximálisan kiélvezhesse tartózkodásának minden pillanatát.',
-            features: ['extra nagy méretű és kényelmes ágyak', 'privát erkély gyönyörű kilátással a környező tájra', 'modernebb berendezések és dekoráció', 'luxus fürdőszoba esőztető zuhannyal'],
-            modalImages: [
-                'img/Szoba/superior1.jpg',
-                'img/Szoba/superior2.jpg',
-                'img/Szoba/superioreloszoba.jpg',
-                'img/Szoba/superiorfurdo.jpg',
-                'img/Szoba/superiorhaloszoba.jpg'
-            ]
-		  },
-		  {// 3 szoba adatai
-			name: 'Deluxe',
-			description: 'Deluxe mínőség kedvelőinek',
-			img: 'img/Szoba/deluxe1.jpg',
-			price: '72 180',
-			modalId: 'exampleModal3',
+				modalTitle: 'Superior szoba',
+							modalDescription: 'A Superior szobák kifinomult eleganciájukkal és modern berendezésükkel azonnal otthonos hangulatot teremtenek, ami hozzájárul a vendégek teljes kikapcsolódásához és relaxációjához. Emellett a Superior szobák kényelmi szolgáltatásai és extra felszereltsége teszik lehetővé, hogy minden vendég maximálisan kiélvezhesse tartózkodásának minden pillanatát.',
+							features: ['extra nagy méretű és kényelmes ágyak', 'privát erkély gyönyörű kilátással a környező tájra', 'modernebb berendezések és dekoráció', 'luxus fürdőszoba esőztető zuhannyal'],
+							modalImages: [
+									'img/Szoba/superior1.jpg',
+									'img/Szoba/superior2.jpg',
+									'img/Szoba/superioreloszoba.jpg',
+									'img/Szoba/superiorfurdo.jpg',
+									'img/Szoba/superiorhaloszoba.jpg'
+							]
+				},
+				{// 3 szoba adatai
+				name: 'Deluxe',
+				description: 'Deluxe mínőség kedvelőinek',
+				img: 'img/Szoba/deluxe1.jpg',
+				price: '72 180',
+				modalId: 'exampleModal3',
 
-			modalTitle: 'Deluxe szoba',
-            modalDescription: 'A Deluxe szobák exkluzív atmoszférája és gondosan megtervezett kényelmi szolgáltatások minden igényt kielégítenek, miközben a vendégeknek lehetőségük van egyedülálló pihenésre és feltöltődésre. A szoba tágas elrendezése és a kifinomult részletek harmonikus egyensúlyt teremtenek, amely tökéletes helyszínt biztosít az újjászületéshez és a mélyebb kapcsolatok elmélyítéséhez.',
-            features: ['kényelmes, prémium minőségű ágyak', 'nyugtató és elegáns berendezés', 'luxus kiegészítők és kényelmi szolgáltatások', 'minibár és tea/kávé készítési lehetőség'],
-            modalImages: [
-                'img/Szoba/deluxe2.jpg',
-                'img/Szoba/deluxe3.jpg',
-                'img/Szoba/deluxe2kanape.jpg',
-                'img/Szoba/deluxeteljes.jpg',
-                'img/Szoba/deluxefurdo.jpg'
-            ]
-		  },
-		  {// 4 szoba adatai
-			name: 'Deluxe+',
-			description: 'Deluxe mínőség plusszokkal',
-			img: 'img/Szoba/deluxe+1.jpg',
-			price: '103 370',
-			modalId: 'exampleModal4',
+				modalTitle: 'Deluxe szoba',
+							modalDescription: 'A Deluxe szobák exkluzív atmoszférája és gondosan megtervezett kényelmi szolgáltatások minden igényt kielégítenek, miközben a vendégeknek lehetőségük van egyedülálló pihenésre és feltöltődésre. A szoba tágas elrendezése és a kifinomult részletek harmonikus egyensúlyt teremtenek, amely tökéletes helyszínt biztosít az újjászületéshez és a mélyebb kapcsolatok elmélyítéséhez.',
+							features: ['kényelmes, prémium minőségű ágyak', 'nyugtató és elegáns berendezés', 'luxus kiegészítők és kényelmi szolgáltatások', 'minibár és tea/kávé készítési lehetőség'],
+							modalImages: [
+									'img/Szoba/deluxe2.jpg',
+									'img/Szoba/deluxe3.jpg',
+									'img/Szoba/deluxe2kanape.jpg',
+									'img/Szoba/deluxeteljes.jpg',
+									'img/Szoba/deluxefurdo.jpg'
+							]
+				},
+				{// 4 szoba adatai
+				name: 'Deluxe+',
+				description: 'Deluxe mínőség plusszokkal',
+				img: 'img/Szoba/deluxe+1.jpg',
+				price: '103 370',
+				modalId: 'exampleModal4',
 
-			modalTitle: 'Deluxe+ szoba',
-            modalDescription: 'A Deluxe+ szoba a luxus és a kényelem csúcspontja, amely ideális választás azoknak, akik mindenben a legmagasabb színvonalat keresik, miközben ragaszkodnak a visszafogott eleganciához és a nyugalomhoz. Ez a szálloda legexkluzívabb szállásopciója, amely az egyedi szolgáltatások és az elképesztő kényelmi szolgáltatások tökéletes összhangját kínálja a vendégeknek. A Deluxe+ szoba minden részlete gondosan megtervezett és kivitelezett, hogy a vendégek teljes kényelemben és luxusban élvezhessék tartózkodásukat.',
-            features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
-            modalImages: [
-                'img/Szoba/deluxe+1.jpg',
-                'img/Szoba/deluxe+3.jpg',
-                'img/Szoba/deluxe+7.jpg',
-                'img/Szoba/deluxe+6.jpg',
-                'img/Szoba/deluxe+8.jpg'
-            ]
-		  },
-		  {// 5 szoba adatai
-			name: 'Lakosztály',
-			description: 'Titanic szintű lakosztály',
-			img: 'img/Szoba/lakosztalyteljes.jpg',
-			price: '138 740',
-			modalId: 'exampleModal5',
+				modalTitle: 'Deluxe+ szoba',
+							modalDescription: 'A Deluxe+ szoba a luxus és a kényelem csúcspontja, amely ideális választás azoknak, akik mindenben a legmagasabb színvonalat keresik, miközben ragaszkodnak a visszafogott eleganciához és a nyugalomhoz. Ez a szálloda legexkluzívabb szállásopciója, amely az egyedi szolgáltatások és az elképesztő kényelmi szolgáltatások tökéletes összhangját kínálja a vendégeknek. A Deluxe+ szoba minden részlete gondosan megtervezett és kivitelezett, hogy a vendégek teljes kényelemben és luxusban élvezhessék tartózkodásukat.',
+							features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+							modalImages: [
+									'img/Szoba/deluxe+1.jpg',
+									'img/Szoba/deluxe+3.jpg',
+									'img/Szoba/deluxe+7.jpg',
+									'img/Szoba/deluxe+6.jpg',
+									'img/Szoba/deluxe+8.jpg'
+							]
+				},
+				{// 5 szoba adatai
+				name: 'Lakosztály',
+				description: 'Titanic szintű lakosztály',
+				img: 'img/Szoba/lakosztalyteljes.jpg',
+				price: '138 740',
+				modalId: 'exampleModal5',
 
-			modalTitle: 'Lakosztály',
-            modalDescription: 'A Lakosztály stílusú szobák exkluzív atmoszférájukkal és aprólékos részleteikkel olyan környezetet teremtenek, amely tökéletes a romantikus kikapcsolódáshoz vagy a személyes luxusélmények megtapasztalásához. Ezek a lakosztályok magas színvonalú kényelemmel és visszafogott eleganciával harmonizálnak, biztosítva, hogy minden vendég teljes mértékben átélhesse a luxust és a nyugalmat.',
-            features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
-            modalImages: [
-                'img/Szoba/lakosztalyszoba1.jpg',
-                'img/Szoba/lakosztalyteljes.jpg',
-                'img/Szoba/lakosztalyfolyoso.jpg',
-                'img/Szoba/lakosztalykonyhanappali.jpg',
-                'img/Szoba/lakosztalykonyha.jpg',
-				'img/Szoba/lakosztalyfurdo.jpg'
-            ]
-		  },
-		  {// 6 szoba adatai
-			name: 'Nászutas lakosztály',
-			description: 'Nászutas pároknak',
-			img: 'img/Szoba/naszutaslakosztaly1.jpg',
-			price: '162 540',
-			modalId: 'exampleModal6',
+				modalTitle: 'Lakosztály',
+							modalDescription: 'A Lakosztály stílusú szobák exkluzív atmoszférájukkal és aprólékos részleteikkel olyan környezetet teremtenek, amely tökéletes a romantikus kikapcsolódáshoz vagy a személyes luxusélmények megtapasztalásához. Ezek a lakosztályok magas színvonalú kényelemmel és visszafogott eleganciával harmonizálnak, biztosítva, hogy minden vendég teljes mértékben átélhesse a luxust és a nyugalmat.',
+							features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+							modalImages: [
+									'img/Szoba/lakosztalyszoba1.jpg',
+									'img/Szoba/lakosztalyteljes.jpg',
+									'img/Szoba/lakosztalyfolyoso.jpg',
+									'img/Szoba/lakosztalykonyhanappali.jpg',
+									'img/Szoba/lakosztalykonyha.jpg',
+					'img/Szoba/lakosztalyfurdo.jpg'
+							]
+				},
+				{// 6 szoba adatai
+				name: 'Nászutas lakosztály',
+				description: 'Nászutas pároknak',
+				img: 'img/Szoba/naszutaslakosztaly1.jpg',
+				price: '162 540',
+				modalId: 'exampleModal6',
 
-			modalTitle: 'Nászutas lakosztály',
-            modalDescription: 'A Nászutas lakosztályok egyedi atmoszférájukkal és romantikus részleteikkel olyan környezetet teremtenek, amely tökéletes az új házasok számára, akik szeretnék megünnepelni az egyedülálló pillanatokat. Ezek a lakosztályok luxus kényelemmel és intimitással rendelkeznek, hogy az esküvői utazás minden pillanata emlékezetes legyen. A Nászutas lakosztályok elegáns kialakításukkal és exkluzív szolgáltatásaikkal garantálják a párok teljes ellazulását és a romantikus élmények maximális élvezetét.',
-            features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
-            modalImages: [
-                'img/Szoba/naszutaslakosztaly1.jpg',
-                'img/Szoba/naszutaslakosztaly2.jpg',
-                'img/Szoba/naszutasszoba.jpg',
-                'img/Szoba/naszutaslakosztalykonyha.jpg',
-                'img/Szoba/naszutaslakosztalyfurdo.jpg'
-            ]
-		  },
-		  {// 7 szoba adatai
-			name: 'Elnöki lakosztály',
-			description: 'Az elnöknek személyesen',
-			img: 'img/Szoba/elnokilakosztaly1.jpg',
-			price: '197 470',
-			modalId: 'exampleModal7',
+				modalTitle: 'Nászutas lakosztály',
+							modalDescription: 'A Nászutas lakosztályok egyedi atmoszférájukkal és romantikus részleteikkel olyan környezetet teremtenek, amely tökéletes az új házasok számára, akik szeretnék megünnepelni az egyedülálló pillanatokat. Ezek a lakosztályok luxus kényelemmel és intimitással rendelkeznek, hogy az esküvői utazás minden pillanata emlékezetes legyen. A Nászutas lakosztályok elegáns kialakításukkal és exkluzív szolgáltatásaikkal garantálják a párok teljes ellazulását és a romantikus élmények maximális élvezetét.',
+							features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+							modalImages: [
+									'img/Szoba/naszutaslakosztaly1.jpg',
+									'img/Szoba/naszutaslakosztaly2.jpg',
+									'img/Szoba/naszutasszoba.jpg',
+									'img/Szoba/naszutaslakosztalykonyha.jpg',
+									'img/Szoba/naszutaslakosztalyfurdo.jpg'
+							]
+				},
+				{// 7 szoba adatai
+				name: 'Elnöki lakosztály',
+				description: 'Az elnöknek személyesen',
+				img: 'img/Szoba/elnokilakosztaly1.jpg',
+				price: '197 470',
+				modalId: 'exampleModal7',
 
-			modalTitle: 'Elnöki lakosztály',
-            modalDescription: 'Az Elnöki lakosztály az abszolút luxus és kényelem megtestesítője, mely ideális választás azoknak, akik a legmagasabb színvonalú szolgáltatásokra és kényelemre vágynak. Ez a lakosztály a szálloda csúcsa, exkluzív atmoszférával és impozáns méretével kiemelkedik a többi szobából. Tágas tér, kifinomult design és privát szolgáltatások biztosítják, hogy a vendégek teljes mértékben átéljék az exkluzivitás és a kényelem érzését, hogy teljesen kikapcsolódhassanak a mindennapok stresszétől.',
-            features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
-            modalImages: [
-                'img/Szoba/elnokilakosztaly1.jpg',
-                'img/Szoba/elnokilakosztaly2.jpg',
-                'img/Szoba/elnokilakosztaly3.jpg',
-                'img/Szoba/elnokilakosztaly4.jpg',
-                'img/Szoba/elnokilakosztaly5.jpg',
-				'img/Szoba/elnokilakosztalynappali.jpg',
-				'img/Szoba/elnokilakosztalyfurdo.jpg',
-				'img/Szoba/elnokilakosztalykonyha.jpg'
-            ]
-		  },
-		  {// 8 szoba adatai
-			name: 'Akadálymentesített szoba',
-			description: 'Mozgássérülteknek rendelkezésre álló lakosztály',
-			img: 'img/Szoba/akadalymentesitett1.jpg',
-			price: '69 270',
-			modalId: 'exampleModal8',
+				modalTitle: 'Elnöki lakosztály',
+							modalDescription: 'Az Elnöki lakosztály az abszolút luxus és kényelem megtestesítője, mely ideális választás azoknak, akik a legmagasabb színvonalú szolgáltatásokra és kényelemre vágynak. Ez a lakosztály a szálloda csúcsa, exkluzív atmoszférával és impozáns méretével kiemelkedik a többi szobából. Tágas tér, kifinomult design és privát szolgáltatások biztosítják, hogy a vendégek teljes mértékben átéljék az exkluzivitás és a kényelem érzését, hogy teljesen kikapcsolódhassanak a mindennapok stresszétől.',
+							features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+							modalImages: [
+									'img/Szoba/elnokilakosztaly1.jpg',
+									'img/Szoba/elnokilakosztaly2.jpg',
+									'img/Szoba/elnokilakosztaly3.jpg',
+									'img/Szoba/elnokilakosztaly4.jpg',
+									'img/Szoba/elnokilakosztaly5.jpg',
+					'img/Szoba/elnokilakosztalynappali.jpg',
+					'img/Szoba/elnokilakosztalyfurdo.jpg',
+					'img/Szoba/elnokilakosztalykonyha.jpg'
+							]
+				},
+				{// 8 szoba adatai
+				name: 'Akadálymentesített szoba',
+				description: 'Mozgássérülteknek rendelkezésre álló lakosztály',
+				img: 'img/Szoba/akadalymentesitett1.jpg',
+				price: '69 270',
+				modalId: 'exampleModal8',
 
-			modalTitle: 'Akadálymentesített szoba',
-            modalDescription: 'Az Akadálymentesített lakosztály kényelmes és befogadó környezetet biztosít mozgássérült vendégek számára, anélkül, hogy kompromisszumot kellene kötniük a luxus és a kényelem terén. Kiemelkedő jellemzői közé tartozik a tágas tér, az alacsonyan elhelyezett bútorok és az akadálymentesített fürdőszoba, amelyek gondosan tervezettek annak érdekében, hogy a vendégek teljes mértékben élvezhessék tartózkodásukat a szállodában.',
-            features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
-            modalImages: [
-                'img/Szoba/akadalymentesitett1.jpg',
-                'img/Szoba/akadalymentesitett2.jpg',
-                'img/Szoba/akadalymentesitettfurdo.jpg',
-                'img/Szoba/akadalymentesitettfurdo1.jpg'
-            ]
-		  }
-		];
-	  })
-		
-
-		
-
-	  .controller('foglalasController', [
-			'$rootScope',
-			'$scope',
-		  '$timeout',
-			'http',
-			'util',
-			function($rootScope, $scope, $timeout, http, util) {
-
-				$scope.foglalas = () => {
-					
-					let args = util.objFilterByKeys($scope.model, [
-					], false);
-
-					args.start = moment(args.start).format('YYYY-MM-DD');
-					args.and = moment(args.and).format('YYYY-MM-DD');
-					args.user_id = $rootScope.user.id;
-
-					// Http request
-					http.request({
-						method: 'POST',
-						url 	: `./php/foglalas.php`,
-						data 	: args
-					})
-					.then(response => {
-						alert(response);
-					}).catch(e => () => { 
-						alert(e); 
-					});
+				modalTitle: 'Akadálymentesített szoba',
+							modalDescription: 'Az Akadálymentesített lakosztály kényelmes és befogadó környezetet biztosít mozgássérült vendégek számára, anélkül, hogy kompromisszumot kellene kötniük a luxus és a kényelem terén. Kiemelkedő jellemzői közé tartozik a tágas tér, az alacsonyan elhelyezett bútorok és az akadálymentesített fürdőszoba, amelyek gondosan tervezettek annak érdekében, hogy a vendégek teljes mértékben élvezhessék tartózkodásukat a szállodában.',
+							features: ['kényelmes,puha ágy', 'utcára nyíló ablakok', 'erkély csodás kilátással', 'kicsempézett fürdőszoba'],
+							modalImages: [
+									'img/Szoba/akadalymentesitett1.jpg',
+									'img/Szoba/akadalymentesitett2.jpg',
+									'img/Szoba/akadalymentesitettfurdo.jpg',
+									'img/Szoba/akadalymentesitettfurdo1.jpg'
+							]
 				}
+			];
+	  }
+	])
+		
+	.controller('foglalasController', [
+		'$rootScope',
+		'$scope',
+		'$timeout',
+		'http',
+		'util',
+		function($rootScope, $scope, $timeout, http, util) {
 
-		  }
-	  ])
+			$scope.foglalas = () => {
+				
+				let args = util.objFilterByKeys($scope.model, [
+				], false);
+
+				args.start = moment(args.start).format('YYYY-MM-DD');
+				args.and = moment(args.and).format('YYYY-MM-DD');
+				args.user_id = $rootScope.user.id;
+
+				// Http request
+				http.request({
+					method: 'POST',
+					url 	: `./php/foglalas.php`,
+					data 	: args
+				})
+				.then(response => {
+					alert(response);
+				}).catch(e => () => { 
+					alert(e); 
+				});
+			}
+		}
+	])
 	   
-	
-	   .controller('homeController', ['$scope', '$http', '$location', function($scope, $http, $location) {
-		$scope.images = [
-			{ src: 'img/Szoba/lakosztaly1.jpg', alt: 'lakosztaly1' },
-			{ src: 'img/Szoba/lakosztaly2.jpg', alt: 'lakosztaly2' },
-			{ src: 'img/Szoba/lakosztaly3.jpg', alt: 'lakosztaly3' },
-			{ src: 'img/Szoba/lakosztaly4.jpg', alt: 'lakosztaly4' },
-			{ src: 'img/Szoba/lakosztaly5.jpg', alt: 'lakosztaly5' },
-			{ src: 'img/Szoba/szoba1.jpg', alt: 'szoba1' },
-			{ src: 'img/Szoba/szoba2.jpg', alt: 'szoba2' },
-			{ src: 'img/Szoba/szoba10.jpg', alt: 'szoba10' },
-			{ src: 'img/Szoba/szoba11.jpg', alt: 'szoba11' },
-			{ src: 'img/Szoba/szoba8.jpg', alt: 'szoba8' },
-			{ src: 'img/Szoba/deluxe1.jpg', alt: 'deluxe1' },
-			{ src: 'img/Szoba/deluxe2.jpg', alt: 'deluxe2' },
-			{ src: 'img/Szoba/deluxe+1.jpg', alt: 'deluxe+1' },
-			{ src: 'img/Szoba/deluxe+2.jpg', alt: 'deluxe+2' },
-			{ src: 'img/Szoba/superiorglorius.jpg', alt: 'superiorglorius' },
-		];
+	.controller('homeController', [
+		'$scope', '$http', '$location', 
+		function($scope, $http, $location) {
+			$scope.images = [
+				{ src: 'img/Szoba/lakosztaly1.jpg', alt: 'lakosztaly1' },
+				{ src: 'img/Szoba/lakosztaly2.jpg', alt: 'lakosztaly2' },
+				{ src: 'img/Szoba/lakosztaly3.jpg', alt: 'lakosztaly3' },
+				{ src: 'img/Szoba/lakosztaly4.jpg', alt: 'lakosztaly4' },
+				{ src: 'img/Szoba/lakosztaly5.jpg', alt: 'lakosztaly5' },
+				{ src: 'img/Szoba/szoba1.jpg', alt: 'szoba1' },
+				{ src: 'img/Szoba/szoba2.jpg', alt: 'szoba2' },
+				{ src: 'img/Szoba/szoba10.jpg', alt: 'szoba10' },
+				{ src: 'img/Szoba/szoba11.jpg', alt: 'szoba11' },
+				{ src: 'img/Szoba/szoba8.jpg', alt: 'szoba8' },
+				{ src: 'img/Szoba/deluxe1.jpg', alt: 'deluxe1' },
+				{ src: 'img/Szoba/deluxe2.jpg', alt: 'deluxe2' },
+				{ src: 'img/Szoba/deluxe+1.jpg', alt: 'deluxe+1' },
+				{ src: 'img/Szoba/deluxe+2.jpg', alt: 'deluxe+2' },
+				{ src: 'img/Szoba/superiorglorius.jpg', alt: 'superiorglorius' },
+			];
 
-		$scope.welcomeImageSrc = 'img/Szoba/szoba13.jpg';
-		$scope.welcomeTitle = 'Üdvözöljük';
-		$scope.welcomeSubtitle = 'DiamondLake Wellness Szállodában!';
-		$scope.welcomeMessage1 = 'Szeretettel köszöntjük Önt a Diamond Lake Wellness Szálloda varázslatos világában, ahol a kikapcsolódás és az élmények új dimenzióit fedezheti fel.';
-		$scope.welcomeSection1Title = 'Fedezze fel új lehetőségeinket!';
-		$scope.welcomeSection1Content = 'Válassza a pihenést és feltöltődést a lenyűgöző wellness szolgáltatásaink révén, ahol testét és lelkét egyaránt ápolhatja. Engedje, hogy a nyugtató masszázsok és a gyógyító fürdők egészséget és harmóniát hozzanak az életébe.';
-		$scope.welcomeSection2Title = 'Kalandra fel a játékosoknak!';
-		$scope.welcomeSection2Content = 'Azoknak, akik inkább izgalmakra vágynak, számtalan lehetőséget kínálunk a szórakozásra. Élvezze a modern konzolok által nyújtott élményeket a Konzolszobánkban, ahol a legújabb játékokkal találkozhat és versenyezhet barátaival.';
-		$scope.restaurantImageSrc = 'img/Esemenyek/pihi.jpg';
-		$scope.restaurantSectionTitle = 'Étterem és Gasztronómia';
-		$scope.restaurantSectionContent = 'Az étterem a hotel egyik büszkesége, ahol ízletes ételek és italok várják Önt. Legyen szó reggeliről, ebédről vagy vacsoráról, szakácsaink friss és helyi alapanyagokból készítik ételeinket, hogy minden falat egy igazi gasztronómiai élmény legyen.';
-		$scope.natureSectionTitle = 'Élvezze a természet szépségét!';
-		$scope.natureSectionContent = 'Ha pedig a friss levegő és a természet közelsége hívja, sétáljon körbe varázslatos tóparti kertünkben, vagy merüljön el a környék lenyűgöző tájainak felfedezésében. A túrázás, kerékpározás és horgászat kiváló lehetőségeket kínál a kikapcsolódásra.';
-		$scope.entertainmentSectionTitle = 'Szórakozás és barátság minden nap!';
-		$scope.entertainmentSectionContent = 'A Diamond Lake Wellness Szálloda minden nap új élményekkel és lehetőségekkel várja Önt és szeretteit. Legyen részese egy olyan helynek, ahol a jókedv, a barátság és az élmények örök emlékeket teremtenek.';
-		$scope.relaxationSectionTitle = 'Kapcsolódjon ki nálunk, és élvezze az élet szépségeit!';
-		$scope.relaxationSectionContent = 'A Diamond Lake Wellness Szálloda csapata mindenben segítségére lesz, hogy Önnek és társainak felejthetetlen élményekben legyen része. Várjuk Önt szeretettel a legközelebbi pihenésre és kalandra!';
+			$scope.welcomeImageSrc = 'img/Szoba/szoba13.jpg';
+			$scope.welcomeTitle = 'Üdvözöljük';
+			$scope.welcomeSubtitle = 'DiamondLake Wellness Szállodában!';
+			$scope.welcomeMessage1 = 'Szeretettel köszöntjük Önt a Diamond Lake Wellness Szálloda varázslatos világában, ahol a kikapcsolódás és az élmények új dimenzióit fedezheti fel.';
+			$scope.welcomeSection1Title = 'Fedezze fel új lehetőségeinket!';
+			$scope.welcomeSection1Content = 'Válassza a pihenést és feltöltődést a lenyűgöző wellness szolgáltatásaink révén, ahol testét és lelkét egyaránt ápolhatja. Engedje, hogy a nyugtató masszázsok és a gyógyító fürdők egészséget és harmóniát hozzanak az életébe.';
+			$scope.welcomeSection2Title = 'Kalandra fel a játékosoknak!';
+			$scope.welcomeSection2Content = 'Azoknak, akik inkább izgalmakra vágynak, számtalan lehetőséget kínálunk a szórakozásra. Élvezze a modern konzolok által nyújtott élményeket a Konzolszobánkban, ahol a legújabb játékokkal találkozhat és versenyezhet barátaival.';
+			$scope.restaurantImageSrc = 'img/Esemenyek/pihi.jpg';
+			$scope.restaurantSectionTitle = 'Étterem és Gasztronómia';
+			$scope.restaurantSectionContent = 'Az étterem a hotel egyik büszkesége, ahol ízletes ételek és italok várják Önt. Legyen szó reggeliről, ebédről vagy vacsoráról, szakácsaink friss és helyi alapanyagokból készítik ételeinket, hogy minden falat egy igazi gasztronómiai élmény legyen.';
+			$scope.natureSectionTitle = 'Élvezze a természet szépségét!';
+			$scope.natureSectionContent = 'Ha pedig a friss levegő és a természet közelsége hívja, sétáljon körbe varázslatos tóparti kertünkben, vagy merüljön el a környék lenyűgöző tájainak felfedezésében. A túrázás, kerékpározás és horgászat kiváló lehetőségeket kínál a kikapcsolódásra.';
+			$scope.entertainmentSectionTitle = 'Szórakozás és barátság minden nap!';
+			$scope.entertainmentSectionContent = 'A Diamond Lake Wellness Szálloda minden nap új élményekkel és lehetőségekkel várja Önt és szeretteit. Legyen részese egy olyan helynek, ahol a jókedv, a barátság és az élmények örök emlékeket teremtenek.';
+			$scope.relaxationSectionTitle = 'Kapcsolódjon ki nálunk, és élvezze az élet szépségeit!';
+			$scope.relaxationSectionContent = 'A Diamond Lake Wellness Szálloda csapata mindenben segítségére lesz, hogy Önnek és társainak felejthetetlen élményekben legyen része. Várjuk Önt szeretettel a legközelebbi pihenésre és kalandra!';
+		}
+	])
+	
+	.controller('rolunkController', [
+		'$scope', '$http', '$location', 
+		function($scope, $http, $location) {
+
+			$scope.rolunk = [
+				{img: 'ikonok/Systemproperty/Systemproperty1', title:'Valach Martin', job:'Software Developer'},
+				{img: 'ikonok/Systemproperty/Systemproperty2', title:'Surányi Csenge', job:'Software Developer'},
+				{img: 'ikonok/Systemproperty/Systemproperty1', title:'Kiss Benjámin Zoltán', job:'Software Developer'}
+			];
+
+			$scope.gondolatok = [
+				{ cim: 'Kényelmes szobák', 
+					leiras: 'Vendégeink szerint kényelmesek és jól felszereltek a szobáink.', 
+					velemeny: ' Vendég: Fantasztikus élmény volt itt megszállni!' },
+				
+				{ cim: 'Kiváló szolgáltatás', 
+					leiras: 'Barátságos és segítőkész személyzetünk mindenben a rendelkezésére áll.',
+					velemeny: ' Egy elégedett vendég: Nagyon kedves és figyelmes személyzet!' },
+				
+				{ cim: 'Kitűnő elhelyezkedés',  
+					leiras: 'A szálloda központi elhelyezkedése könnyű hozzáférést biztosít a város látnivalóihoz.',
+					velemeny: ' Szállodánk hűséges vendégei: "Csodálatos kilátás és közel mindenhez!' }, 
+
+				{ cim: 'Bőséges reggeli', 
+					leiras: 'A reggelik változatosak és bőségesek, mindenki megtalálja a kedvére valót.',
+					velemeny: ' Egy újabb elégedett vendég: "A reggeli választék kiváló!' }, 
+
+				{ cim: 'Kellemes környezet', 
+					leiras: 'A szálloda környezete nyugodt és barátságos, ideális pihenéshez.',
+					velemeny: ' Egy elégedett vendég: "Csodálatos és nyugodt környezet!' }, 
+
+				{ cim: 'Vidám diszkóparti', 
+					leiras: 'A szálloda rendezvénytermeiben rendszeresen vidám és felejthetetlen diszkópartikat szervezünk.',
+					velemeny: ' Egy bulizni vágyó vendég: "Fantasztikus hangulat és jó zenék a diszkópartikon!' }, 
+			];
 
 	}])
 	
-
-	   .controller('rolunkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
-		$scope.rolunk = [
-			{img: 'ikonok/Systemproperty/Systemproperty1', title:'Valach Martin', job:'Software Developer'},
-			{img: 'ikonok/Systemproperty/Systemproperty2', title:'Surányi Csenge', job:'Software Developer'},
-			{img: 'ikonok/Systemproperty/Systemproperty1', title:'Kiss Benjámin Zoltán', job:'Software Developer'},
-			
-		];
-
-
-		$scope.gondolatok = [
-			{ cim: 'Kényelmes szobák', 
-			  leiras: 'Vendégeink szerint kényelmesek és jól felszereltek a szobáink.', 
-			  velemeny: ' Vendég: Fantasztikus élmény volt itt megszállni!' },
-			
-			{ cim: 'Kiváló szolgáltatás', 
-			  leiras: 'Barátságos és segítőkész személyzetünk mindenben a rendelkezésére áll.',
-			  velemeny: ' Egy elégedett vendég: Nagyon kedves és figyelmes személyzet!' },
-			
-			{ cim: 'Kitűnő elhelyezkedés',  
-			  leiras: 'A szálloda központi elhelyezkedése könnyű hozzáférést biztosít a város látnivalóihoz.',
-			  velemeny: ' Szállodánk hűséges vendégei: "Csodálatos kilátás és közel mindenhez!' }, 
-
-			{ cim: 'Bőséges reggeli', 
-			  leiras: 'A reggelik változatosak és bőségesek, mindenki megtalálja a kedvére valót.',
-			  velemeny: ' Egy újabb elégedett vendég: "A reggeli választék kiváló!' }, 
-
-			{ cim: 'Kellemes környezet', 
-			  leiras: 'A szálloda környezete nyugodt és barátságos, ideális pihenéshez.',
-			  velemeny: ' Egy elégedett vendég: "Csodálatos és nyugodt környezet!' }, 
-
-			{ cim: 'Vidám diszkóparti', 
-			  leiras: 'A szálloda rendezvénytermeiben rendszeresen vidám és felejthetetlen diszkópartikat szervezünk.',
-			  velemeny: ' Egy bulizni vágyó vendég: "Fantasztikus hangulat és jó zenék a diszkópartikon!' }, 
-		];
-
-	}])
+	.controller('szolgaltatasainkController', [
+		'$scope', '$http', '$location', 
+		function($scope, $http, $location) {
+			$scope.data = [
+				{img: 'masszazs', title:'Wellness'},
+				{img: 'medence', title:'Medencék'},
+				{img: 'sauna1', title:'Szauna világ'},
+				{img: 'gyerekek', title:'Konzolszoba'},
+				{img: 'etterem2', title:'Étterem'},
+				{img: 'bar', title:'Bár'},
+				{img: 'kondi', title:'Sportolási lehetőségeink'},
+				{img: 'Disco', title:'Szórakozás'}
+			];
+		}
+	]);
 	
-	   .controller('szolgaltatasainkController', ['$scope', '$http', '$location', function($scope, $http, $location) {
-		$scope.data = [
-			{img: 'masszazs', title:'Wellness'},
-			{img: 'medence', title:'Medencék'},
-			{img: 'sauna1', title:'Szauna világ'},
-			{img: 'gyerekek', title:'Konzolszoba'},
-			{img: 'etterem2', title:'Étterem'},
-			{img: 'bar', title:'Bár'},
-			{img: 'kondi', title:'Sportolási lehetőségeink'},
-			{img: 'Disco', title:'Szórakozás'}
-		];
-	}]);
-	
-	
-
 })(window, angular);
