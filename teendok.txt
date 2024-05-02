@@ -4,5 +4,5 @@ Meg jelenítettem csak nem jelentkezik ki  OK
 
 
 
-User maradjon bejelenkezve
+User maradjon bejelenkezve OK
 Csak bejelenkezett felhasználó foglalhasson	OK

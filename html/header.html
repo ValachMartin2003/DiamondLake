@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-xl" 
-		 id="navbar">
+		 id="navbar"
+		 ng-bs-navbar-collapse>
 
 	<!-- Container -->
 	<div class="container-fluid">
@@ -44,8 +45,12 @@
 					</a>
 					<ul class="dropdown-menu" 
 							aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" ui-sref="wendings">Esküvőszervezés</a></li>
-						<li><a class="dropdown-item" ui-sref="esemeny">Közelgő események</a></li>
+						<li>
+							<a class="dropdown-item" ui-sref="wendings">Esküvőszervezés</a>
+						</li>
+						<li>
+							<a class="dropdown-item" ui-sref="esemeny">Közelgő események</a>
+						</li>
 					</ul>
 				</li>
 				<li class="nav-item dropdown">
@@ -59,14 +64,18 @@
 					</a>
 					<ul class="dropdown-menu" 
 							aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" ui-sref="elerhetoseg">Elérhetőség</a></li>
-						<li><a class="dropdown-item" ui-sref="obout_us">Rólunk</a></li>
+						<li>
+							<a class="dropdown-item" ui-sref="elerhetoseg">Elérhetőség</a>
+						</li>
+						<li>
+							<a class="dropdown-item" ui-sref="obout_us">Rólunk</a>
+						</li>
 					</ul>
 				</li> 
 			</ul>
 		 
 		   <ul class="navbar-nav ms-auto align-items-center">
-				<li><!-- Foglalás gomb/link -->
+				<li class="nav-item"><!-- Foglalás gomb/link -->
 					<a ui-sref="foglalas">
 						<button class="btn btn-outline-dark border-dark" 
 								ng-if="$root.user.id" 
@@ -75,7 +84,7 @@
 						</button>
 					</a>
 				</li>
-				<li>
+				<li class="nav-item">
 					<button type="button" 
 									class="btn btn-outline-dark" 
 									data-bs-toggle="modal" 

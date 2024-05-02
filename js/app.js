@@ -5,7 +5,8 @@
   // Application module
   angular.module('app', [
     'ui.router',
-		'app.common'
+		'app.common',
+		'app_user'
   ])
 
   // Application config
@@ -140,38 +141,36 @@
 		'$rootScope',
 		'$timeout',
     'trans',
-    ($state, $rootScope, $timeout, trans) => {
-
-			// Set user properties
-			$rootScope.user = {
-				id: null,
-				type: null,
-				type_name: null,
-				name: null,
-				born: null,
-				gender: null,
-				address: null,
-				country_code: null,
-				phone: null,
-				email: null
-			};
+		'user',
+    ($state, $rootScope, $timeout, trans, user) => {
 
       // Transaction events
 			trans.events('foglalas');
 
+			// Get user
+      user.get().then(() => {
+
+        // Check user exist
+        if ($rootScope.user.id) {
+
+          // Get user rest properties
+          user.user();
+        }
+      });
+
 			// Logout
-			$rootScope.logout = () => {
+			// $rootScope.logout = () => {
 
-				// Confirm
-				if (confirm('Biztosan ki akar jelentkezni?')) {
+			// 	// Confirm
+			// 	if (confirm('Biztosan ki akar jelentkezni?')) {
 
-					// Reset user
-					Object.keys($rootScope.user).forEach((i) => $rootScope.user[i] = null);
+			// 		// Reset user
+			// 		Object.keys($rootScope.user).forEach((i) => $rootScope.user[i] = null);
 
-					if ($rootScope.state.disabled.includes($rootScope.state.id))
-						$state.go($rootScope.state.prevEnabled);
-				}
-			};
+			// 		if ($rootScope.state.disabled.includes($rootScope.state.id))
+			// 			$state.go($rootScope.state.prevEnabled);
+			// 	}
+			// };
     }
   ])
 
@@ -182,7 +181,8 @@
 		'$timeout',
 		'util',
 		'http',
-    function($rootScope, $scope, $timeout, util, http) {
+		'user',
+    function($rootScope, $scope, $timeout, util, http, user) {
 
 			// Set methods
 			let methods = {
@@ -236,7 +236,7 @@
 
 					// Set saved colors
 					$scope.helper.palettes.forEach(palette => {
-						let color = localStorage.getItem(`${palette.id}Color`);
+						let color = window.localStorage.getItem(`${palette.id}Color`);
 						if (color) {
 							let element = palette.id === 'body' ? document.body :
 														document.getElementById(palette.id);
@@ -245,7 +245,8 @@
 					});
 
 					// Set saved last login email address
-					$scope.model.login.email = localStorage.getItem('userEmailAddress');
+					$scope.model.login.email = user.getEmail();
+					$scope.$applyAsync();
 
 					// Set events
 					methods.events();
@@ -296,7 +297,7 @@
 								if (typeof $scope.model[key][k] === 'boolean')
 											$scope.model[key][k] = false;
 								else if (key === 'login' && k === 'email')
-											$scope.model[key][k] = localStorage.getItem('userEmailAddress');
+											$scope.model[key][k] = user.getEmail();
 								else 	$scope.model[key][k] = null;
 							});
 						}
@@ -391,7 +392,7 @@
 															document.getElementById(paletteId);
 								if (element) {
 									element.style.backgroundColor = color;
-									localStorage.setItem(`${paletteId}Color`, color);
+									window.localStorage.setItem(`${paletteId}Color`, color);
 								}
 							}
 						}
@@ -440,21 +441,21 @@
 							// When is event Login/Register
 							if (key === 'login' || key === 'register') {
 
-								// Save in local storige email address
-								localStorage.setItem('userEmailAddress', args.email);
-
 								// When is event register, then:
 								// set user identifier, and default type, and type name.
 								if (key === 'register') {
-									args['id'] 				= response['id'];
-									args['type'] 			= 'U';
-									args['type_name'] = 'felhasználó';
-								}
+												args['id'] 				= response['id'];
+												args['type'] 			= 'U';
+												args['type_name'] = 'felhasználó';
+								} else	response['email'] = args['email'];
 							}
 
 							// Set user
 							$rootScope.user = util.objMerge($rootScope.user, 
 																key === 'login' ? response : args, true);
+
+							// Save user properties to local storage
+							user.save();
 
 							// Apply change
 							$rootScope.$applyAsync();
@@ -465,20 +466,6 @@
 						.catch(e => $timeout(() => { alert(e); }, 50));
 					}
 				},
-
-				// // Logout
-				// logout: () => {
-
-				// 	// Confirm
-				// 	if (confirm('Biztosan ki akar jelentkezni?')) {
-
-				// 		// Reset user
-				// 		Object.keys($rootScope.user).forEach((i) => $rootScope.user[i] = null);
-
-				// 		// Reset model
-				// 		$timeout(() => { methods.reset(true); });
-				// 	}
-				// },
 
 				// Tab buttons clicked
 				tabClicked: (event) => {
@@ -509,15 +496,12 @@
 
 								// Set/Save color
 								element.style.backgroundColor = palette.default;
-								localStorage.setItem(`${palette.id}Color`, palette.default);
+								window.localStorage.setItem(`${palette.id}Color`, palette.default);
 							}
 						})
 					}
 				}
 			};
-
-
-		
 
 			// Initialize
 			methods.init();
