@@ -1,4 +1,5 @@
-# DiamondLake Wellness Szálloda
+# Diamond Lake Wellness Szálloda
+##### Projektfelelős: Valach Martin
 ##### Készítették: Surányi Csenge, Valach Martin és Kiss Benjámin Zoltán
 ## A weboldalunk elérése a következö úton lehetséges:
 ###### http://localhost/2_14_a/vizsgaremek/DiamondLake/#!/
