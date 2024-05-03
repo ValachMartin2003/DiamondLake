@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2024. Ápr 11. 09:19
+-- Létrehozás ideje: 2024. Máj 03. 11:48
 -- Kiszolgáló verziója: 10.4.6-MariaDB
 -- PHP verzió: 7.3.8
 
@@ -29,15 +29,26 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `booking` (
-  `user_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `user_id` int(11) UNSIGNED NOT NULL,
   `start` date NOT NULL,
   `and` date NOT NULL,
   `adult` int(10) NOT NULL,
   `kids` int(10) NOT NULL,
   `baby_bed` tinyint(1) NOT NULL,
-  `room` int(11) NOT NULL,
+  `room` int(10) UNSIGNED NOT NULL,
   `comment` varchar(300) COLLATE utf8_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `booking`
+--
+
+INSERT INTO `booking` (`id`, `user_id`, `start`, `and`, `adult`, `kids`, `baby_bed`, `room`, `comment`) VALUES
+(2, 6, '2024-05-24', '2024-05-28', 2, 1, 1, 1, 'Széf használatot kérnénk.'),
+(3, 6, '2024-06-07', '2024-06-11', 2, 0, 0, 5, 'Migrén és fejfájás elleni masszázsra szeretnénk menni'),
+(4, 10, '2024-06-18', '2024-06-21', 2, 0, 1, 6, 'Gyümölcsös szaunafelöntés és légkondit'),
+(6, 16, '2024-05-30', '2024-06-02', 2, 0, 0, 3, 'Légkondicionálóval és hajszárítóval szeretnénk');
 
 -- --------------------------------------------------------
 
@@ -167,7 +178,9 @@ INSERT INTO `users` (`id`, `type`, `name`, `born`, `gender`, `country_code`, `ph
 -- A tábla indexei `booking`
 --
 ALTER TABLE `booking`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `room` (`room`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- A tábla indexei `programok`
@@ -179,7 +192,8 @@ ALTER TABLE `programok`
 -- A tábla indexei `room`
 --
 ALTER TABLE `room`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
 
 --
 -- A tábla indexei `type`
@@ -199,6 +213,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT a táblához `booking`
+--
+ALTER TABLE `booking`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT a táblához `programok`
 --
 ALTER TABLE `programok`
@@ -208,7 +228,17 @@ ALTER TABLE `programok`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- Megkötések a kiírt táblákhoz
+--
+
+--
+-- Megkötések a táblához `booking`
+--
+ALTER TABLE `booking`
+  ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
